@@ -1,0 +1,42 @@
+{
+  "avg_rating": 4.3,
+  "category": "Dinner",
+  "comments": [
+    {
+      "text": "Perfect weeknight dinner!",
+      "username": "WokMaster"
+    }
+  ],
+  "cooking_time": 25,
+  "description": "Quick and flavorful beef with vegetables in savory sauce",
+  "id": "cce44aae-a03b-42d1-bdec-a788c19e8d29",
+  "image": "https://example.com/beef-stir-fry.jpg",
+  "ingredients": [
+    "beef sirloin",
+    "bell peppers",
+    "broccoli",
+    "soy sauce",
+    "oyster sauce",
+    "garlic",
+    "ginger",
+    "cornstarch",
+    "sesame oil"
+  ],
+  "instructions": "Slice beef thin, marinate, stir-fry with vegetables over high heat, add sauce.",
+  "number_of_rating": 21,
+  "nutritionalInfo": {
+    "calories": 380,
+    "carbs": 22,
+    "fat": 18,
+    "protein": 32
+  },
+  "servings": 4,
+  "share_url": "https://yourapp.com/recipes/5",
+  "tags": [
+    "Asian",
+    "Quick",
+    "Healthy"
+  ],
+  "title": "Beef Stir Fry",
+  "total_score": 78
+}

@@ -1,0 +1,45 @@
+{
+  "avg_rating": 4.2,
+  "category": "Dinner",
+  "comments": [
+    {
+      "text": "Family favorite!",
+      "username": "TacoLover"
+    },
+    {
+      "text": "Quick and delicious",
+      "username": "MexicanFood"
+    }
+  ],
+  "cooking_time": 25,
+  "description": "Seasoned ground beef in crispy taco shells",
+  "id": "4cf29f05-4702-41c3-9d44-cacc845c70a0",
+  "image": "https://example.com/beef-tacos.jpg",
+  "ingredients": [
+    "ground beef",
+    "taco shells",
+    "lettuce",
+    "tomatoes",
+    "cheese",
+    "sour cream",
+    "onion",
+    "taco seasoning"
+  ],
+  "instructions": "Brown beef with seasoning, warm taco shells, assemble with fresh toppings.",
+  "number_of_rating": 24,
+  "nutritionalInfo": {
+    "calories": 380,
+    "carbs": 24,
+    "fat": 22,
+    "protein": 24
+  },
+  "servings": 6,
+  "share_url": "https://yourapp.com/recipes/13",
+  "tags": [
+    "Mexican",
+    "Quick",
+    "Family"
+  ],
+  "title": "Beef Tacos",
+  "total_score": 89
+}

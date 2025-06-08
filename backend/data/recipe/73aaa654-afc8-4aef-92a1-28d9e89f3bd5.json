@@ -1,0 +1,49 @@
+{
+  "avg_rating": 4.3,
+  "category": "Dinner",
+  "comments": [
+    {
+      "text": "Authentic flavors!",
+      "username": "ThaiFood101"
+    },
+    {
+      "text": "Better than takeout",
+      "username": "NoodleLover"
+    }
+  ],
+  "cooking_time": 35,
+  "description": "Classic Thai stir-fried noodles with shrimp and peanuts",
+  "id": "73aaa654-afc8-4aef-92a1-28d9e89f3bd5",
+  "image": "https://example.com/pad-thai.jpg",
+  "ingredients": [
+    "rice noodles",
+    "shrimp",
+    "eggs",
+    "bean sprouts",
+    "green onions",
+    "peanuts",
+    "lime",
+    "fish sauce",
+    "tamarind paste",
+    "palm sugar",
+    "garlic",
+    "chili flakes"
+  ],
+  "instructions": "Soak noodles, stir-fry shrimp and eggs, add noodles and sauce, toss with vegetables and peanuts.",
+  "number_of_rating": 27,
+  "nutritionalInfo": {
+    "calories": 450,
+    "carbs": 58,
+    "fat": 16,
+    "protein": 22
+  },
+  "servings": 4,
+  "share_url": "https://yourapp.com/recipes/11",
+  "tags": [
+    "Thai",
+    "Seafood",
+    "Spicy"
+  ],
+  "title": "Pad Thai",
+  "total_score": 103
+}

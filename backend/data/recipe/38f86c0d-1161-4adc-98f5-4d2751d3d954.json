@@ -1,0 +1,41 @@
+{
+  "avg_rating": 4.0,
+  "category": "Salad",
+  "comments": [
+    {
+      "text": "So fresh and healthy!",
+      "username": "MediterraneanFan"
+    }
+  ],
+  "cooking_time": 10,
+  "description": "Fresh Mediterranean salad with feta and olives",
+  "id": "38f86c0d-1161-4adc-98f5-4d2751d3d954",
+  "image": "https://example.com/greek-salad.jpg",
+  "ingredients": [
+    "tomatoes",
+    "cucumber",
+    "red onion",
+    "feta cheese",
+    "kalamata olives",
+    "olive oil",
+    "red wine vinegar",
+    "oregano"
+  ],
+  "instructions": "Chop vegetables, crumble feta, toss with dressing made from olive oil, vinegar, and oregano.",
+  "number_of_rating": 16,
+  "nutritionalInfo": {
+    "calories": 220,
+    "carbs": 12,
+    "fat": 18,
+    "protein": 8
+  },
+  "servings": 4,
+  "share_url": "https://yourapp.com/recipes/7",
+  "tags": [
+    "Greek",
+    "Healthy",
+    "Vegetarian"
+  ],
+  "title": "Greek Salad",
+  "total_score": 58
+}

@@ -1,0 +1,43 @@
+{
+  "avg_rating": 4.5,
+  "category": "Dinner",
+  "comments": [
+    {
+      "text": "Absolutely delicious and authentic!",
+      "username": "PastaLover92"
+    },
+    {
+      "text": "Perfect technique, just like nonna used to make",
+      "username": "ChefMario"
+    }
+  ],
+  "cooking_time": 25,
+  "description": "Classic Italian pasta with eggs, cheese, and pancetta",
+  "id": "807deb07-bc2e-478a-a8d7-755ae74d0469",
+  "image": "https://example.com/spaghetti-carbonara.jpg",
+  "ingredients": [
+    "spaghetti",
+    "eggs",
+    "parmesan cheese",
+    "pancetta",
+    "black pepper",
+    "garlic"
+  ],
+  "instructions": "Cook pasta, fry pancetta, mix eggs with cheese, combine all ingredients while hot.",
+  "number_of_rating": 23,
+  "nutritionalInfo": {
+    "calories": 580,
+    "carbs": 48,
+    "fat": 32,
+    "protein": 28
+  },
+  "servings": 4,
+  "share_url": "https://yourapp.com/recipes/1",
+  "tags": [
+    "Italian",
+    "Pasta",
+    "Quick"
+  ],
+  "title": "Spaghetti Carbonara",
+  "total_score": 87
+}
