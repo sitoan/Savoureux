@@ -1,0 +1,51 @@
+{
+  "avg_rating": 4.7,
+  "category": "Dessert",
+  "comments": [
+    {
+      "text": "Best cookie recipe ever!",
+      "username": "BakeQueen"
+    },
+    {
+      "text": "My kids absolutely love these",
+      "username": "SweetTooth"
+    },
+    {
+      "text": "Perfect texture every time",
+      "username": "CookieLover"
+    }
+  ],
+  "cooking_time": 35,
+  "description": "Soft and chewy homemade chocolate chip cookies",
+  "id": "7c6ce637-e0b5-4042-b177-866169d6734c",
+  "image": "https://example.com/chocolate-chip-cookies.jpg",
+  "ingredients": [
+    "flour",
+    "butter",
+    "brown sugar",
+    "white sugar",
+    "eggs",
+    "vanilla",
+    "baking soda",
+    "salt",
+    "chocolate chips"
+  ],
+  "instructions": "Cream butter and sugars, add eggs and vanilla, mix in dry ingredients, fold in chips, bake.",
+  "number_of_rating": 38,
+  "nutritionalInfo": {
+    "calories": 185,
+    "carbs": 28,
+    "fat": 8,
+    "protein": 3
+  },
+  "servings": 24,
+  "share_url": "https://yourapp.com/recipes/6",
+  "tags": [
+    "Dessert",
+    "Baking",
+    "Sweet",
+    "Family"
+  ],
+  "title": "Chocolate Chip Cookies",
+  "total_score": 142
+}

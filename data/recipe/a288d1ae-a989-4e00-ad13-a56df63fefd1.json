@@ -1,0 +1,46 @@
+{
+  "avg_rating": 3.9,
+  "category": "Salad",
+  "comments": [
+    {
+      "text": "Classic and perfect!",
+      "username": "SaladGuru"
+    },
+    {
+      "text": "Great as a side or main dish",
+      "username": "HealthyEater"
+    }
+  ],
+  "cooking_time": 15,
+  "description": "Crisp romaine lettuce with creamy caesar dressing",
+  "id": "a288d1ae-a989-4e00-ad13-a56df63fefd1",
+  "image": "https://example.com/caesar-salad.jpg",
+  "ingredients": [
+    "romaine lettuce",
+    "croutons",
+    "parmesan cheese",
+    "anchovies",
+    "mayonnaise",
+    "lemon juice",
+    "worcestershire sauce",
+    "garlic",
+    "dijon mustard"
+  ],
+  "instructions": "Make dressing by mixing anchovies, mayo, lemon, and seasonings. Toss with lettuce and toppings.",
+  "number_of_rating": 19,
+  "nutritionalInfo": {
+    "calories": 320,
+    "carbs": 8,
+    "fat": 28,
+    "protein": 12
+  },
+  "servings": 4,
+  "share_url": "https://yourapp.com/recipes/4",
+  "tags": [
+    "Salad",
+    "Classic",
+    "Quick"
+  ],
+  "title": "Caesar Salad",
+  "total_score": 67
+}

@@ -1,0 +1,46 @@
+{
+  "avg_rating": 4.5,
+  "category": "Dinner",
+  "comments": [
+    {
+      "text": "Falls apart perfectly!",
+      "username": "BBQKing"
+    },
+    {
+      "text": "Just like grandpa used to make",
+      "username": "SouthernCook"
+    }
+  ],
+  "cooking_time": 480,
+  "description": "Slow-cooked pork shoulder in tangy barbecue sauce",
+  "id": "fa1f5f01-ca40-427b-8fb7-548b88115e7b",
+  "image": "https://example.com/bbq-pulled-pork.jpg",
+  "ingredients": [
+    "pork shoulder",
+    "bbq sauce",
+    "brown sugar",
+    "paprika",
+    "garlic powder",
+    "onion powder",
+    "cayenne pepper",
+    "salt",
+    "black pepper"
+  ],
+  "instructions": "Rub pork with spices, slow cook until tender, shred and mix with BBQ sauce.",
+  "number_of_rating": 31,
+  "nutritionalInfo": {
+    "calories": 520,
+    "carbs": 18,
+    "fat": 28,
+    "protein": 42
+  },
+  "servings": 8,
+  "share_url": "https://yourapp.com/recipes/10",
+  "tags": [
+    "BBQ",
+    "American",
+    "Slow Cooked"
+  ],
+  "title": "BBQ Pulled Pork",
+  "total_score": 126
+}

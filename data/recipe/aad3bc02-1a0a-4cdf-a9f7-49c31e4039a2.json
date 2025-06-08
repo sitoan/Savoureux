@@ -1,0 +1,43 @@
+{
+  "avg_rating": 4.3,
+  "category": "Dinner",
+  "comments": [
+    {
+      "text": "Sizzling and delicious!",
+      "username": "TexMexFan"
+    }
+  ],
+  "cooking_time": 30,
+  "description": "Sizzling chicken and peppers with tortillas",
+  "id": "aad3bc02-1a0a-4cdf-a9f7-49c31e4039a2",
+  "image": "https://example.com/chicken-fajitas.jpg",
+  "ingredients": [
+    "chicken breast",
+    "bell peppers",
+    "onions",
+    "flour tortillas",
+    "lime",
+    "cumin",
+    "chili powder",
+    "paprika",
+    "garlic",
+    "olive oil"
+  ],
+  "instructions": "Season and cook chicken strips, sauté peppers and onions, serve with warm tortillas.",
+  "number_of_rating": 26,
+  "nutritionalInfo": {
+    "calories": 420,
+    "carbs": 38,
+    "fat": 15,
+    "protein": 32
+  },
+  "servings": 4,
+  "share_url": "https://yourapp.com/recipes/16",
+  "tags": [
+    "Mexican",
+    "Healthy",
+    "Quick"
+  ],
+  "title": "Chicken Fajitas",
+  "total_score": 96
+}

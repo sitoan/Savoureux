@@ -1,0 +1,53 @@
+{
+  "avg_rating": 4.6,
+  "category": "Dinner",
+  "comments": [
+    {
+      "text": "Best tikka masala I've ever made!",
+      "username": "SpiceLover"
+    },
+    {
+      "text": "Restaurant quality at home",
+      "username": "IndianFoodie"
+    },
+    {
+      "text": "My family asks for this every week",
+      "username": "CurryQueen"
+    }
+  ],
+  "cooking_time": 60,
+  "description": "Creamy tomato-based curry with tender chicken pieces",
+  "id": "4ccfda60-d31a-4108-8b88-e5e63b7d259e",
+  "image": "https://example.com/chicken-tikka-masala.jpg",
+  "ingredients": [
+    "chicken thighs",
+    "yogurt",
+    "garam masala",
+    "tomato sauce",
+    "heavy cream",
+    "onion",
+    "garlic",
+    "ginger",
+    "cumin",
+    "paprika",
+    "cayenne pepper"
+  ],
+  "instructions": "Marinate chicken in yogurt and spices, grill, then simmer in creamy tomato sauce.",
+  "number_of_rating": 34,
+  "nutritionalInfo": {
+    "calories": 420,
+    "carbs": 18,
+    "fat": 22,
+    "protein": 35
+  },
+  "servings": 6,
+  "share_url": "https://yourapp.com/recipes/2",
+  "tags": [
+    "Indian",
+    "Curry",
+    "Spicy",
+    "Comfort Food"
+  ],
+  "title": "Chicken Tikka Masala",
+  "total_score": 156
+}
