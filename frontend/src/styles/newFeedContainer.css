@@ -1,0 +1,19 @@
+#container {
+  display: flex;
+  width: 95%;
+  height: 95%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 26px;
+  color: black;
+  font-family: "BeVietNamPro_Bold";
+}
+
+#newFeed {
+  display: flex;
+  flex: 3;
+}
+
+#newFeedSideBar {
+  display: flex;
+  flex: 1;
+}

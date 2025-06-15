@@ -1,0 +1,29 @@
+.body {
+  display: flex;
+  width: 90%;
+  height: 750px;
+  background-color: antiquewhite;
+  margin: auto;
+  margin-top: 6vh;
+
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px 0 rgba(166, 172, 246, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.profile {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.newFeedArea {
+  display: flex;
+  flex: 5;
+  align-items: center;
+  justify-content: center;
+}

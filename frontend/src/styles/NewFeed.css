@@ -1,0 +1,107 @@
+/* Container tổng */
+#nf_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 5%;
+  box-sizing: border-box;
+  margin-top: 3%;
+  position: relative;
+}
+
+/* Tiêu đề */
+h2,
+h3 {
+  font-family: "BeVietNamPro_Bold";
+  color: rgb(70, 70, 70);
+  margin-bottom: 12px;
+}
+h2 {
+  font-size: 26px;
+}
+h3 {
+  font-size: 18px;
+}
+
+.categories_wrapper {
+  width: 660px;
+  overflow-x: auto;
+  padding: 8px 0;
+  scrollbar-color: #ccc transparent;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.categories_wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.categories_wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+.categories_wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.categories_container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: max-content;
+  scroll-behavior: smooth;
+}
+
+#newFeed_header {
+  display: flex;
+  align-items: center;
+  margin-top: 4%;
+  justify-content: space-between;
+}
+
+.next_button {
+  position: absolute;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  right: 17px;
+  top: 30%;
+  background-color: rgba(148, 165, 179, 0.3);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+.next_button img {
+  width: 20px;
+  height: 20px;
+}
+
+.next_button:hover {
+  background-color: rgb(56, 56, 56);
+}
+
+#view_all_area {
+  display: flex;
+  font-family: "BeVietNamPro_Bold";
+  align-items: center;
+}
+#view_all_area:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+#view_all_area img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  opacity: 0.7;
+}
+
+#content {
+  display: flex;
+  background-color: bisque;
+  height: 38%;
+  margin-top: 4%;
+}

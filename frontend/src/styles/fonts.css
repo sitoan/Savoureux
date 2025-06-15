@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Josefin_Sans";
+  src: url("../assets/FontsFamily/Josefin_Sans/static/JosefinSans-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BeVietNamPro_Bold";
+  src: url("../assets/FontsFamily/Be_Vietnam_Pro/BeVietnamPro-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BeVietNamPro_Black";
+  src: url("../assets/FontsFamily/Be_Vietnam_Pro/BeVietnamPro-Black.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobotoBold";
+  src: url("src/assets/FontsFamily/Roboto/static/Roboto_Condensed-Black.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
