@@ -10,17 +10,6 @@ import RecipePage from "./pages/RecipePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <AuthContextProvider>
-      <UserContextProvider>
-        <CategoryContextProvider>
-          <RecipeContextProvider>
-            <HomePage />
-          </RecipeContextProvider>
-        </CategoryContextProvider>
-      </UserContextProvider>
-    </AuthContextProvider>
-  </StrictMode>
   // <StrictMode>
   <BrowserRouter>
     <Routes>

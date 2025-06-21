@@ -2,7 +2,6 @@ import "../styles/newFeed.css";
 import "../styles/fonts.css";
 import nextRightArrow from "../assets/iconImages/nextrightArrow.png";
 import nextIcon from "../assets/iconImages/nextIcon.png";
-import rissotoImage from "../assets/foodImages/risotto.png";
 import { useNavigate } from "react-router-dom";
 import Category from "./Category";
 import RecipeCard from "./RecipeCard";
@@ -73,38 +72,6 @@ const NewFeed = () => {
       </div>
       <div className="content_wrapper" ref={recipeRef}>
         <div className="content_container">
-          <RecipeCard
-            id={sample.id}
-            title={sample.title}
-            image={sample.image}
-            description={sample.description}
-            avg_rating={sample.avg_rating}
-            onClick={() => handleClickCard(sample.id)}
-          />
-          <RecipeCard
-            id={sample.id}
-            title={sample.title}
-            image={sample.image}
-            description={sample.description}
-            avg_rating={sample.avg_rating}
-            onClick={() => handleClickCard(sample.id)}
-          />
-          <RecipeCard
-            id={sample.id}
-            title={sample.title}
-            image={sample.image}
-            description={sample.description}
-            avg_rating={sample.avg_rating}
-            onClick={() => handleClickCard(sample.id)}
-          />
-          <RecipeCard
-            id={sample.id}
-            title={sample.title}
-            image={sample.image}
-            description={sample.description}
-            avg_rating={sample.avg_rating}
-            onClick={() => handleClickCard(sample.id)}
-          />
           <RecipeCard
             id={sample.id}
             title={sample.title}
