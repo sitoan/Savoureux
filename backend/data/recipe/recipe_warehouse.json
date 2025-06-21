@@ -7,11 +7,11 @@
     "instructions": "Cook pasta, fry pancetta, mix eggs with cheese, combine all ingredients while hot.",
     "cooking_time": 25,
     "servings": 4,
-    "category": "Dinner",
+    "category": ["Pasta & Noodles","Meat Dishes"],
     "total_score": 87,
     "number_of_rating": 23,
     "avg_rating": 4.5,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 580,
       "protein": 28,
       "fat": 32,
@@ -38,11 +38,11 @@
     "instructions": "Marinate chicken in yogurt and spices, grill, then simmer in creamy tomato sauce.",
     "cooking_time": 60,
     "servings": 6,
-    "category": "Dinner",
+    "category": ["Indian Inspired","Meat Dishes"],
     "total_score": 156,
     "number_of_rating": 34,
     "avg_rating": 4.6,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 420,
       "protein": 35,
       "fat": 22,
@@ -73,11 +73,11 @@
     "instructions": "Mix dry ingredients, combine wet ingredients, fold together, cook on griddle until golden.",
     "cooking_time": 20,
     "servings": 4,
-    "category": "Breakfast",
+    "category": ["Breakfast"],
     "total_score": 95,
     "number_of_rating": 28,
     "avg_rating": 4.1,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 280,
       "protein": 8,
       "fat": 12,
@@ -100,11 +100,11 @@
     "instructions": "Make dressing by mixing anchovies, mayo, lemon, and seasonings. Toss with lettuce and toppings.",
     "cooking_time": 15,
     "servings": 4,
-    "category": "Salad",
+    "category": ["Salads"],
     "total_score": 67,
     "number_of_rating": 19,
     "avg_rating": 3.9,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 320,
       "protein": 12,
       "fat": 28,
@@ -131,11 +131,11 @@
     "instructions": "Slice beef thin, marinate, stir-fry with vegetables over high heat, add sauce.",
     "cooking_time": 25,
     "servings": 4,
-    "category": "Dinner",
+    "category": ["Asian Inspired","Meat Dishes"],
     "total_score": 78,
     "number_of_rating": 21,
     "avg_rating": 4.3,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 380,
       "protein": 32,
       "fat": 18,
@@ -158,11 +158,11 @@
     "instructions": "Cream butter and sugars, add eggs and vanilla, mix in dry ingredients, fold in chips, bake.",
     "cooking_time": 35,
     "servings": 24,
-    "category": "Dessert",
+    "category": ["Desserts & Baked Goods"],
     "total_score": 142,
     "number_of_rating": 38,
     "avg_rating": 4.7,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 185,
       "protein": 3,
       "fat": 8,
@@ -193,11 +193,11 @@
     "instructions": "Chop vegetables, crumble feta, toss with dressing made from olive oil, vinegar, and oregano.",
     "cooking_time": 10,
     "servings": 4,
-    "category": "Salad",
+    "category": ["Salads","Vegetarian"],
     "total_score": 58,
     "number_of_rating": 16,
     "avg_rating": 4.0,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 220,
       "protein": 8,
       "fat": 18,
@@ -220,11 +220,11 @@
     "instructions": "Season and grill fish, make slaw with cabbage and lime, assemble tacos with toppings.",
     "cooking_time": 30,
     "servings": 4,
-    "category": "Lunch",
+    "category": ["Mexican Inspired","Meat Dishes"],
     "total_score": 84,
     "number_of_rating": 22,
     "avg_rating": 4.4,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 340,
       "protein": 28,
       "fat": 12,
@@ -251,11 +251,11 @@
     "instructions": "Sauté mushrooms and onions, toast rice, gradually add warm broth while stirring, finish with cheese.",
     "cooking_time": 45,
     "servings": 4,
-    "category": "Dinner",
+    "category": ["Vegetarian"],
     "total_score": 91,
     "number_of_rating": 25,
     "avg_rating": 4.2,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 420,
       "protein": 12,
       "fat": 16,
@@ -278,11 +278,11 @@
     "instructions": "Rub pork with spices, slow cook until tender, shred and mix with BBQ sauce.",
     "cooking_time": 480,
     "servings": 8,
-    "category": "Dinner",
+    "category": ["Meat Dishes"],
     "total_score": 126,
     "number_of_rating": 31,
     "avg_rating": 4.5,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 520,
       "protein": 42,
       "fat": 28,
@@ -309,11 +309,11 @@
     "instructions": "Soak noodles, stir-fry shrimp and eggs, add noodles and sauce, toss with vegetables and peanuts.",
     "cooking_time": 35,
     "servings": 4,
-    "category": "Dinner",
+    "category": ["Pasta & Noodles","Asian Inspired"],
     "total_score": 103,
     "number_of_rating": 27,
     "avg_rating": 4.3,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 450,
       "protein": 22,
       "fat": 16,
@@ -340,11 +340,11 @@
     "instructions": "Whisk eggs with milk and spices, dip bread, cook in buttered pan until golden.",
     "cooking_time": 20,
     "servings": 4,
-    "category": "Breakfast",
+    "category": ["Breakfast"],
     "total_score": 72,
     "number_of_rating": 20,
     "avg_rating": 4.1,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 320,
       "protein": 12,
       "fat": 14,
@@ -367,11 +367,11 @@
     "instructions": "Brown beef with seasoning, warm taco shells, assemble with fresh toppings.",
     "cooking_time": 25,
     "servings": 6,
-    "category": "Dinner",
+    "category": ["Mexican Inspired","Meat Dishes"],
     "total_score": 89,
     "number_of_rating": 24,
     "avg_rating": 4.2,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 380,
       "protein": 24,
       "fat": 22,
@@ -398,11 +398,11 @@
     "instructions": "Slice tomatoes and mozzarella, arrange with basil leaves, drizzle with oil and vinegar.",
     "cooking_time": 10,
     "servings": 4,
-    "category": "Appetizer",
+    "category": ["Salads","Vegetarian"],
     "total_score": 65,
     "number_of_rating": 18,
     "avg_rating": 4.0,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 250,
       "protein": 16,
       "fat": 18,
@@ -425,11 +425,11 @@
     "instructions": "Mash bananas, cream butter and sugar, combine wet and dry ingredients, bake until golden.",
     "cooking_time": 75,
     "servings": 8,
-    "category": "Dessert",
+    "category": ["Desserts & Baked Goods","Breakfast"],
     "total_score": 108,
     "number_of_rating": 29,
     "avg_rating": 4.4,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 280,
       "protein": 5,
       "fat": 12,
@@ -456,11 +456,11 @@
     "instructions": "Season and cook chicken strips, sauté peppers and onions, serve with warm tortillas.",
     "cooking_time": 30,
     "servings": 4,
-    "category": "Dinner",
+    "category": ["Mexican Inspired","Meat Dishes"],
     "total_score": 96,
     "number_of_rating": 26,
     "avg_rating": 4.3,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 420,
       "protein": 32,
       "fat": 15,
@@ -483,11 +483,11 @@
     "instructions": "Sauté vegetables, add broth and seasonings, simmer until tender.",
     "cooking_time": 45,
     "servings": 6,
-    "category": "Soup",
+    "category": ["Soups & Stews","Vegetarian"],
     "total_score": 74,
     "number_of_rating": 21,
     "avg_rating": 3.8,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 180,
       "protein": 6,
       "fat": 2,
@@ -514,11 +514,11 @@
     "instructions": "Mix dry ingredients, cream butter and sugar, alternate wet and dry, bake and frost.",
     "cooking_time": 90,
     "servings": 12,
-    "category": "Dessert",
+    "category": ["Desserts & Baked Goods"],
     "total_score": 134,
     "number_of_rating": 35,
     "avg_rating": 4.6,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 420,
       "protein": 6,
       "fat": 18,
@@ -549,11 +549,11 @@
     "instructions": "Cook quinoa, cool, mix with chopped vegetables and herbs, dress with lemon and oil.",
     "cooking_time": 25,
     "servings": 4,
-    "category": "Salad",
+    "category": ["Salads","Vegetarian"],
     "total_score": 52,
     "number_of_rating": 15,
     "avg_rating": 3.7,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 320,
       "protein": 12,
       "fat": 14,
@@ -576,11 +576,11 @@
     "instructions": "Brown beef, sauté vegetables, add liquids and seasonings, simmer until tender.",
     "cooking_time": 180,
     "servings": 6,
-    "category": "Dinner",
+    "category": ["Soups & Stews","Meat Dishes"],
     "total_score": 118,
     "number_of_rating": 32,
     "avg_rating": 4.4,
-    "nutritionalInfo": {
+    "nutritional_info": {
       "calories": 480,
       "protein": 35,
       "fat": 18,

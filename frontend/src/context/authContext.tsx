@@ -2,17 +2,17 @@
 import { createContext, useContext, useState } from "react";
 
 interface AuthContextType {
-  user_id: number | null;
-  setuser_id: (id: number | null) => void;
+  userId: number | null;
+  setUserId: (id: number | null) => void;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [user_id, setuser_id] = useState<number | null>(null);
+  const [userId, setUserId] = useState<number | null>(null);
 
   return (
-    <AuthContext.Provider value={{ user_id, setuser_id }}>
+    <AuthContext.Provider value={{ userId, setUserId }}>
       {children}
     </AuthContext.Provider>
   );

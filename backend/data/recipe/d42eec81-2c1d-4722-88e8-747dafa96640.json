@@ -1,6 +1,9 @@
 {
   "avg_rating": 4.6,
-  "category": "Dinner",
+  "category": [
+    "Indian Inspired",
+    "Meat Dishes"
+  ],
   "comments": [
     {
       "text": "Best tikka masala I've ever made!",
@@ -17,7 +20,7 @@
   ],
   "cooking_time": 60,
   "description": "Creamy tomato-based curry with tender chicken pieces",
-  "id": "4ccfda60-d31a-4108-8b88-e5e63b7d259e",
+  "id": "d42eec81-2c1d-4722-88e8-747dafa96640",
   "image": "https://example.com/chicken-tikka-masala.jpg",
   "ingredients": [
     "chicken thighs",
@@ -35,6 +38,12 @@
   "instructions": "Marinate chicken in yogurt and spices, grill, then simmer in creamy tomato sauce.",
   "number_of_rating": 34,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 420,
     "carbs": 18,
     "fat": 22,

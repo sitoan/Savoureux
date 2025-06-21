@@ -1,6 +1,9 @@
 {
   "avg_rating": 4.3,
-  "category": "Dinner",
+  "category": [
+    "Asian Inspired",
+    "Meat Dishes"
+  ],
   "comments": [
     {
       "text": "Perfect weeknight dinner!",
@@ -9,7 +12,7 @@
   ],
   "cooking_time": 25,
   "description": "Quick and flavorful beef with vegetables in savory sauce",
-  "id": "cce44aae-a03b-42d1-bdec-a788c19e8d29",
+  "id": "1f971570-43ce-4389-a431-9a6c2dfa87d3",
   "image": "https://example.com/beef-stir-fry.jpg",
   "ingredients": [
     "beef sirloin",
@@ -25,6 +28,12 @@
   "instructions": "Slice beef thin, marinate, stir-fry with vegetables over high heat, add sauce.",
   "number_of_rating": 21,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 380,
     "carbs": 22,
     "fat": 18,

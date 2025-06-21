@@ -1,6 +1,8 @@
 {
   "avg_rating": 3.9,
-  "category": "Salad",
+  "category": [
+    "Salads"
+  ],
   "comments": [
     {
       "text": "Classic and perfect!",
@@ -13,7 +15,7 @@
   ],
   "cooking_time": 15,
   "description": "Crisp romaine lettuce with creamy caesar dressing",
-  "id": "a288d1ae-a989-4e00-ad13-a56df63fefd1",
+  "id": "3cc0abbc-d05c-44ed-99fa-07fa9bf58462",
   "image": "https://example.com/caesar-salad.jpg",
   "ingredients": [
     "romaine lettuce",
@@ -29,6 +31,12 @@
   "instructions": "Make dressing by mixing anchovies, mayo, lemon, and seasonings. Toss with lettuce and toppings.",
   "number_of_rating": 19,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 320,
     "carbs": 8,
     "fat": 28,

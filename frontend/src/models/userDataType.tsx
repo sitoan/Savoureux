@@ -39,9 +39,9 @@
 //   }[];
 // }
 
-export interface user_profile_type {
+export interface userProfileType {
   id: string;
-  username: string;
+  userName: string;
   email: string;
   avatar: string;
   preferences: {
@@ -50,39 +50,39 @@ export interface user_profile_type {
   };
 }
 
-export interface user_favorite_and_rating_type {
+export interface userFavoriteAndRatingType {
   favorites: string[];
   ratings: {
-    recipe_id: string;
+    recipeId: string;
     score: number;
   }[];
 }
 
-export interface user_meal_plans_type {
-  meal_plans: {
+export interface userMealPlansType {
+  mealPlans: {
     date: string;
     meals: {
       type: string;
-      recipe_id: string;
+      recipeId: string;
     }[];
   }[];
 }
 
-export interface user_comments_type {
+export interface userCommentType {
   comments: {
-    recipe_id: string;
+    recipeId: string;
     text: string;
     timestamp: string;
   }[];
 }
 
-export interface user_view_history_type {
-  view_history: {
-    recipe_id: {
-      view_count: number;
-      total_duration: number;
-      last_viewed_at: string;
-      just_viewed: {
+export interface userViewHistoryType {
+  viewHistory: {
+    recipeId: {
+      viewCount: number;
+      totalDuration: number;
+      lastViewedAt: string;
+      justViewed: {
         start: string;
         end: string;
         duration: number;

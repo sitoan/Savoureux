@@ -1,6 +1,9 @@
 {
   "avg_rating": 4.5,
-  "category": "Dinner",
+  "category": [
+    "Pasta & Noodles",
+    "Meat Dishes"
+  ],
   "comments": [
     {
       "text": "Absolutely delicious and authentic!",
@@ -13,7 +16,7 @@
   ],
   "cooking_time": 25,
   "description": "Classic Italian pasta with eggs, cheese, and pancetta",
-  "id": "807deb07-bc2e-478a-a8d7-755ae74d0469",
+  "id": "a5208cbe-f820-43c1-a910-8efac4e83277",
   "image": "https://example.com/spaghetti-carbonara.jpg",
   "ingredients": [
     "spaghetti",
@@ -26,6 +29,12 @@
   "instructions": "Cook pasta, fry pancetta, mix eggs with cheese, combine all ingredients while hot.",
   "number_of_rating": 23,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 580,
     "carbs": 48,
     "fat": 32,

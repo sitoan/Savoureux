@@ -1,6 +1,8 @@
 {
   "avg_rating": 4.7,
-  "category": "Dessert",
+  "category": [
+    "Desserts & Baked Goods"
+  ],
   "comments": [
     {
       "text": "Best cookie recipe ever!",
@@ -17,7 +19,7 @@
   ],
   "cooking_time": 35,
   "description": "Soft and chewy homemade chocolate chip cookies",
-  "id": "7c6ce637-e0b5-4042-b177-866169d6734c",
+  "id": "c35b0c4c-16a5-4ad3-9686-670232df5454",
   "image": "https://example.com/chocolate-chip-cookies.jpg",
   "ingredients": [
     "flour",
@@ -33,6 +35,12 @@
   "instructions": "Cream butter and sugars, add eggs and vanilla, mix in dry ingredients, fold in chips, bake.",
   "number_of_rating": 38,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 185,
     "carbs": 28,
     "fat": 8,

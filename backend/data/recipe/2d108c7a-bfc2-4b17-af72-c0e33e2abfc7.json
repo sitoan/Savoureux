@@ -1,6 +1,8 @@
 {
   "avg_rating": 4.2,
-  "category": "Dinner",
+  "category": [
+    "Vegetarian"
+  ],
   "comments": [
     {
       "text": "Restaurant quality at home!",
@@ -9,7 +11,7 @@
   ],
   "cooking_time": 45,
   "description": "Creamy Italian rice dish with mixed mushrooms",
-  "id": "1b6f5f99-4b64-489c-b488-7f051762a60f",
+  "id": "2d108c7a-bfc2-4b17-af72-c0e33e2abfc7",
   "image": "https://example.com/mushroom-risotto.jpg",
   "ingredients": [
     "arborio rice",
@@ -27,6 +29,12 @@
   "instructions": "Sauté mushrooms and onions, toast rice, gradually add warm broth while stirring, finish with cheese.",
   "number_of_rating": 25,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 420,
     "carbs": 58,
     "fat": 16,

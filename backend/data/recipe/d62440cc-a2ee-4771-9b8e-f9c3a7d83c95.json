@@ -1,6 +1,9 @@
 {
   "avg_rating": 4.0,
-  "category": "Salad",
+  "category": [
+    "Salads",
+    "Vegetarian"
+  ],
   "comments": [
     {
       "text": "So fresh and healthy!",
@@ -9,7 +12,7 @@
   ],
   "cooking_time": 10,
   "description": "Fresh Mediterranean salad with feta and olives",
-  "id": "38f86c0d-1161-4adc-98f5-4d2751d3d954",
+  "id": "d62440cc-a2ee-4771-9b8e-f9c3a7d83c95",
   "image": "https://example.com/greek-salad.jpg",
   "ingredients": [
     "tomatoes",
@@ -24,6 +27,12 @@
   "instructions": "Chop vegetables, crumble feta, toss with dressing made from olive oil, vinegar, and oregano.",
   "number_of_rating": 16,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 220,
     "carbs": 12,
     "fat": 18,
