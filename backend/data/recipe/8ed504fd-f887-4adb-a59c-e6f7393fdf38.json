@@ -1,6 +1,9 @@
 {
   "avg_rating": 4.2,
-  "category": "Dinner",
+  "category": [
+    "Mexican Inspired",
+    "Meat Dishes"
+  ],
   "comments": [
     {
       "text": "Family favorite!",
@@ -13,7 +16,7 @@
   ],
   "cooking_time": 25,
   "description": "Seasoned ground beef in crispy taco shells",
-  "id": "4cf29f05-4702-41c3-9d44-cacc845c70a0",
+  "id": "8ed504fd-f887-4adb-a59c-e6f7393fdf38",
   "image": "https://example.com/beef-tacos.jpg",
   "ingredients": [
     "ground beef",
@@ -28,6 +31,12 @@
   "instructions": "Brown beef with seasoning, warm taco shells, assemble with fresh toppings.",
   "number_of_rating": 24,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 380,
     "carbs": 24,
     "fat": 22,

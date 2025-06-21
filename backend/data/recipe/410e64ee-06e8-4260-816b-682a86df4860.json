@@ -1,6 +1,9 @@
 {
   "avg_rating": 4.4,
-  "category": "Dessert",
+  "category": [
+    "Desserts & Baked Goods",
+    "Breakfast"
+  ],
   "comments": [
     {
       "text": "Uses up overripe bananas perfectly!",
@@ -13,7 +16,7 @@
   ],
   "cooking_time": 75,
   "description": "Moist and sweet homemade banana bread",
-  "id": "4f3a8497-5a7c-4ea2-9387-3d93fcfc1ef2",
+  "id": "410e64ee-06e8-4260-816b-682a86df4860",
   "image": "https://example.com/banana-bread.jpg",
   "ingredients": [
     "ripe bananas",
@@ -29,6 +32,12 @@
   "instructions": "Mash bananas, cream butter and sugar, combine wet and dry ingredients, bake until golden.",
   "number_of_rating": 29,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 280,
     "carbs": 42,
     "fat": 12,

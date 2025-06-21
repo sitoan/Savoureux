@@ -1,6 +1,9 @@
 {
   "avg_rating": 4.4,
-  "category": "Dinner",
+  "category": [
+    "Soups & Stews",
+    "Meat Dishes"
+  ],
   "comments": [
     {
       "text": "Ultimate winter warmer!",
@@ -17,7 +20,7 @@
   ],
   "cooking_time": 180,
   "description": "Slow-cooked beef with vegetables in rich gravy",
-  "id": "ca03b16f-7169-4f13-b266-080aeedffdc7",
+  "id": "9a8923b6-4b5c-44f9-918b-ba91a7d942f9",
   "image": "https://example.com/beef-stew.jpg",
   "ingredients": [
     "beef chuck",
@@ -36,6 +39,12 @@
   "instructions": "Brown beef, sauté vegetables, add liquids and seasonings, simmer until tender.",
   "number_of_rating": 32,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 480,
     "carbs": 32,
     "fat": 18,

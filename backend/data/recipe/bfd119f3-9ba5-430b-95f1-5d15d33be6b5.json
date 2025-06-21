@@ -1,6 +1,9 @@
 {
   "avg_rating": 3.7,
-  "category": "Salad",
+  "category": [
+    "Salads",
+    "Vegetarian"
+  ],
   "comments": [
     {
       "text": "Great protein-packed salad!",
@@ -9,7 +12,7 @@
   ],
   "cooking_time": 25,
   "description": "Nutritious grain salad with vegetables and herbs",
-  "id": "a828b005-e357-488e-9998-cbcf65f877aa",
+  "id": "bfd119f3-9ba5-430b-95f1-5d15d33be6b5",
   "image": "https://example.com/quinoa-salad.jpg",
   "ingredients": [
     "quinoa",
@@ -25,6 +28,12 @@
   "instructions": "Cook quinoa, cool, mix with chopped vegetables and herbs, dress with lemon and oil.",
   "number_of_rating": 15,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 320,
     "carbs": 42,
     "fat": 14,

@@ -1,6 +1,8 @@
 {
   "avg_rating": 4.5,
-  "category": "Dinner",
+  "category": [
+    "Meat Dishes"
+  ],
   "comments": [
     {
       "text": "Falls apart perfectly!",
@@ -13,7 +15,7 @@
   ],
   "cooking_time": 480,
   "description": "Slow-cooked pork shoulder in tangy barbecue sauce",
-  "id": "fa1f5f01-ca40-427b-8fb7-548b88115e7b",
+  "id": "180c5ea8-9f09-406a-b61f-af5340169354",
   "image": "https://example.com/bbq-pulled-pork.jpg",
   "ingredients": [
     "pork shoulder",
@@ -29,6 +31,12 @@
   "instructions": "Rub pork with spices, slow cook until tender, shred and mix with BBQ sauce.",
   "number_of_rating": 31,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 520,
     "carbs": 18,
     "fat": 28,

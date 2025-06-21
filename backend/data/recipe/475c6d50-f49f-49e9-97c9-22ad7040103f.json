@@ -1,6 +1,9 @@
 {
   "avg_rating": 4.3,
-  "category": "Dinner",
+  "category": [
+    "Pasta & Noodles",
+    "Asian Inspired"
+  ],
   "comments": [
     {
       "text": "Authentic flavors!",
@@ -13,7 +16,7 @@
   ],
   "cooking_time": 35,
   "description": "Classic Thai stir-fried noodles with shrimp and peanuts",
-  "id": "73aaa654-afc8-4aef-92a1-28d9e89f3bd5",
+  "id": "475c6d50-f49f-49e9-97c9-22ad7040103f",
   "image": "https://example.com/pad-thai.jpg",
   "ingredients": [
     "rice noodles",
@@ -32,6 +35,12 @@
   "instructions": "Soak noodles, stir-fry shrimp and eggs, add noodles and sauce, toss with vegetables and peanuts.",
   "number_of_rating": 27,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 450,
     "carbs": 58,
     "fat": 16,

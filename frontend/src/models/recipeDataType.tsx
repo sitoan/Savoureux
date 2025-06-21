@@ -25,15 +25,15 @@
 //     share_url: string
 // }
 
-export interface recipe_info_type{
+export interface recipeInfoType{
     id: string;
     title: string;
     description: string;
     image: string;
     instructions: string;
-    cooking_time: number;
+    cookingTime: number;
     servings: number;
-    category: string;
+    category: string[];
     nutritionalInfo: {
         calories: number;
         protein: number;
@@ -41,20 +41,20 @@ export interface recipe_info_type{
         carbs: number
     };
     tags: string[];
-    share_url: string
+    shareUrl: string
 }
 
-export interface recipe_ingredient_type{
+export interface recipeIngredientType{
     ingredients: string[];
 }
 
-export interface recipe_rating_type{
-    total_score: number;
-    number_of_rating: number;
-    avg_rating: number;
+export interface recipeRatingType{
+    totalScore: number;
+    numberOfRating: number;
+    avgRating: number;
 }
 
-export interface recipe_comment_type{
+export interface recipeCommentType{
     comments: {
         text: string;
         username: string

@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify
+from script.controller.category_controller import category_controller
 from script.controller.recipe_controller import recipe_controller
 from script.controller.user_controller import user_controller
 from datetime import datetime
 
 app = Flask(__name__)
 
+category_ctrl = category_controller()
 recipe_ctrl = recipe_controller()
 user_ctrl = user_controller()
 
@@ -93,6 +95,13 @@ def get_user(user_id):
 
 #     user_ctrl.update_user(user_id, user)
 #     return ("View recorded", 200)
+
+
+# --- Category APIs ---
+@app.route("/category/all", methods=["GET"])
+def get_categories():
+    return jsonify(category_ctrl.get_categories())
+
 
 if __name__ == "__main__":
     app.run(debug=True)

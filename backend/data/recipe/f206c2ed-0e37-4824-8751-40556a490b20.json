@@ -1,6 +1,9 @@
 {
   "avg_rating": 4.3,
-  "category": "Dinner",
+  "category": [
+    "Mexican Inspired",
+    "Meat Dishes"
+  ],
   "comments": [
     {
       "text": "Sizzling and delicious!",
@@ -9,7 +12,7 @@
   ],
   "cooking_time": 30,
   "description": "Sizzling chicken and peppers with tortillas",
-  "id": "aad3bc02-1a0a-4cdf-a9f7-49c31e4039a2",
+  "id": "f206c2ed-0e37-4824-8751-40556a490b20",
   "image": "https://example.com/chicken-fajitas.jpg",
   "ingredients": [
     "chicken breast",
@@ -26,6 +29,12 @@
   "instructions": "Season and cook chicken strips, sauté peppers and onions, serve with warm tortillas.",
   "number_of_rating": 26,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 420,
     "carbs": 38,
     "fat": 15,

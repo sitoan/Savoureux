@@ -1,6 +1,8 @@
 {
   "avg_rating": 4.1,
-  "category": "Breakfast",
+  "category": [
+    "Breakfast"
+  ],
   "comments": [
     {
       "text": "Perfect weekend breakfast!",
@@ -9,7 +11,7 @@
   ],
   "cooking_time": 20,
   "description": "Classic breakfast with cinnamon and vanilla",
-  "id": "be01ae1a-25b0-4a9c-b01d-f4418da2cb84",
+  "id": "7e04d591-3ec4-4001-beed-f7d79e12e73c",
   "image": "https://example.com/french-toast.jpg",
   "ingredients": [
     "bread",
@@ -24,6 +26,12 @@
   "instructions": "Whisk eggs with milk and spices, dip bread, cook in buttered pan until golden.",
   "number_of_rating": 20,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 320,
     "carbs": 38,
     "fat": 14,

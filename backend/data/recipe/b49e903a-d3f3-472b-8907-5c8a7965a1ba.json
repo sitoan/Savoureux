@@ -1,6 +1,9 @@
 {
   "avg_rating": 3.8,
-  "category": "Soup",
+  "category": [
+    "Soups & Stews",
+    "Vegetarian"
+  ],
   "comments": [
     {
       "text": "Comforting and nutritious!",
@@ -13,7 +16,7 @@
   ],
   "cooking_time": 45,
   "description": "Hearty soup with mixed seasonal vegetables",
-  "id": "8641f6d9-1c58-4e38-a7e1-ac2863f71145",
+  "id": "b49e903a-d3f3-472b-8907-5c8a7965a1ba",
   "image": "https://example.com/vegetable-soup.jpg",
   "ingredients": [
     "carrots",
@@ -31,6 +34,12 @@
   "instructions": "Sauté vegetables, add broth and seasonings, simmer until tender.",
   "number_of_rating": 21,
   "nutritionalInfo": {
+    "calories": null,
+    "carbs": null,
+    "fat": null,
+    "protein": null
+  },
+  "nutritional_info": {
     "calories": 180,
     "carbs": 38,
     "fat": 2,
