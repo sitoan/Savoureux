@@ -1,10 +1,14 @@
+
 from flask import Flask, request, jsonify
+from flask_cors import CORS
+
 from script.controller.category_controller import category_controller
 from script.controller.recipe_controller import recipe_controller
 from script.controller.user_controller import user_controller
 from datetime import datetime
 
 app = Flask(__name__)
+CORS(app)
 
 category_ctrl = category_controller()
 recipe_ctrl = recipe_controller()

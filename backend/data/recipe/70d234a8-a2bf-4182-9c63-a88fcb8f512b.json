@@ -11,8 +11,8 @@
   ],
   "cooking_time": 20,
   "description": "Fluffy American-style breakfast pancakes",
-  "id": "ce01fa26-a36b-4c0f-8a92-d325f1f1f9fb",
-  "image": "https://example.com/pancakes.jpg",
+  "id": "70d234a8-a2bf-4182-9c63-a88fcb8f512b",
+  "image": "https://i.pinimg.com/736x/6e/19/57/6e19573c475c983b556d75c488fb02ce.jpg",
   "ingredients": [
     "flour",
     "eggs",
@@ -24,7 +24,7 @@
   ],
   "instructions": "Mix dry ingredients, combine wet ingredients, fold together, cook on griddle until golden.",
   "number_of_rating": 28,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,

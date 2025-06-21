@@ -26,7 +26,7 @@ export const useCategoryContext = () => {
 };
 
 // -------------------- Provider Component --------------------
-export const CategoryProvider = ({ children }: PropsWithChildren) => {
+export const CategoryContextProvider = ({ children }: PropsWithChildren) => {
   const [categories, setCategories] = useState<categoryDataType[]>([]);
 
   useEffect(() => {

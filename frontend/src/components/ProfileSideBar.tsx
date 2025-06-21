@@ -3,14 +3,16 @@ import "../styles/profileSideBar.css";
 import homeIcon from "../assets/iconImages/homeIcon.png";
 import profileIcon from "../assets/iconImages/profileIcon.png";
 import settingIcon from "../assets/iconImages/settingIcon.png";
-import avatar_sample from "../assets/otherImages/avatar_sample.jpg";
 import salad from "../assets/otherImages/salad.png";
+import { useUserProfileContext } from "../context/userContext";
 const ProfileSideBar = () => {
+  const {userProfile} = useUserProfileContext()
+  console.log(userProfile)
   return (
     <div id="profileSB_container">
       <div id="avatar_area">
-        <img src={avatar_sample} alt="" />
-        <h5>@chefJasper_P</h5>
+        <img src={userProfile?.avatar} alt="" />
+        <h5>{userProfile?.userName}</h5>
       </div>
 
       <div className="personal_setting_buttons" id="newfeed_area">

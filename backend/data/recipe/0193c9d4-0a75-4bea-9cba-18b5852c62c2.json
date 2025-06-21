@@ -12,8 +12,8 @@
   ],
   "cooking_time": 10,
   "description": "Fresh Mediterranean salad with feta and olives",
-  "id": "d62440cc-a2ee-4771-9b8e-f9c3a7d83c95",
-  "image": "https://example.com/greek-salad.jpg",
+  "id": "0193c9d4-0a75-4bea-9cba-18b5852c62c2",
+  "image": "https://i.pinimg.com/736x/53/b2/c0/53b2c09a0d164ec15152c0ffe736856f.jpg",
   "ingredients": [
     "tomatoes",
     "cucumber",
@@ -26,7 +26,7 @@
   ],
   "instructions": "Chop vegetables, crumble feta, toss with dressing made from olive oil, vinegar, and oregano.",
   "number_of_rating": 16,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,

@@ -12,8 +12,8 @@
   ],
   "cooking_time": 25,
   "description": "Nutritious grain salad with vegetables and herbs",
-  "id": "bfd119f3-9ba5-430b-95f1-5d15d33be6b5",
-  "image": "https://example.com/quinoa-salad.jpg",
+  "id": "d957a202-af94-4428-9dfc-7f328340a06f",
+  "image": "https://i.pinimg.com/736x/68/2b/dd/682bddfa23f57ec23b8aec2bfa9da75d.jpg",
   "ingredients": [
     "quinoa",
     "cucumber",
@@ -27,7 +27,7 @@
   ],
   "instructions": "Cook quinoa, cool, mix with chopped vegetables and herbs, dress with lemon and oil.",
   "number_of_rating": 15,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,

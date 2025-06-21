@@ -12,8 +12,8 @@
   ],
   "cooking_time": 25,
   "description": "Quick and flavorful beef with vegetables in savory sauce",
-  "id": "1f971570-43ce-4389-a431-9a6c2dfa87d3",
-  "image": "https://example.com/beef-stir-fry.jpg",
+  "id": "4de042b6-d48f-449b-8d22-b4ebda83a582",
+  "image": "https://i.pinimg.com/736x/5d/de/2b/5dde2b8e175ee99752f72d4d6d60b0b1.jpg",
   "ingredients": [
     "beef sirloin",
     "bell peppers",
@@ -27,7 +27,7 @@
   ],
   "instructions": "Slice beef thin, marinate, stir-fry with vegetables over high heat, add sauce.",
   "number_of_rating": 21,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,

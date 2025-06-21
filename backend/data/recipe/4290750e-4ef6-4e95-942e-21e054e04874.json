@@ -16,8 +16,8 @@
   ],
   "cooking_time": 25,
   "description": "Classic Italian pasta with eggs, cheese, and pancetta",
-  "id": "a5208cbe-f820-43c1-a910-8efac4e83277",
-  "image": "https://example.com/spaghetti-carbonara.jpg",
+  "id": "4290750e-4ef6-4e95-942e-21e054e04874",
+  "image": "https://i.pinimg.com/736x/e0/dd/71/e0dd715d3d7d74fb0bf6481b017e89ca.jpg",
   "ingredients": [
     "spaghetti",
     "eggs",
@@ -28,7 +28,7 @@
   ],
   "instructions": "Cook pasta, fry pancetta, mix eggs with cheese, combine all ingredients while hot.",
   "number_of_rating": 23,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,

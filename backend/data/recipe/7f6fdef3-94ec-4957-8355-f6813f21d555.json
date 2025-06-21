@@ -19,8 +19,8 @@
   ],
   "cooking_time": 35,
   "description": "Soft and chewy homemade chocolate chip cookies",
-  "id": "c35b0c4c-16a5-4ad3-9686-670232df5454",
-  "image": "https://example.com/chocolate-chip-cookies.jpg",
+  "id": "7f6fdef3-94ec-4957-8355-f6813f21d555",
+  "image": "https://i.pinimg.com/736x/26/fa/2f/26fa2fda58995d96010d696a0bd0aac2.jpg",
   "ingredients": [
     "flour",
     "butter",
@@ -34,7 +34,7 @@
   ],
   "instructions": "Cream butter and sugars, add eggs and vanilla, mix in dry ingredients, fold in chips, bake.",
   "number_of_rating": 38,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,

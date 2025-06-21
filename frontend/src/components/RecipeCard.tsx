@@ -11,7 +11,6 @@ interface CardInfor {
   onClick?: () => void;
 }
 const RecipeCard = ({
-  id,
   title,
   image,
   description,

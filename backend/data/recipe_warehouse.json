@@ -2,7 +2,7 @@
   {
     "title": "Spaghetti Carbonara",
     "description": "Classic Italian pasta with eggs, cheese, and pancetta",
-    "image": "https://example.com/spaghetti-carbonara.jpg",
+    "image": "https://i.pinimg.com/736x/e0/dd/71/e0dd715d3d7d74fb0bf6481b017e89ca.jpg",
     "ingredients": ["spaghetti", "eggs", "parmesan cheese", "pancetta", "black pepper", "garlic"],
     "instructions": "Cook pasta, fry pancetta, mix eggs with cheese, combine all ingredients while hot.",
     "cooking_time": 25,
@@ -33,7 +33,7 @@
   {
     "title": "Chicken Tikka Masala",
     "description": "Creamy tomato-based curry with tender chicken pieces",
-    "image": "https://example.com/chicken-tikka-masala.jpg",
+    "image": "https://i.pinimg.com/736x/96/e9/a5/96e9a5eee31448bff7b4bb23f85bfd28.jpg",
     "ingredients": ["chicken thighs", "yogurt", "garam masala", "tomato sauce", "heavy cream", "onion", "garlic", "ginger", "cumin", "paprika", "cayenne pepper"],
     "instructions": "Marinate chicken in yogurt and spices, grill, then simmer in creamy tomato sauce.",
     "cooking_time": 60,
@@ -68,7 +68,7 @@
   {
     "title": "Pancakes",
     "description": "Fluffy American-style breakfast pancakes",
-    "image": "https://example.com/pancakes.jpg",
+    "image": "https://i.pinimg.com/736x/6e/19/57/6e19573c475c983b556d75c488fb02ce.jpg",
     "ingredients": ["flour", "eggs", "milk", "sugar", "baking powder", "salt", "butter"],
     "instructions": "Mix dry ingredients, combine wet ingredients, fold together, cook on griddle until golden.",
     "cooking_time": 20,
@@ -95,7 +95,7 @@
   {
     "title": "Caesar Salad",
     "description": "Crisp romaine lettuce with creamy caesar dressing",
-    "image": "https://example.com/caesar-salad.jpg",
+    "image": "https://i.pinimg.com/736x/ec/29/77/ec29778102e2ace073e9d4db9d359f0d.jpg",
     "ingredients": ["romaine lettuce", "croutons", "parmesan cheese", "anchovies", "mayonnaise", "lemon juice", "worcestershire sauce", "garlic", "dijon mustard"],
     "instructions": "Make dressing by mixing anchovies, mayo, lemon, and seasonings. Toss with lettuce and toppings.",
     "cooking_time": 15,
@@ -126,7 +126,7 @@
   {
     "title": "Beef Stir Fry",
     "description": "Quick and flavorful beef with vegetables in savory sauce",
-    "image": "https://example.com/beef-stir-fry.jpg",
+    "image": "https://i.pinimg.com/736x/5d/de/2b/5dde2b8e175ee99752f72d4d6d60b0b1.jpg",
     "ingredients": ["beef sirloin", "bell peppers", "broccoli", "soy sauce", "oyster sauce", "garlic", "ginger", "cornstarch", "sesame oil"],
     "instructions": "Slice beef thin, marinate, stir-fry with vegetables over high heat, add sauce.",
     "cooking_time": 25,
@@ -153,7 +153,7 @@
   {
     "title": "Chocolate Chip Cookies",
     "description": "Soft and chewy homemade chocolate chip cookies",
-    "image": "https://example.com/chocolate-chip-cookies.jpg",
+    "image": "https://i.pinimg.com/736x/26/fa/2f/26fa2fda58995d96010d696a0bd0aac2.jpg",
     "ingredients": ["flour", "butter", "brown sugar", "white sugar", "eggs", "vanilla", "baking soda", "salt", "chocolate chips"],
     "instructions": "Cream butter and sugars, add eggs and vanilla, mix in dry ingredients, fold in chips, bake.",
     "cooking_time": 35,
@@ -188,7 +188,7 @@
   {
     "title": "Greek Salad",
     "description": "Fresh Mediterranean salad with feta and olives",
-    "image": "https://example.com/greek-salad.jpg",
+    "image": "https://i.pinimg.com/736x/53/b2/c0/53b2c09a0d164ec15152c0ffe736856f.jpg",
     "ingredients": ["tomatoes", "cucumber", "red onion", "feta cheese", "kalamata olives", "olive oil", "red wine vinegar", "oregano"],
     "instructions": "Chop vegetables, crumble feta, toss with dressing made from olive oil, vinegar, and oregano.",
     "cooking_time": 10,
@@ -215,7 +215,7 @@
   {
     "title": "Fish Tacos",
     "description": "Grilled fish with cabbage slaw in soft tortillas",
-    "image": "https://example.com/fish-tacos.jpg",
+    "image": "https://i.pinimg.com/736x/6e/d0/f8/6ed0f89669cec598d5367505f77cf2cf.jpg",
     "ingredients": ["white fish fillets", "corn tortillas", "cabbage", "lime", "cilantro", "sour cream", "hot sauce", "cumin", "chili powder", "garlic powder"],
     "instructions": "Season and grill fish, make slaw with cabbage and lime, assemble tacos with toppings.",
     "cooking_time": 30,
@@ -246,7 +246,7 @@
   {
     "title": "Mushroom Risotto",
     "description": "Creamy Italian rice dish with mixed mushrooms",
-    "image": "https://example.com/mushroom-risotto.jpg",
+    "image": "https://i.pinimg.com/736x/af/31/f9/af31f9aacd3134968b3656545ae36170.jpg",
     "ingredients": ["arborio rice", "mixed mushrooms", "vegetable broth", "white wine", "onion", "garlic", "parmesan cheese", "butter", "olive oil", "thyme", "parsley"],
     "instructions": "Sauté mushrooms and onions, toast rice, gradually add warm broth while stirring, finish with cheese.",
     "cooking_time": 45,
@@ -273,7 +273,7 @@
   {
     "title": "BBQ Pulled Pork",
     "description": "Slow-cooked pork shoulder in tangy barbecue sauce",
-    "image": "https://example.com/bbq-pulled-pork.jpg",
+    "image": "https://i.pinimg.com/736x/c6/cf/fe/c6cffeab908e290f1abe6e837bf6bedb.jpg",
     "ingredients": ["pork shoulder", "bbq sauce", "brown sugar", "paprika", "garlic powder", "onion powder", "cayenne pepper", "salt", "black pepper"],
     "instructions": "Rub pork with spices, slow cook until tender, shred and mix with BBQ sauce.",
     "cooking_time": 480,
@@ -304,7 +304,7 @@
   {
     "title": "Pad Thai",
     "description": "Classic Thai stir-fried noodles with shrimp and peanuts",
-    "image": "https://example.com/pad-thai.jpg",
+    "image": "https://i.pinimg.com/736x/5f/6a/c3/5f6ac3bc9c127712bff5451569abf497.jpg",
     "ingredients": ["rice noodles", "shrimp", "eggs", "bean sprouts", "green onions", "peanuts", "lime", "fish sauce", "tamarind paste", "palm sugar", "garlic", "chili flakes"],
     "instructions": "Soak noodles, stir-fry shrimp and eggs, add noodles and sauce, toss with vegetables and peanuts.",
     "cooking_time": 35,
@@ -335,7 +335,7 @@
   {
     "title": "French Toast",
     "description": "Classic breakfast with cinnamon and vanilla",
-    "image": "https://example.com/french-toast.jpg",
+    "image": "https://i.pinimg.com/736x/6d/7d/18/6d7d18266974659a8db01346b99728a3.jpg",
     "ingredients": ["bread", "eggs", "milk", "vanilla", "cinnamon", "sugar", "butter", "maple syrup"],
     "instructions": "Whisk eggs with milk and spices, dip bread, cook in buttered pan until golden.",
     "cooking_time": 20,
@@ -362,7 +362,7 @@
   {
     "title": "Beef Tacos",
     "description": "Seasoned ground beef in crispy taco shells",
-    "image": "https://example.com/beef-tacos.jpg",
+    "image": "https://i.pinimg.com/736x/22/bd/86/22bd86d22838ec680bf32ca902fab9b4.jpg",
     "ingredients": ["ground beef", "taco shells", "lettuce", "tomatoes", "cheese", "sour cream", "onion", "taco seasoning"],
     "instructions": "Brown beef with seasoning, warm taco shells, assemble with fresh toppings.",
     "cooking_time": 25,
@@ -393,7 +393,7 @@
   {
     "title": "Caprese Salad",
     "description": "Fresh mozzarella, tomatoes, and basil with balsamic",
-    "image": "https://example.com/caprese-salad.jpg",
+    "image": "https://i.pinimg.com/736x/b1/11/9b/b1119b8c49f501da0f2c4dba0078608e.jpg",
     "ingredients": ["fresh mozzarella", "tomatoes", "fresh basil", "balsamic vinegar", "olive oil", "salt", "black pepper"],
     "instructions": "Slice tomatoes and mozzarella, arrange with basil leaves, drizzle with oil and vinegar.",
     "cooking_time": 10,
@@ -420,7 +420,7 @@
   {
     "title": "Banana Bread",
     "description": "Moist and sweet homemade banana bread",
-    "image": "https://example.com/banana-bread.jpg",
+    "image": "https://i.pinimg.com/736x/2b/c0/24/2bc024b4b062199c62158e62b5e1f2d9.jpg",
     "ingredients": ["ripe bananas", "flour", "sugar", "butter", "eggs", "baking soda", "salt", "vanilla", "walnuts"],
     "instructions": "Mash bananas, cream butter and sugar, combine wet and dry ingredients, bake until golden.",
     "cooking_time": 75,
@@ -451,7 +451,7 @@
   {
     "title": "Chicken Fajitas",
     "description": "Sizzling chicken and peppers with tortillas",
-    "image": "https://example.com/chicken-fajitas.jpg",
+    "image": "https://i.pinimg.com/736x/e7/22/bb/e722bb52dcf0d304a594bf5d20805f8e.jpg",
     "ingredients": ["chicken breast", "bell peppers", "onions", "flour tortillas", "lime", "cumin", "chili powder", "paprika", "garlic", "olive oil"],
     "instructions": "Season and cook chicken strips, sauté peppers and onions, serve with warm tortillas.",
     "cooking_time": 30,
@@ -478,7 +478,7 @@
   {
     "title": "Vegetable Soup",
     "description": "Hearty soup with mixed seasonal vegetables",
-    "image": "https://example.com/vegetable-soup.jpg",
+    "image": "https://i.pinimg.com/736x/ee/90/c4/ee90c44274082e70c8e48fcd0765686c.jpg",
     "ingredients": ["carrots", "celery", "onions", "potatoes", "green beans", "corn", "vegetable broth", "tomatoes", "herbs", "garlic", "bay leaves"],
     "instructions": "Sauté vegetables, add broth and seasonings, simmer until tender.",
     "cooking_time": 45,
@@ -509,7 +509,7 @@
   {
     "title": "Chocolate Cake",
     "description": "Rich and moist chocolate layer cake",
-    "image": "https://example.com/chocolate-cake.jpg",
+    "image": "https://i.pinimg.com/736x/f7/06/b5/f706b57706ab60ad29185037cf6d0006.jpg",
     "ingredients": ["flour", "cocoa powder", "sugar", "eggs", "butter", "baking powder", "baking soda", "vanilla", "buttermilk", "chocolate frosting"],
     "instructions": "Mix dry ingredients, cream butter and sugar, alternate wet and dry, bake and frost.",
     "cooking_time": 90,
@@ -544,7 +544,7 @@
   {
     "title": "Quinoa Salad",
     "description": "Nutritious grain salad with vegetables and herbs",
-    "image": "https://example.com/quinoa-salad.jpg",
+    "image": "https://i.pinimg.com/736x/68/2b/dd/682bddfa23f57ec23b8aec2bfa9da75d.jpg",
     "ingredients": ["quinoa", "cucumber", "cherry tomatoes", "red onion", "parsley", "mint", "lemon juice", "olive oil", "feta cheese"],
     "instructions": "Cook quinoa, cool, mix with chopped vegetables and herbs, dress with lemon and oil.",
     "cooking_time": 25,
@@ -571,7 +571,7 @@
   {
     "title": "Beef Stew",
     "description": "Slow-cooked beef with vegetables in rich gravy",
-    "image": "https://example.com/beef-stew.jpg",
+    "image": "https://i.pinimg.com/736x/a3/9e/74/a39e748901909fa688af85dd286d19cf.jpg", 
     "ingredients": ["beef chuck", "potatoes", "carrots", "onions", "celery", "beef broth", "tomato paste", "red wine", "thyme", "bay leaves", "flour", "garlic"],
     "instructions": "Brown beef, sauté vegetables, add liquids and seasonings, simmer until tender.",
     "cooking_time": 180,

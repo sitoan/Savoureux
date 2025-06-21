@@ -16,8 +16,8 @@
   ],
   "cooking_time": 25,
   "description": "Seasoned ground beef in crispy taco shells",
-  "id": "8ed504fd-f887-4adb-a59c-e6f7393fdf38",
-  "image": "https://example.com/beef-tacos.jpg",
+  "id": "5b79e62a-4ffa-476e-9c65-3fc76c447962",
+  "image": "https://i.pinimg.com/736x/22/bd/86/22bd86d22838ec680bf32ca902fab9b4.jpg",
   "ingredients": [
     "ground beef",
     "taco shells",
@@ -30,7 +30,7 @@
   ],
   "instructions": "Brown beef with seasoning, warm taco shells, assemble with fresh toppings.",
   "number_of_rating": 24,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,

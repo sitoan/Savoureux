@@ -1,49 +1,23 @@
 import "../styles/newFeed.css";
 import "../styles/fonts.css";
-import vietnamese from "../assets/categoryImages/vietnamese.png";
-import chinese from "../assets/categoryImages/chinese.png";
-import italian from "../assets/categoryImages/italian.png";
-import usuk from "../assets/categoryImages/usuk.png";
-import sweet from "../assets/categoryImages/sweet.png";
-import drink from "../assets/categoryImages/drink.png";
 import nextRightArrow from "../assets/iconImages/nextrightArrow.png";
 import nextIcon from "../assets/iconImages/nextIcon.png";
-import rissotoImage from "../assets/foodImages/risotto.png";
 
 import Category from "./Category";
 import RecipeCard from "./RecipeCard";
 import { useRef } from "react";
-interface CardInfor {
-  id: string;
-  title: string;
-  image: string;
-  description: string;
-  avg_rating: number;
-  onClick?: () => void;
-}
+import { useCategoryContext } from "../context/categoryContext";
+import {
+  useRecipeInfoContext,
+  useRecipeRatingContext,
+} from "../context/recipeContext";
 
-const sample: CardInfor = {
-  id: "5a902bbf-5b69-4fd5-a4bb-efb4c973a25f",
-  title: "Mushroom Risotto",
-  image: rissotoImage,
-  description: "Creamy Italian rice dish with mixed mushrooms",
-  avg_rating: 4,
-};
 
 const NewFeed = () => {
-  const categories = [
-    { src: vietnamese, title: "Vietnamese" },
-    { src: italian, title: "Italian" },
-    { src: chinese, title: "Chinese" },
-    { src: usuk, title: "USUK" },
-    { src: sweet, title: "Sweet" },
-    { src: drink, title: "Drink" },
-    { src: drink, title: "Drink" },
-    { src: drink, title: "Drink" },
-    { src: drink, title: "Drink" },
-  ];
+  const { categories } = useCategoryContext();
   const scrollRef = useRef<HTMLDivElement>(null);
-
+  const { recipeRatingMap } = useRecipeRatingContext();
+  const { recipeInfoMap } = useRecipeInfoContext();
   const handleNextClick = () => {
     const container = scrollRef.current;
     if (container) {
@@ -73,7 +47,7 @@ const NewFeed = () => {
       <div className="categories_wrapper" ref={scrollRef}>
         <div className="categories_container">
           {categories.map((item, index) => (
-            <Category key={index} image={item.src} title={item.title} />
+            <Category key={index} image={item.image} title={item.title} />
           ))}
         </div>
       </div>
@@ -86,47 +60,20 @@ const NewFeed = () => {
       </div>
       <div className="content_wrapper" ref={scrollRef}>
         <div className="content_container">
-          <RecipeCard
-            id={sample.id}
-            title={sample.title}
-            image={sample.image}
-            description={sample.description}
-            avg_rating={sample.avg_rating}
-            onClick={() => handleClickCard(sample.id)}
-          />
-
-          <RecipeCard
-            id={sample.id}
-            title={sample.title}
-            image={sample.image}
-            description={sample.description}
-            avg_rating={sample.avg_rating}
-            onClick={() => handleClickCard(sample.id)}
-          />
-          <RecipeCard
-            id={sample.id}
-            title={sample.title}
-            image={sample.image}
-            description={sample.description}
-            avg_rating={sample.avg_rating}
-            onClick={() => handleClickCard(sample.id)}
-          />
-          <RecipeCard
-            id={sample.id}
-            title={sample.title}
-            image={sample.image}
-            description={sample.description}
-            avg_rating={sample.avg_rating}
-            onClick={() => handleClickCard(sample.id)}
-          />
-          <RecipeCard
-            id={sample.id}
-            title={sample.title}
-            image={sample.image}
-            description={sample.description}
-            avg_rating={sample.avg_rating}
-            onClick={() => handleClickCard(sample.id)}
-          />
+          {Object.entries(recipeInfoMap).map(([id, info]) => {
+            const rating = recipeRatingMap[id];
+            return (
+              <RecipeCard
+                key={id}
+                id={id}
+                title={info.title}
+                image={info.image}
+                description={info.description}
+                avg_rating={rating?.avgRating || 0}
+                onClick={() => handleClickCard(id)}
+              />
+            );
+          })}
         </div>
       </div>
       <div className="next-button-category" onClick={handleNextClick}>
