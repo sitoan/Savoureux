@@ -1,0 +1,116 @@
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  padding: 50px 150px;
+
+  /* background-color: #ffffff; */
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  font-family: "Segoe UI", sans-serif;
+  overflow-y: hidden;
+}
+.recipe-container img {
+  width: 300px;
+  height: 300px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.recipe-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #333;
+}
+
+.recipe-image {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.recipe-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 16px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.recipe-meta {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.recipe-section {
+  margin-bottom: 24px;
+}
+
+.recipe-section h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  background-color: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.ingredient-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px 20px;
+  font-size: 15px;
+  color: #333;
+}
+
+.ingredient-list li {
+  background-color: #f9f9f9;
+  padding: 10px 14px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.2s ease;
+}
+
+.ingredient-list li:hover {
+  background-color: #eef6ff;
+  cursor: pointer;
+}
+
+.instruction-section h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+.instruction-section p {
+  color: #333;
+  line-height: 1.6;
+}
