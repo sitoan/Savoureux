@@ -4,7 +4,7 @@
   align-items: center;
   margin: 0 15px;
   width: 160px;
-  height: 90%;
+  height: 260px; /* height cố định sẽ đẹp hơn dùng % */
   border-radius: 32px;
   background-color: rgba(243, 249, 255, 0.7); /* màu nền nhẹ */
   backdrop-filter: blur(10px);
@@ -23,8 +23,12 @@
 .recipe-card > img {
   margin-top: 5px;
   width: 100%;
-  height: 50%;
+  height: 120px; /* hoặc 140px */
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  object-fit: cover;
 }
+
 .recipe-card > h5 {
 }
 .recipe-card-description {
@@ -43,7 +47,11 @@
 
 .recipe-card-footer {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 90%;
+  margin-top: auto; /* đẩy footer xuống dưới */
+  margin-bottom: 12px;
 }
 .recipe-card-footer > .rating {
   display: flex;

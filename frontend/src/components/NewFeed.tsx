@@ -11,11 +11,12 @@ import {
   useRecipeInfoContext,
   useRecipeRatingContext,
 } from "../context/recipeContext";
-
+import { useUserFavoriteAndRatingContext } from "../context/userContext";
 
 const NewFeed = () => {
   const { categories } = useCategoryContext();
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { userFavoriteAndRating } = useUserFavoriteAndRatingContext();
   const { recipeRatingMap } = useRecipeRatingContext();
   const { recipeInfoMap } = useRecipeInfoContext();
   const handleNextClick = () => {
@@ -52,16 +53,21 @@ const NewFeed = () => {
         </div>
       </div>
       <div id="newFeed_header">
-        <h3>All items</h3>
+        <h3>For you</h3>
         <div id="view_all_area">
-          <h5>View all</h5>
+          <h5>Discovery</h5>
           <img src={nextIcon} alt="" />
         </div>
       </div>
       <div className="content_wrapper" ref={scrollRef}>
         <div className="content_container">
-          {Object.entries(recipeInfoMap).map(([id, info]) => {
+          {userFavoriteAndRating?.favorites.map((id) => {
+            const info = recipeInfoMap[id];
             const rating = recipeRatingMap[id];
+
+            // Nếu recipe không tồn tại trong map thì bỏ qua
+            if (!info) return null;
+
             return (
               <RecipeCard
                 key={id}

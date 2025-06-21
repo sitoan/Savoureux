@@ -53,5 +53,8 @@ pids/
 *.seed
 *.pid.lock
 
+package.json
+package-lock.json
+
 # Misc
 *.tgz
