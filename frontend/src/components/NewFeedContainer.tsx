@@ -1,6 +1,5 @@
 import "../styles/newFeedContainer.css";
 import NewFeed from "./NewFeed";
-import NewFeedSideBar from "./NewFeedSideBar";
 const NewFeedContainer = () => {
   return (
     <div id="container">

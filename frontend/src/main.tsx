@@ -10,12 +10,23 @@ import RecipePage from "./pages/RecipePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <AuthContextProvider>
+      <UserContextProvider>
+        <CategoryContextProvider>
+          <RecipeContextProvider>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/recipe/:id" element={<RecipePage />} />
+              </Routes>
+            </BrowserRouter>
+          </RecipeContextProvider>
+        </CategoryContextProvider>
+      </UserContextProvider>
+    </AuthContextProvider>
+  </StrictMode>
   // <StrictMode>
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/recipe/:id" element={<RecipePage />} />
-    </Routes>
-  </BrowserRouter>
+
   // </StrictMode>
 );

@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import type { RecipeSummary } from "../models/recipeDataType";
 import "../styles/recipeDetail.css";
 
