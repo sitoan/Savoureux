@@ -6,6 +6,8 @@ import { AuthContextProvider } from "./context/authContext";
 import { UserContextProvider } from "./context/userContext";
 import { CategoryContextProvider } from "./context/categoryContext";
 import { RecipeContextProvider } from "./context/recipeContext";
+import RecipePage from "./pages/RecipePage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -19,4 +21,12 @@ createRoot(document.getElementById("root")!).render(
       </UserContextProvider>
     </AuthContextProvider>
   </StrictMode>
+  // <StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/recipe/:id" element={<RecipePage />} />
+    </Routes>
+  </BrowserRouter>
+  // </StrictMode>
 );
