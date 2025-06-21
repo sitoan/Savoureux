@@ -18,7 +18,7 @@ DEFAULT_RECIPE_TEMPLATE = {
     "total_score": 0,
     "number_of_rating": 0,
     "avg_rating": 0.0,
-    "nutritionalInfo": {
+    "nutrition_info": {
         "calories": None,
         "protein": None,
         "fat": None,

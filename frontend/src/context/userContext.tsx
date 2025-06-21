@@ -80,7 +80,8 @@ export const useUserViewHistoryContext = () => {
 
 // ---------------- Provider component ----------------
 export const UserContextProvider = ({ children }: PropsWithChildren) => {
-  const { userId } = useAuth();
+  // const { userId } = useAuth();
+  const  userId  = "f50967e4-24af-439a-83de-f4b411001c0c";
 
   const [userProfile, setUserProfile] = useState<userProfileType | null>(null);
   const [userFavoriteAndRating, setUserFavoriteAndRating] = useState<userFavoriteAndRatingType | null>(null);

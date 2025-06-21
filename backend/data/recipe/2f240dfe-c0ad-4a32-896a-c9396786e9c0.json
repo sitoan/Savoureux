@@ -15,8 +15,8 @@
   ],
   "cooking_time": 480,
   "description": "Slow-cooked pork shoulder in tangy barbecue sauce",
-  "id": "180c5ea8-9f09-406a-b61f-af5340169354",
-  "image": "https://example.com/bbq-pulled-pork.jpg",
+  "id": "2f240dfe-c0ad-4a32-896a-c9396786e9c0",
+  "image": "https://i.pinimg.com/736x/c6/cf/fe/c6cffeab908e290f1abe6e837bf6bedb.jpg",
   "ingredients": [
     "pork shoulder",
     "bbq sauce",
@@ -30,7 +30,7 @@
   ],
   "instructions": "Rub pork with spices, slow cook until tender, shred and mix with BBQ sauce.",
   "number_of_rating": 31,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,

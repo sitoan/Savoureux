@@ -12,8 +12,8 @@
   ],
   "cooking_time": 30,
   "description": "Sizzling chicken and peppers with tortillas",
-  "id": "f206c2ed-0e37-4824-8751-40556a490b20",
-  "image": "https://example.com/chicken-fajitas.jpg",
+  "id": "34d73bee-7f50-4081-ac3a-5bc80f99e007",
+  "image": "https://i.pinimg.com/736x/e7/22/bb/e722bb52dcf0d304a594bf5d20805f8e.jpg",
   "ingredients": [
     "chicken breast",
     "bell peppers",
@@ -28,7 +28,7 @@
   ],
   "instructions": "Season and cook chicken strips, sauté peppers and onions, serve with warm tortillas.",
   "number_of_rating": 26,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,

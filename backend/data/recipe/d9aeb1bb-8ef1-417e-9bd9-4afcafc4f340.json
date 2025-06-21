@@ -11,8 +11,8 @@
   ],
   "cooking_time": 20,
   "description": "Classic breakfast with cinnamon and vanilla",
-  "id": "7e04d591-3ec4-4001-beed-f7d79e12e73c",
-  "image": "https://example.com/french-toast.jpg",
+  "id": "d9aeb1bb-8ef1-417e-9bd9-4afcafc4f340",
+  "image": "https://i.pinimg.com/736x/6d/7d/18/6d7d18266974659a8db01346b99728a3.jpg",
   "ingredients": [
     "bread",
     "eggs",
@@ -25,7 +25,7 @@
   ],
   "instructions": "Whisk eggs with milk and spices, dip bread, cook in buttered pan until golden.",
   "number_of_rating": 20,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,

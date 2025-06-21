@@ -1,11 +1,5 @@
 import "../styles/newFeed.css";
 import "../styles/fonts.css";
-import vietnamese from "../assets/categoryImages/vietnamese.png";
-import chinese from "../assets/categoryImages/chinese.png";
-import italian from "../assets/categoryImages/italian.png";
-import usuk from "../assets/categoryImages/usuk.png";
-import sweet from "../assets/categoryImages/sweet.png";
-import drink from "../assets/categoryImages/drink.png";
 import nextRightArrow from "../assets/iconImages/nextrightArrow.png";
 import nextIcon from "../assets/iconImages/nextIcon.png";
 import rissotoImage from "../assets/foodImages/risotto.png";
@@ -13,22 +7,11 @@ import { useNavigate } from "react-router-dom";
 import Category from "./Category";
 import RecipeCard from "./RecipeCard";
 import { useRef } from "react";
-interface CardInfor {
-  id: string;
-  title: string;
-  image: string;
-  description: string;
-  avg_rating: number;
-  onClick?: () => void;
-}
-
-const sample: CardInfor = {
-  id: "5a902bbf-5b69-4fd5-a4bb-efb4c973a25f",
-  title: "Mushroom Risotto",
-  image: rissotoImage,
-  description: "Creamy Italian rice dish with mixed mushrooms",
-  avg_rating: 4,
-};
+import { useCategoryContext } from "../context/categoryContext";
+import {
+  useRecipeInfoContext,
+  useRecipeRatingContext,
+} from "../context/recipeContext";
 
 const NewFeed = () => {
   const categories = [
@@ -76,7 +59,7 @@ const NewFeed = () => {
       <div className="categories_wrapper" ref={categoryRef}>
         <div className="categories_container">
           {categories.map((item, index) => (
-            <Category key={index} image={item.src} title={item.title} />
+            <Category key={index} image={item.image} title={item.title} />
           ))}
         </div>
       </div>

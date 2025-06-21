@@ -16,8 +16,8 @@
   ],
   "cooking_time": 75,
   "description": "Moist and sweet homemade banana bread",
-  "id": "410e64ee-06e8-4260-816b-682a86df4860",
-  "image": "https://example.com/banana-bread.jpg",
+  "id": "9c39fae1-dc1d-40bb-aad5-6b8e3f92fbd6",
+  "image": "https://i.pinimg.com/736x/2b/c0/24/2bc024b4b062199c62158e62b5e1f2d9.jpg",
   "ingredients": [
     "ripe bananas",
     "flour",
@@ -31,7 +31,7 @@
   ],
   "instructions": "Mash bananas, cream butter and sugar, combine wet and dry ingredients, bake until golden.",
   "number_of_rating": 29,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,

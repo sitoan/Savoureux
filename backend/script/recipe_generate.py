@@ -12,8 +12,9 @@ headers = {
   'Content-Type': 'application/json'
 }
 
-with open("data/recipe/recipe_warehouse.json", "r", encoding="utf-8") as f:
+with open("../data/recipe_warehouse.json", "r", encoding="utf-8") as f:
     payload = json.load(f)
+    print(len(payload))
     for recipe in payload:
         response = requests.request("POST", url, headers=headers, data=json.dumps(recipe))
         print(response.text)

@@ -20,8 +20,8 @@
   ],
   "cooking_time": 60,
   "description": "Creamy tomato-based curry with tender chicken pieces",
-  "id": "d42eec81-2c1d-4722-88e8-747dafa96640",
-  "image": "https://example.com/chicken-tikka-masala.jpg",
+  "id": "12cfd8b5-e677-4db2-9e8e-4267a13be051",
+  "image": "https://i.pinimg.com/736x/96/e9/a5/96e9a5eee31448bff7b4bb23f85bfd28.jpg",
   "ingredients": [
     "chicken thighs",
     "yogurt",
@@ -37,7 +37,7 @@
   ],
   "instructions": "Marinate chicken in yogurt and spices, grill, then simmer in creamy tomato sauce.",
   "number_of_rating": 34,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,

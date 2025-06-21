@@ -16,8 +16,8 @@
   ],
   "cooking_time": 35,
   "description": "Classic Thai stir-fried noodles with shrimp and peanuts",
-  "id": "475c6d50-f49f-49e9-97c9-22ad7040103f",
-  "image": "https://example.com/pad-thai.jpg",
+  "id": "371aa6c3-48f6-43f9-b4e9-aa9e54bbbf49",
+  "image": "https://i.pinimg.com/736x/5f/6a/c3/5f6ac3bc9c127712bff5451569abf497.jpg",
   "ingredients": [
     "rice noodles",
     "shrimp",
@@ -34,7 +34,7 @@
   ],
   "instructions": "Soak noodles, stir-fry shrimp and eggs, add noodles and sauce, toss with vegetables and peanuts.",
   "number_of_rating": 27,
-  "nutritionalInfo": {
+  "nutrition_info": {
     "calories": null,
     "carbs": null,
     "fat": null,
