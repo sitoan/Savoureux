@@ -28,9 +28,12 @@
   border-top-right-radius: 32px;
   object-fit: cover;
 }
+<<<<<<< HEAD
 
 .recipe-card > h5 {
 }
+=======
+>>>>>>> 6935c476f4ff2e333ac011eaa70276db34b85291
 .recipe-card-description {
   display: flex;
   width: 80%;

@@ -1,0 +1,33 @@
+.body {
+  display: flex;
+  width: 90%;
+  height: 750px;
+  background-color: antiquewhite;
+  margin: auto;
+  margin-top: 6vh;
+
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px 0 rgba(166, 172, 246, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.profile {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipeArea {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* đẩy nội dung lên trên */
+  overflow-y: auto; /* để nội dung dài có thể cuộn */
+  height: 100%; /* phải có chiều cao để cuộn trong vùng .body */
+  /* padding: 24px; */
+  margin-left: 30px;
+}

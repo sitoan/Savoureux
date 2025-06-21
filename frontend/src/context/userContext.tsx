@@ -12,7 +12,6 @@ import type {
   userMealPlansType,
   userViewHistoryType,
 } from "../models/userDataType";
-import { useAuth } from "./authContext";
 
 // ---------------- Context types ----------------
 interface UserProfileContextType {
