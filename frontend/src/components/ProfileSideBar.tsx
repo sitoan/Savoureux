@@ -6,6 +6,7 @@ import settingIcon from "../assets/iconImages/settingIcon.png";
 import salad from "../assets/otherImages/salad.png";
 import { useEffect, useState } from "react";
 import { useAuth } from "../context/authContext";
+import { useNavigate } from "react-router-dom";
 
 interface userProfileType {
   id: string;
@@ -18,12 +19,10 @@ interface userProfileType {
   };
 }
 
-
 const ProfileSideBar = () => {
-
-  const {userId} = useAuth();
+  const { userId } = useAuth();
   const [userProfile, setUserProfile] = useState<userProfileType | null>(null);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchUserProfile = async () => {
       const response = await fetch("http://127.0.0.1:5000/user/" + userId);
