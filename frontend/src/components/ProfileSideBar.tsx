@@ -40,7 +40,11 @@ const ProfileSideBar = () => {
         <h5>{userProfile?.userName}</h5>
       </div>
 
-      <div className="personal_setting_buttons" id="newfeed_area">
+      <div
+        className="personal_setting_buttons"
+        id="newfeed_area"
+        onClick={() => navigate("/")}
+      >
         <div className="icon_wrapper">
           <img src={homeIcon} alt="" />
         </div>
@@ -50,7 +54,7 @@ const ProfileSideBar = () => {
         <div className="icon_wrapper">
           <img src={profileIcon} alt="" />
         </div>
-        <h6>Personal recipe</h6> 
+        <h6>Personal recipe</h6>
       </div>
       <div className="personal_setting_buttons" id="setting_area">
         <div className="icon_wrapper">
