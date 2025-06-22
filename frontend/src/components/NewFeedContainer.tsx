@@ -6,7 +6,6 @@ const NewFeedContainer = () => {
       <div id="newFeed">
         <NewFeed />
       </div>
-      <div id="newFeedSideBar">{/* <NewFeedSideBar /> */}</div>
     </div>
   );
 };
