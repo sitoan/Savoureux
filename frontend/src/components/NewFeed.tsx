@@ -8,14 +8,12 @@ import RecipeCard from "./RecipeCard";
 import { useEffect, useRef, useState } from "react";
 import { useAuth } from "../context/authContext";
 
-
 interface categoryType {
   title: string;
   image: string;
 }
 
-
-interface recipeInfo{
+interface recipeInfo {
   id: string;
   title: string;
   image: string;
@@ -24,19 +22,21 @@ interface recipeInfo{
 }
 
 const NewFeed = () => {
-
-  const {userId} = useAuth();
+  const { userId } = useAuth();
   const categoryRef = useRef<HTMLDivElement>(null);
   const recipeRef = useRef<HTMLDivElement>(null);
   const [category, setCategory] = useState<categoryType[]>([]);
   const [recipeInfo, setRecipeInfo] = useState<recipeInfo[]>([]);
 
-
-  useEffect( () => {
+  useEffect(() => {
     const fetchData = async () => {
       try {
-        const categoryResponse = await fetch("http://127.0.0.1:5000/category/all");
-        const userFavoriteRecipeResponse = await fetch("http://127.0.0.1:5000/user/favorite/" + userId);
+        const categoryResponse = await fetch(
+          "http://127.0.0.1:5000/category/all"
+        );
+        const userFavoriteRecipeResponse = await fetch(
+          "http://127.0.0.1:5000/user/favorite/" + userId
+        );
         const userFavoriteRecipeData = await userFavoriteRecipeResponse.json();
         setRecipeInfo(userFavoriteRecipeData);
         const categoryData = await categoryResponse.json();
@@ -87,14 +87,19 @@ const NewFeed = () => {
 
       <div id="newFeed_header">
         <h3>For you</h3>
-        <div id="view_all_area">
+        <div
+          id="view_all_area"
+          onClick={() => {
+            navigate("/view-all");
+          }}
+        >
           <h5>Discovery</h5>
           <img src={nextIcon} alt="" />
         </div>
       </div>
       <div className="content_wrapper" ref={recipeRef}>
         <div className="content_container">
-          {recipeInfo.map((recipeInfo,id) => {
+          {recipeInfo.map((recipeInfo, id) => {
             return (
               <RecipeCard
                 key={id}
