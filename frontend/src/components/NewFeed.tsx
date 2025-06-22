@@ -60,7 +60,7 @@ const NewFeed = () => {
 
       <div id="newFeed_header">
         <h3>For you</h3>
-        <div id="view_all_area">
+        <div id="view_all_area" onClick={() => navigate("/view-all")}>
           <h5>Discovery</h5>
           <img src={nextIcon} alt="" />
         </div>
