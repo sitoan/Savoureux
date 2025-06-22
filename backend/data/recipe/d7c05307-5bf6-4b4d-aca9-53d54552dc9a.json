@@ -6,16 +6,18 @@
   "comments": [
     {
       "text": "Falls apart perfectly!",
+      "timestamp": "2024-11-08T16:19:42Z",
       "username": "BBQKing"
     },
     {
       "text": "Just like grandpa used to make",
+      "timestamp": "2024-12-04T13:45:28Z",
       "username": "SouthernCook"
     }
   ],
   "cooking_time": 480,
   "description": "Slow-cooked pork shoulder in tangy barbecue sauce",
-  "id": "2f240dfe-c0ad-4a32-896a-c9396786e9c0",
+  "id": "d7c05307-5bf6-4b4d-aca9-53d54552dc9a",
   "image": "https://i.pinimg.com/736x/c6/cf/fe/c6cffeab908e290f1abe6e837bf6bedb.jpg",
   "ingredients": [
     "pork shoulder",

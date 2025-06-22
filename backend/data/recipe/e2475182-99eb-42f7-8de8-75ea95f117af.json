@@ -6,12 +6,13 @@
   "comments": [
     {
       "text": "Perfect weekend breakfast!",
+      "timestamp": "2024-12-14T09:23:57Z",
       "username": "MorningPerson"
     }
   ],
   "cooking_time": 20,
   "description": "Classic breakfast with cinnamon and vanilla",
-  "id": "d9aeb1bb-8ef1-417e-9bd9-4afcafc4f340",
+  "id": "e2475182-99eb-42f7-8de8-75ea95f117af",
   "image": "https://i.pinimg.com/736x/6d/7d/18/6d7d18266974659a8db01346b99728a3.jpg",
   "ingredients": [
     "bread",

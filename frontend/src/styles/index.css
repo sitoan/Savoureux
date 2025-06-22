@@ -27,6 +27,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 1000px;
+  overflow: hidden;
 }
 
 #leave_img {

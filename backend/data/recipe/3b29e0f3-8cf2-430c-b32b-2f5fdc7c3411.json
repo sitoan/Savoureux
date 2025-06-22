@@ -7,16 +7,18 @@
   "comments": [
     {
       "text": "Uses up overripe bananas perfectly!",
+      "timestamp": "2024-10-29T14:27:08Z",
       "username": "BakingMom"
     },
     {
       "text": "Moist and flavorful",
+      "timestamp": "2024-12-06T16:51:34Z",
       "username": "SweetBaker"
     }
   ],
   "cooking_time": 75,
   "description": "Moist and sweet homemade banana bread",
-  "id": "9c39fae1-dc1d-40bb-aad5-6b8e3f92fbd6",
+  "id": "3b29e0f3-8cf2-430c-b32b-2f5fdc7c3411",
   "image": "https://i.pinimg.com/736x/2b/c0/24/2bc024b4b062199c62158e62b5e1f2d9.jpg",
   "ingredients": [
     "ripe bananas",

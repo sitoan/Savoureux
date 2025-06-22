@@ -30,4 +30,7 @@
   height: 100%; /* phải có chiều cao để cuộn trong vùng .body */
   /* padding: 24px; */
   margin-left: 30px;
+  background-color: rgb(255,255,255);
+  border-radius: 16px;
+
 }

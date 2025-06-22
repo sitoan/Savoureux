@@ -54,6 +54,13 @@ def add_comment(recipe_id):
 
 # --- USER APIs ---
 
+@app.route("/user/favorite/<user_id>", methods=["GET"])
+def get_user_favorite(user_id):
+    user_favorites = user_ctrl.get_user_favorite_recipes(user_id)
+    recipe_favorites = recipe_ctrl.get_favorite_recipes(user_favorites)
+    return jsonify(recipe_favorites)
+
+
 @app.route("/user/create", methods=["POST"])
 def add_user():
     data = request.json

@@ -65,3 +65,7 @@ class user_controller:
         with open(path, "w", encoding="utf-8") as f:
             json.dump(user_data, f, indent=2, ensure_ascii=False)
         return True
+
+    def get_user_favorite_recipes(self, user_id: str) -> list:
+        user = self.get_user_by_id(user_id)
+        return user["favorites"]

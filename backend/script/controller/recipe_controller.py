@@ -136,4 +136,17 @@ class recipe_controller:
                     recipes.append(json.load(f))
         return recipes
 
+    def get_favorite_recipes(self, user_favorites: List[str]) -> List[Dict[str, Any]]:
+        favorite_recipes = []
+        for recipe_id in user_favorites:
+            recipe = self.get_recipe_by_id(recipe_id)
+            if recipe:
+                favorite_recipes.append({
+                    "id": recipe["id"],
+                    "title": recipe["title"],
+                    "image": recipe["image"],
+                    "avg_rating": recipe["avg_rating"],
+                    "description": recipe["description"]
+                })
+        return favorite_recipes
 

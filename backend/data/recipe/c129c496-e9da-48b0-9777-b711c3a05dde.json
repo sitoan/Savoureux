@@ -7,16 +7,18 @@
   "comments": [
     {
       "text": "Authentic flavors!",
+      "timestamp": "2024-11-30T08:17:35Z",
       "username": "ThaiFood101"
     },
     {
       "text": "Better than takeout",
+      "timestamp": "2024-12-07T19:54:11Z",
       "username": "NoodleLover"
     }
   ],
   "cooking_time": 35,
   "description": "Classic Thai stir-fried noodles with shrimp and peanuts",
-  "id": "371aa6c3-48f6-43f9-b4e9-aa9e54bbbf49",
+  "id": "c129c496-e9da-48b0-9777-b711c3a05dde",
   "image": "https://i.pinimg.com/736x/5f/6a/c3/5f6ac3bc9c127712bff5451569abf497.jpg",
   "ingredients": [
     "rice noodles",

@@ -7,20 +7,23 @@
   "comments": [
     {
       "text": "Best tikka masala I've ever made!",
+      "timestamp": "2024-10-28T16:23:44Z",
       "username": "SpiceLover"
     },
     {
       "text": "Restaurant quality at home",
+      "timestamp": "2024-12-08T20:15:37Z",
       "username": "IndianFoodie"
     },
     {
       "text": "My family asks for this every week",
+      "timestamp": "2024-11-22T11:58:02Z",
       "username": "CurryQueen"
     }
   ],
   "cooking_time": 60,
   "description": "Creamy tomato-based curry with tender chicken pieces",
-  "id": "12cfd8b5-e677-4db2-9e8e-4267a13be051",
+  "id": "72e716d9-df88-4e7a-849d-01705fd8c3e0",
   "image": "https://i.pinimg.com/736x/96/e9/a5/96e9a5eee31448bff7b4bb23f85bfd28.jpg",
   "ingredients": [
     "chicken thighs",
