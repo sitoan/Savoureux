@@ -6,6 +6,7 @@ import { AuthContextProvider } from "./context/authContext";
 // import RecipePage from "./pages/RecipePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RecipePage from "./pages/RecipePage";
+import ViewAllPage from "./pages/ViewAllPage";
 
 createRoot(document.getElementById("root")!).render(
   <AuthContextProvider>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/recipe/:id" element={<RecipePage />} />
+        <Route path="/view-all" element={<ViewAllPage />} />
       </Routes>
     </BrowserRouter>
   </AuthContextProvider>
