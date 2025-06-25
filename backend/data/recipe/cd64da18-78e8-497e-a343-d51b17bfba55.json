@@ -13,7 +13,7 @@
   ],
   "cooking_time": 10,
   "description": "Fresh mozzarella, tomatoes, and basil with balsamic",
-  "id": "a38aa787-1361-4526-8dfb-1af6c192e331",
+  "id": "cd64da18-78e8-497e-a343-d51b17bfba55",
   "image": "https://i.pinimg.com/736x/b1/11/9b/b1119b8c49f501da0f2c4dba0078608e.jpg",
   "ingredients": [
     "fresh mozzarella",
@@ -26,12 +26,6 @@
   ],
   "instructions": "Slice tomatoes and mozzarella, arrange with basil leaves, drizzle with oil and vinegar.",
   "number_of_rating": 18,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 250,
     "carbs": 8,

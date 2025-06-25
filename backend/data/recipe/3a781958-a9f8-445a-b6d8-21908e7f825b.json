@@ -23,7 +23,7 @@
   ],
   "cooking_time": 180,
   "description": "Slow-cooked beef with vegetables in rich gravy",
-  "id": "8702acc4-dd73-481e-a0e0-b4664c2a4b12",
+  "id": "3a781958-a9f8-445a-b6d8-21908e7f825b",
   "image": "https://i.pinimg.com/736x/a3/9e/74/a39e748901909fa688af85dd286d19cf.jpg",
   "ingredients": [
     "beef chuck",
@@ -41,12 +41,6 @@
   ],
   "instructions": "Brown beef, sauté vegetables, add liquids and seasonings, simmer until tender.",
   "number_of_rating": 32,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 480,
     "carbs": 32,

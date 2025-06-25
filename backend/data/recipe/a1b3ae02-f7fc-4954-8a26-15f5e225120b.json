@@ -18,7 +18,7 @@
   ],
   "cooking_time": 30,
   "description": "Grilled fish with cabbage slaw in soft tortillas",
-  "id": "e2309933-12ae-4e5d-b98b-3396d0c6a9ab",
+  "id": "a1b3ae02-f7fc-4954-8a26-15f5e225120b",
   "image": "https://i.pinimg.com/736x/6e/d0/f8/6ed0f89669cec598d5367505f77cf2cf.jpg",
   "ingredients": [
     "white fish fillets",
@@ -34,12 +34,6 @@
   ],
   "instructions": "Season and grill fish, make slaw with cabbage and lime, assemble tacos with toppings.",
   "number_of_rating": 22,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 340,
     "carbs": 32,

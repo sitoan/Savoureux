@@ -23,7 +23,7 @@
   ],
   "cooking_time": 60,
   "description": "Creamy tomato-based curry with tender chicken pieces",
-  "id": "72e716d9-df88-4e7a-849d-01705fd8c3e0",
+  "id": "33481e8c-e171-4b08-8094-be6d406b4f2b",
   "image": "https://i.pinimg.com/736x/96/e9/a5/96e9a5eee31448bff7b4bb23f85bfd28.jpg",
   "ingredients": [
     "chicken thighs",
@@ -40,12 +40,6 @@
   ],
   "instructions": "Marinate chicken in yogurt and spices, grill, then simmer in creamy tomato sauce.",
   "number_of_rating": 34,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 420,
     "carbs": 18,

@@ -5,22 +5,51 @@ import { useNavigate } from "react-router-dom";
 import Category from "./Category";
 import RecipeCard from "./RecipeCard";
 import { useEffect, useRef, useState } from "react";
-import { useCategoryContext } from "../context/categoryContext";
-import {
-  useRecipeInfoContext,
-  useRecipeRatingContext,
-} from "../context/recipeContext";
-import { useUserFavoriteAndRatingContext } from "../context/userContext";
-import Dropdown from "./Dropdown";
-const ViewAllDetail = () => {
-  const { categories } = useCategoryContext();
-  const { userFavoriteAndRating } = useUserFavoriteAndRatingContext();
-  const { recipeRatingMap } = useRecipeRatingContext();
-  const { recipeInfoMap } = useRecipeInfoContext();
-  const [filter, setFilter] = useState("All Recipe");
 
+interface categoryType {
+  title: string;
+  image: string;
+}
+
+interface recipeInfo {
+  id: string;
+  title: string;
+  image: string;
+  description: string;
+  avgRating: number;
+}
+
+import Dropdown from "./Dropdown";
+import { useAuth } from "../context/authContext";
+const ViewAllDetail = () => {
+  const [filter, setFilter] = useState("All Recipe");
+  const { userId } = useAuth();
   const categoryRef = useRef<HTMLDivElement>(null);
   const recipeRef = useRef<HTMLDivElement>(null);
+
+  const [category, setCategory] = useState<categoryType[]>([]);
+  const [recipeInfo, setRecipeInfo] = useState<recipeInfo[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const categoryResponse = await fetch(
+          "http://127.0.0.1:5000/category/all"
+        );
+        const allRecipeResponse = await fetch(
+          "http://127.0.0.1:5000/recipe/all"
+        );
+        const allRecipeData = await allRecipeResponse.json();
+        setRecipeInfo(allRecipeData);
+        const categoryData = await categoryResponse.json();
+        setCategory(categoryData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, [userId]);
 
   const navigate = useNavigate();
   const handleSelect = (value: string) => {
@@ -56,34 +85,29 @@ const ViewAllDetail = () => {
       <h3>Categories</h3>
       <div className="categories_wrapper" ref={categoryRef}>
         <div className="categories_container">
-          {categories.map((item, index) => (
+          {category.map((item, index) => (
             <Category key={index} image={item.image} title={item.title} />
           ))}
         </div>
       </div>
 
       <div id="newFeed_header">
-        <h3>For you</h3>
+        <h3>All Recipes</h3>
         <Dropdown onSelect={handleSelect} />
       </div>
 
       <div className="content_wrapper" ref={recipeRef}>
         <div className="content_container">
-          {userFavoriteAndRating?.favorites.map((id) => {
-            const info = recipeInfoMap[id];
-            const rating = recipeRatingMap[id];
-
-            if (!info) return null;
-
+          {recipeInfo.map((recipeInfo, id) => {
             return (
               <RecipeCard
                 key={id}
-                id={id}
-                title={info.title}
-                image={info.image}
-                description={info.description}
-                avg_rating={rating?.avgRating || 0}
-                onClick={() => handleClickCard(id)}
+                id={recipeInfo.id}
+                title={recipeInfo.title}
+                image={recipeInfo.image}
+                description={recipeInfo.description}
+                avg_rating={recipeInfo?.avgRating || 0}
+                onClick={() => handleClickCard(recipeInfo.id)}
               />
             );
           })}

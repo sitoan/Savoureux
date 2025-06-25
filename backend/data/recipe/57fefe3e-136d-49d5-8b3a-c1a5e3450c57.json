@@ -12,7 +12,7 @@
   ],
   "cooking_time": 20,
   "description": "Classic breakfast with cinnamon and vanilla",
-  "id": "e2475182-99eb-42f7-8de8-75ea95f117af",
+  "id": "57fefe3e-136d-49d5-8b3a-c1a5e3450c57",
   "image": "https://i.pinimg.com/736x/6d/7d/18/6d7d18266974659a8db01346b99728a3.jpg",
   "ingredients": [
     "bread",
@@ -26,12 +26,6 @@
   ],
   "instructions": "Whisk eggs with milk and spices, dip bread, cook in buttered pan until golden.",
   "number_of_rating": 20,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 320,
     "carbs": 38,

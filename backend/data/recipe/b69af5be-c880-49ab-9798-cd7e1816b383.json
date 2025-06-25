@@ -12,7 +12,7 @@
   ],
   "cooking_time": 20,
   "description": "Fluffy American-style breakfast pancakes",
-  "id": "2064eb25-f6c2-4829-96f2-27a6b627a79f",
+  "id": "b69af5be-c880-49ab-9798-cd7e1816b383",
   "image": "https://i.pinimg.com/736x/6e/19/57/6e19573c475c983b556d75c488fb02ce.jpg",
   "ingredients": [
     "flour",
@@ -25,12 +25,6 @@
   ],
   "instructions": "Mix dry ingredients, combine wet ingredients, fold together, cook on griddle until golden.",
   "number_of_rating": 28,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 280,
     "carbs": 38,

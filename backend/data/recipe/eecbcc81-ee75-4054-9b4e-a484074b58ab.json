@@ -18,7 +18,7 @@
   ],
   "cooking_time": 45,
   "description": "Hearty soup with mixed seasonal vegetables",
-  "id": "12003898-85fa-4a9f-a1d1-450ae082a633",
+  "id": "eecbcc81-ee75-4054-9b4e-a484074b58ab",
   "image": "https://i.pinimg.com/736x/ee/90/c4/ee90c44274082e70c8e48fcd0765686c.jpg",
   "ingredients": [
     "carrots",
@@ -35,12 +35,6 @@
   ],
   "instructions": "Sauté vegetables, add broth and seasonings, simmer until tender.",
   "number_of_rating": 21,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 180,
     "carbs": 38,

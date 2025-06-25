@@ -22,7 +22,7 @@
   ],
   "cooking_time": 90,
   "description": "Rich and moist chocolate layer cake",
-  "id": "8c93ce61-8257-4853-bd63-d5d6dfe9d8d6",
+  "id": "a6e66e16-9e02-48f2-88a5-4bb494fcf9b7",
   "image": "https://i.pinimg.com/736x/f7/06/b5/f706b57706ab60ad29185037cf6d0006.jpg",
   "ingredients": [
     "flour",
@@ -38,12 +38,6 @@
   ],
   "instructions": "Mix dry ingredients, cream butter and sugar, alternate wet and dry, bake and frost.",
   "number_of_rating": 35,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 420,
     "carbs": 65,
