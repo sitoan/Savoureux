@@ -6,12 +6,13 @@
   "comments": [
     {
       "text": "Restaurant quality at home!",
+      "timestamp": "2024-10-25T21:03:12Z",
       "username": "RisottoMaster"
     }
   ],
   "cooking_time": 45,
   "description": "Creamy Italian rice dish with mixed mushrooms",
-  "id": "8fb0f070-b2d6-497d-9a1b-9ccf0a337be2",
+  "id": "fde5c14c-5efe-4f23-8cd3-140b2fd631ff",
   "image": "https://i.pinimg.com/736x/af/31/f9/af31f9aacd3134968b3656545ae36170.jpg",
   "ingredients": [
     "arborio rice",
@@ -28,12 +29,6 @@
   ],
   "instructions": "Sauté mushrooms and onions, toast rice, gradually add warm broth while stirring, finish with cheese.",
   "number_of_rating": 25,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 420,
     "carbs": 58,

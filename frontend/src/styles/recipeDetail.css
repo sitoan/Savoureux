@@ -114,3 +114,101 @@
   color: #333;
   line-height: 1.6;
 }
+
+
+/* Comments Section Styles */
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  max-width: 800px;
+}
+
+.comment-item {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.comment-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.comment-item strong {
+  color: #2c3e50;
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.comment-item p {
+  color: #495057;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 8px 0 12px 0;
+  word-wrap: break-word;
+}
+
+.comment-item small {
+  color: #6c757d;
+  font-size: 12px;
+  font-style: italic;
+  display: block;
+  text-align: right;
+}
+
+/* No comments message */
+h3 + p {
+  color: #6c757d;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px dashed #dee2e6;
+}
+
+/* Comments heading */
+h3 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .comment-item {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .comment-item strong {
+    font-size: 15px;
+  }
+  
+  .comment-item p {
+    font-size: 13px;
+  }
+  
+  .comment-item small {
+    font-size: 11px;
+  }
+}
+
+/* Alternative color scheme (optional) */
+.comment-item.highlighted {
+  background: #e8f4fd;
+  border-color: #3498db;
+}
+
+.comment-item.highlighted strong {
+  color: #2980b9;
+}

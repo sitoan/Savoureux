@@ -1,35 +1,60 @@
+import "../styles/newFeed.css";
 import "../styles/fonts.css";
 import nextRightArrow from "../assets/iconImages/nextrightArrow.png";
-import Dropdown from "./Dropdown";
 import { useNavigate } from "react-router-dom";
 import Category from "./Category";
 import RecipeCard from "./RecipeCard";
 import { useEffect, useRef, useState } from "react";
-import { useCategoryContext } from "../context/categoryContext";
-import "../styles/allRecipeContainer.css";
 
-import {
-  useRecipeInfoContext,
-  useRecipeRatingContext,
-} from "../context/recipeContext";
-import { useUserFavoriteAndRatingContext } from "../context/userContext";
+interface categoryType {
+  title: string;
+  image: string;
+}
 
-const AllRecipeContainer = () => {
-  const { categories } = useCategoryContext();
-  const { userFavoriteAndRating } = useUserFavoriteAndRatingContext();
-  const { recipeRatingMap } = useRecipeRatingContext();
-  const { recipeInfoMap } = useRecipeInfoContext();
+interface recipeInfo {
+  id: string;
+  title: string;
+  image: string;
+  description: string;
+  avgRating: number;
+}
 
+import Dropdown from "./Dropdown";
+import { useAuth } from "../context/authContext";
+const ViewAllDetail = () => {
+  const [filter, setFilter] = useState("All Recipe");
+  const { userId } = useAuth();
   const categoryRef = useRef<HTMLDivElement>(null);
   const recipeRef = useRef<HTMLDivElement>(null);
 
-  const navigate = useNavigate();
+  const [category, setCategory] = useState<categoryType[]>([]);
+  const [recipeInfo, setRecipeInfo] = useState<recipeInfo[]>([]);
 
-  const [filter, setFilter] = useState("All Recipe");
-  const handleFilterChange = (value: string) => {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const categoryResponse = await fetch(
+          "http://127.0.0.1:5000/category/all"
+        );
+        const allRecipeResponse = await fetch(
+          "http://127.0.0.1:5000/recipe/all"
+        );
+        const allRecipeData = await allRecipeResponse.json();
+        setRecipeInfo(allRecipeData);
+        const categoryData = await categoryResponse.json();
+        setCategory(categoryData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, [userId]);
+
+  const navigate = useNavigate();
+  const handleSelect = (value: string) => {
     setFilter(value);
   };
-
   const handleScroll = (ref: React.RefObject<HTMLDivElement | null>) => {
     const container = ref.current;
     if (container) {
@@ -46,49 +71,43 @@ const AllRecipeContainer = () => {
       }
     }
   };
+
   const handleClickCard = (id: string) => {
     navigate(`/recipe/${id}`);
   };
-
   useEffect(() => {
     console.log(filter);
   }, [filter]);
 
   return (
-    <div id="view-all-container">
-      <h2>VIEW ALL PAGE</h2>
+    <div id="nf_container">
+      <h2>View all Page</h2>
       <h3>Categories</h3>
       <div className="categories_wrapper" ref={categoryRef}>
         <div className="categories_container">
-          {categories.map((item, index) => (
+          {category.map((item, index) => (
             <Category key={index} image={item.image} title={item.title} />
           ))}
         </div>
       </div>
 
       <div id="newFeed_header">
-        <h3>For you</h3>
-        <div className="filter-dropdown">
-          <Dropdown onSelect={handleFilterChange} defaultValue={filter} />
-        </div>
+        <h3>All Recipes</h3>
+        <Dropdown onSelect={handleSelect} />
       </div>
+
       <div className="content_wrapper" ref={recipeRef}>
         <div className="content_container">
-          {userFavoriteAndRating?.favorites.map((id) => {
-            const info = recipeInfoMap[id];
-            const rating = recipeRatingMap[id];
-
-            if (!info) return null;
-
+          {recipeInfo.map((recipeInfo, id) => {
             return (
               <RecipeCard
                 key={id}
-                id={id}
-                title={info.title}
-                image={info.image}
-                description={info.description}
-                avg_rating={rating?.avgRating || 0}
-                onClick={() => handleClickCard(id)}
+                id={recipeInfo.id}
+                title={recipeInfo.title}
+                image={recipeInfo.image}
+                description={recipeInfo.description}
+                avg_rating={recipeInfo?.avgRating || 0}
+                onClick={() => handleClickCard(recipeInfo.id)}
               />
             );
           })}
@@ -111,4 +130,4 @@ const AllRecipeContainer = () => {
   );
 };
 
-export default AllRecipeContainer;
+export default ViewAllDetail;

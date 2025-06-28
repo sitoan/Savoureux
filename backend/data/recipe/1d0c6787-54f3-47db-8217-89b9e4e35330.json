@@ -7,12 +7,13 @@
   "comments": [
     {
       "text": "Perfect weeknight dinner!",
+      "timestamp": "2024-11-19T19:12:48Z",
       "username": "WokMaster"
     }
   ],
   "cooking_time": 25,
   "description": "Quick and flavorful beef with vegetables in savory sauce",
-  "id": "4de042b6-d48f-449b-8d22-b4ebda83a582",
+  "id": "1d0c6787-54f3-47db-8217-89b9e4e35330",
   "image": "https://i.pinimg.com/736x/5d/de/2b/5dde2b8e175ee99752f72d4d6d60b0b1.jpg",
   "ingredients": [
     "beef sirloin",
@@ -27,12 +28,6 @@
   ],
   "instructions": "Slice beef thin, marinate, stir-fry with vegetables over high heat, add sauce.",
   "number_of_rating": 21,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 380,
     "carbs": 22,

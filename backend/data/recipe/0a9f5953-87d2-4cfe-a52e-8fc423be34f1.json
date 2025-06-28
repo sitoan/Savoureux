@@ -7,12 +7,13 @@
   "comments": [
     {
       "text": "So fresh and healthy!",
+      "timestamp": "2024-12-09T12:35:47Z",
       "username": "MediterraneanFan"
     }
   ],
   "cooking_time": 10,
   "description": "Fresh Mediterranean salad with feta and olives",
-  "id": "0193c9d4-0a75-4bea-9cba-18b5852c62c2",
+  "id": "0a9f5953-87d2-4cfe-a52e-8fc423be34f1",
   "image": "https://i.pinimg.com/736x/53/b2/c0/53b2c09a0d164ec15152c0ffe736856f.jpg",
   "ingredients": [
     "tomatoes",
@@ -26,12 +27,6 @@
   ],
   "instructions": "Chop vegetables, crumble feta, toss with dressing made from olive oil, vinegar, and oregano.",
   "number_of_rating": 16,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 220,
     "carbs": 12,

@@ -4,10 +4,34 @@ import homeIcon from "../assets/iconImages/homeIcon.png";
 import profileIcon from "../assets/iconImages/profileIcon.png";
 import settingIcon from "../assets/iconImages/settingIcon.png";
 import salad from "../assets/otherImages/salad.png";
-import { useUserProfileContext } from "../context/userContext";
+import { useEffect, useState } from "react";
+import { useAuth } from "../context/authContext";
+import { useNavigate } from "react-router-dom";
+
+interface userProfileType {
+  id: string;
+  userName: string;
+  email: string;
+  avatar: string;
+  preferences: {
+    diet: string;
+    allergies: string[];
+  };
+}
+
 const ProfileSideBar = () => {
-  const {userProfile} = useUserProfileContext()
-  console.log(userProfile)
+  const { userId } = useAuth();
+  const [userProfile, setUserProfile] = useState<userProfileType | null>(null);
+  const navigate = useNavigate();
+  useEffect(() => {
+    const fetchUserProfile = async () => {
+      const response = await fetch("http://127.0.0.1:5000/user/" + userId);
+      const data = await response.json();
+      setUserProfile(data);
+    };
+    fetchUserProfile();
+  }, [userId]);
+
   return (
     <div id="profileSB_container">
       <div id="avatar_area">
@@ -15,7 +39,11 @@ const ProfileSideBar = () => {
         <h5>{userProfile?.userName}</h5>
       </div>
 
-      <div className="personal_setting_buttons" id="newfeed_area">
+      <div
+        className="personal_setting_buttons"
+        id="newfeed_area"
+        onClick={() => navigate("/")}
+      >
         <div className="icon_wrapper">
           <img src={homeIcon} alt="" />
         </div>
@@ -25,7 +53,7 @@ const ProfileSideBar = () => {
         <div className="icon_wrapper">
           <img src={profileIcon} alt="" />
         </div>
-        <h6>Personal recipe</h6> 
+        <h6>Personal recipe</h6>
       </div>
       <div className="personal_setting_buttons" id="setting_area">
         <div className="icon_wrapper">

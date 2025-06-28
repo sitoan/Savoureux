@@ -10,10 +10,4 @@
 
 #newFeed {
   display: flex;
-  flex: 3;
-}
-
-#newFeedSideBar {
-  display: flex;
-  flex: 1;
 }

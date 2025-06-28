@@ -57,20 +57,21 @@ export interface recipeRatingType {
 export interface recipeCommentType {
   comments: {
     text: string;
-    username: string;
+    userName: string;
+    timestamp: string;
   }[];
 }
 
-export interface RecipeSummary {
-  id: string;
-  title: string;
-  image: string;
-  description: string;
-  instructions: string;
-  avg_rating: number;
-  cooking_time: number;
-  servings: number;
-  category: string[];
-  tags: string[];
-  ingredients: string[];
-}
+// export interface RecipeSummary {
+//   id: string;
+//   title: string;
+//   image: string;
+//   description: string;
+//   instructions: string;
+//   avg_rating: number;
+//   cooking_time: number;
+//   servings: number;
+//   category: string[];
+//   tags: string[];
+//   ingredients: string[];
+// }

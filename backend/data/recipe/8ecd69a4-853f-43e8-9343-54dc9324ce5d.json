@@ -6,16 +6,18 @@
   "comments": [
     {
       "text": "Classic and perfect!",
+      "timestamp": "2024-11-07T13:26:53Z",
       "username": "SaladGuru"
     },
     {
       "text": "Great as a side or main dish",
+      "timestamp": "2024-12-01T18:34:16Z",
       "username": "HealthyEater"
     }
   ],
   "cooking_time": 15,
   "description": "Crisp romaine lettuce with creamy caesar dressing",
-  "id": "1a4650ba-4474-4dd0-b1eb-48c21950caa1",
+  "id": "8ecd69a4-853f-43e8-9343-54dc9324ce5d",
   "image": "https://i.pinimg.com/736x/ec/29/77/ec29778102e2ace073e9d4db9d359f0d.jpg",
   "ingredients": [
     "romaine lettuce",
@@ -30,12 +32,6 @@
   ],
   "instructions": "Make dressing by mixing anchovies, mayo, lemon, and seasonings. Toss with lettuce and toppings.",
   "number_of_rating": 19,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 320,
     "carbs": 8,

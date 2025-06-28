@@ -7,16 +7,18 @@
   "comments": [
     {
       "text": "Family favorite!",
+      "timestamp": "2024-11-21T20:38:46Z",
       "username": "TacoLover"
     },
     {
       "text": "Quick and delicious",
+      "timestamp": "2024-12-02T15:12:29Z",
       "username": "MexicanFood"
     }
   ],
   "cooking_time": 25,
   "description": "Seasoned ground beef in crispy taco shells",
-  "id": "5b79e62a-4ffa-476e-9c65-3fc76c447962",
+  "id": "5e54f48d-ea5e-4559-9a10-fc949f40075e",
   "image": "https://i.pinimg.com/736x/22/bd/86/22bd86d22838ec680bf32ca902fab9b4.jpg",
   "ingredients": [
     "ground beef",
@@ -30,12 +32,6 @@
   ],
   "instructions": "Brown beef with seasoning, warm taco shells, assemble with fresh toppings.",
   "number_of_rating": 24,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 380,
     "carbs": 24,

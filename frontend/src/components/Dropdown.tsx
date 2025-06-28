@@ -15,7 +15,7 @@ const Dropdown = ({ onSelect, defaultValue = "All Recipe" }: DropdownProps) => {
   const handleSelect = (option: string) => {
     setSelected(option);
     setOpen(false);
-    onSelect(option); // truyền giá trị được chọn về component cha
+    onSelect(option);
   };
 
   return (

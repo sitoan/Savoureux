@@ -7,12 +7,13 @@
   "comments": [
     {
       "text": "Great protein-packed salad!",
+      "timestamp": "2024-11-12T10:29:43Z",
       "username": "HealthyLife"
     }
   ],
   "cooking_time": 25,
   "description": "Nutritious grain salad with vegetables and herbs",
-  "id": "d957a202-af94-4428-9dfc-7f328340a06f",
+  "id": "e35ab253-98f8-40c6-85e6-d19f119883fe",
   "image": "https://i.pinimg.com/736x/68/2b/dd/682bddfa23f57ec23b8aec2bfa9da75d.jpg",
   "ingredients": [
     "quinoa",
@@ -27,12 +28,6 @@
   ],
   "instructions": "Cook quinoa, cool, mix with chopped vegetables and herbs, dress with lemon and oil.",
   "number_of_rating": 15,
-  "nutrition_info": {
-    "calories": null,
-    "carbs": null,
-    "fat": null,
-    "protein": null
-  },
   "nutritional_info": {
     "calories": 320,
     "carbs": 42,

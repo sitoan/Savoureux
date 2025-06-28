@@ -1,16 +1,16 @@
 // AuthContext.tsx
-import { createContext, useContext, useState } from "react";
+import { createContext, use, useContext, useEffect, useState } from "react";
 
 interface AuthContextType {
-  userId: number | null;
-  setUserId: (id: number | null) => void;
+  userId: string;
+  setUserId: (id: string) => void;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const [userId, setUserId] = useState<number | null>(null);
-
+  const [userId, setUserId] = useState<string>("f50967e4-24af-439a-83de-f4b411001c0c");
+  
   return (
     <AuthContext.Provider value={{ userId, setUserId }}>
       {children}
