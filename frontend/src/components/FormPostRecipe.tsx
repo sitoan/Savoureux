@@ -45,28 +45,28 @@ function DraggableTag({ id }: { id: string }) {
 
 // Droppable input for category
 function DroppableInput({
+  id,
   value,
   onChange,
   onDrop,
 }: {
+  id: string;
   value: string;
-  onChange: (val: string) => void;
+  onChange: (value: string) => void;
   onDrop: (val: string) => void;
 }) {
-  const { setNodeRef, isOver } = useDroppable({ id: "category" });
+  const { setNodeRef, isOver } = useDroppable({ id });
 
   return (
     <input
       ref={setNodeRef}
-      type="text"
-      name="category"
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      placeholder="Drag category here..."
       style={{
+        padding: "8px",
         fontSize: "14px",
-        backgroundColor: "#fff", // luôn trắng
-        color: "black", // chữ đen
+        backgroundColor: "#fff",
+        color: "black",
         border: isOver ? "2px dashed #00bfff" : "1px solid #ccc",
         borderRadius: "6px",
       }}
@@ -105,13 +105,26 @@ export default function FormPostRecipe() {
 
   const handleDragEnd = (event: DragEndEvent) => {
     const { over, active } = event;
-    if (over?.id === "category" && active.data?.current?.content) {
-      const content = active.data.current.content;
+    const content = active.data?.current?.content;
+
+    if (!over || !content) return;
+
+    if (over.id === "categories") {
       const current = form.category.split(",").map((s) => s.trim());
       if (!current.includes(content)) {
         setForm({
           ...form,
           category: [...current, content].join(", "),
+        });
+      }
+    }
+
+    if (over.id === "tags") {
+      const current = form.tags.split(",").map((s) => s.trim());
+      if (!current.includes(content)) {
+        setForm({
+          ...form,
+          tags: [...current, content].join(", "),
         });
       }
     }
@@ -171,6 +184,7 @@ export default function FormPostRecipe() {
             <div className="categoy-input form-group full">
               <label>Category (drag tags here)</label>
               <DroppableInput
+                id="categories"
                 value={form.category}
                 onChange={(val) => setForm({ ...form, category: val })}
                 onDrop={(val) => {
@@ -238,9 +252,23 @@ export default function FormPostRecipe() {
               />
             </div>
 
-            <div className="form-group full">
+            {/* <div className="form-group full">
               <label>Tags (comma-separated)</label>
               <input name="tags" value={form.tags} onChange={handleChange} />
+            </div> */}
+            <div className="form-group full">
+              <label>Tags (drag or type)</label>
+              <DroppableInput
+                id="tags"
+                value={form.tags}
+                onChange={(val) => setForm({ ...form, tags: val })}
+                onDrop={(val) => {
+                  const current = form.tags.split(",").map((s) => s.trim());
+                  if (!current.includes(val)) {
+                    setForm({ ...form, tags: [...current, val].join(", ") });
+                  }
+                }}
+              />
             </div>
 
             <fieldset className="form-group-nutrition full">

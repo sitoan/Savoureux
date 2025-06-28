@@ -1,7 +1,8 @@
-import "../styles/viewAllPage.css";
 import ProfileSideBar from "../components/ProfileSideBar";
 import ViewAllContainer from "../components/ViewAllContainer";
 import leave from "../assets/otherImages/leave.png";
+import "../styles/viewAllPage.css";
+
 const ViewAllPage = () => {
   return (
     <div className="body">
