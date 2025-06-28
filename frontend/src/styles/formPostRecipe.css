@@ -1,0 +1,134 @@
+.form-post-recipe {
+  width: 600px;
+  margin: auto;
+  padding: 24px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #1e1e1e; /* nên dùng màu nền tối nếu chữ input màu trắng */
+  font-family: sans-serif;
+  background-color: white !important;
+}
+
+.form-post-recipe h2 {
+  margin-bottom: 16px;
+  text-align: center;
+  color: black;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  grid-column: span 2;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: rgb(75, 75, 75) !important; /* chữ mô tả màu đen */
+}
+
+input,
+textarea {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  background-color: white;
+  color: black !important; /* nội dung nhập màu trắng */
+}
+
+textarea {
+  min-height: 60px;
+}
+
+.form-group-nutrition {
+  margin-left: 30%;
+}
+
+.form-nutrition-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-actions.full {
+  grid-column: span 2;
+  text-align: right;
+  margin-top: 20px;
+}
+.form-group-nutrition legend {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: black !important;
+}
+.form-actions {
+  text-align: right;
+  margin-right: 40%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.form-container-with-tags {
+  display: flex;
+  margin: auto;
+}
+
+.categories {
+  min-width: 180px;
+  padding: 16px;
+  background: linear-gradient(135deg, #e0f7ff, #c8f1ff);
+  border: 1px solid #a0d8ef;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 24px;
+  margin-top: 40px;
+  height: fit-content;
+  color: #003344;
+  font-family: "Segoe UI", sans-serif;
+  margin-top: 260px;
+}
+
+.tags {
+  min-width: 180px;
+  padding: 16px;
+  background: linear-gradient(135deg, #e0f7ff, #c8f1ff);
+  border: 1px solid #a0d8ef;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 24px;
+  margin-top: 40px;
+  height: fit-content;
+  color: #003344;
+  font-family: "Segoe UI", sans-serif;
+  margin-top: 400px;
+}
+.tag-list-panel h4 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #005577;
+  border-bottom: 1px solid #aad5e6;
+  padding-bottom: 6px;
+}
