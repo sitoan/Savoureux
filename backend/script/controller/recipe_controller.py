@@ -1,7 +1,9 @@
 from flask import Blueprint, request, jsonify
+from flask_cors import CORS
 from script.service.recipe_service import recipe_service
 
 recipe_bp = Blueprint("recipe", __name__)
+CORS(recipe_bp)
 recipe_service = recipe_service()
 
 
@@ -54,3 +56,21 @@ def add_comment(recipe_id):
     comment = request.json
     success = recipe_service.add_comment(recipe_id, comment)
     return ("Commented", 200) if success else ("Not found", 404)
+
+### get name sort recipes
+@recipe_bp.route("/sort/name", methods=["GET"])
+def get_filter_by_name():
+    dimension = request.headers.get("dimension")
+    return jsonify(recipe_service.get_sort_by_name(dimension))
+
+### get rating sort recipes
+@recipe_bp.route("/sort/rating", methods=["GET"])
+def get_filter_by_rating():
+    dimension = request.headers.get("dimension")
+    return jsonify(recipe_service.get_sort_by_rating(dimension))
+
+### get category filter recipes
+@recipe_bp.route("/filter/category", methods=["GET"])
+def get_filter_by_category():
+    category = request.headers.get("category")
+    return jsonify(recipe_service.get_filter_by_category(category))

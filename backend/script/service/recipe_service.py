@@ -149,4 +149,21 @@ class recipe_service:
                     "description": recipe["description"]
                 })
         return favorite_recipes
+    
+    def get_sort_by_name(self, dimension: str) -> List[Dict[str, Any]]:
+        recipes = self.get_all_recipes()
+        if dimension == "ascending":
+            return sorted(recipes, key=lambda recipe: recipe["title"])
+        else:
+            return sorted(recipes, key=lambda recipe: recipe["title"], reverse=True)
 
+    def get_sort_by_rating(self, dimension: str) -> List[Dict[str, Any]]:
+        recipes = self.get_all_recipes()
+        if dimension == "ascending":
+            return sorted(recipes, key=lambda recipe: recipe["avg_rating"])
+        else:
+            return sorted(recipes, key=lambda recipe: recipe["avg_rating"], reverse=True)
+        
+    def get_filter_by_category(self, category: str) -> List[Dict[str, Any]]:
+        recipes = self.get_all_recipes()
+        return [recipe for recipe in recipes if category in recipe["category"] ]

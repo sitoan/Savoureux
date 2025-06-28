@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 interface userProfileType {
   id: string;
-  userName: string;
+  username: string;
   email: string;
   avatar: string;
   preferences: {
@@ -36,7 +36,7 @@ const ProfileSideBar = () => {
     <div id="profileSB_container">
       <div id="avatar_area">
         <img src={userProfile?.avatar} alt="" />
-        <h5>{userProfile?.userName}</h5>
+        <h5>{userProfile?.username}</h5>
       </div>
 
       <div

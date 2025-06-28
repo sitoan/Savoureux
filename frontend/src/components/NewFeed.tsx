@@ -3,15 +3,11 @@ import "../styles/fonts.css";
 import nextRightArrow from "../assets/iconImages/nextrightArrow.png";
 import nextIcon from "../assets/iconImages/nextIcon.png";
 import { useNavigate } from "react-router-dom";
-import Category from "./Category";
+
 import RecipeCard from "./RecipeCard";
 import { useEffect, useRef, useState } from "react";
 import { useAuth } from "../context/authContext";
 
-interface categoryType {
-  title: string;
-  image: string;
-}
 
 interface recipeInfo {
   id: string;
@@ -25,22 +21,17 @@ const NewFeed = () => {
   const { userId } = useAuth();
   const categoryRef = useRef<HTMLDivElement>(null);
   const recipeRef = useRef<HTMLDivElement>(null);
-  const [category, setCategory] = useState<categoryType[]>([]);
+
   const [recipeInfo, setRecipeInfo] = useState<recipeInfo[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const categoryResponse = await fetch(
-          "http://127.0.0.1:5000/category/all"
-        );
         const userFavoriteRecipeResponse = await fetch(
           "http://127.0.0.1:5000/user/favorite/" + userId
         );
         const userFavoriteRecipeData = await userFavoriteRecipeResponse.json();
         setRecipeInfo(userFavoriteRecipeData);
-        const categoryData = await categoryResponse.json();
-        setCategory(categoryData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -76,14 +67,7 @@ const NewFeed = () => {
       <h2>
         Un monde de saveurs, une recette <br /> à la fois.
       </h2>
-      <h3>Categories</h3>
-      <div className="categories_wrapper" ref={categoryRef}>
-        <div className="categories_container">
-          {category.map((item, index) => (
-            <Category key={index} image={item.image} title={item.title} />
-          ))}
-        </div>
-      </div>
+
 
       <div id="newFeed_header">
         <h3>For you</h3>
