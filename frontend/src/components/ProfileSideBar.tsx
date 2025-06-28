@@ -49,11 +49,15 @@ const ProfileSideBar = () => {
         </div>
         <h6>My feed</h6>
       </div>
-      <div className="personal_setting_buttons" id="personal_area">
+      <div
+        className="personal_setting_buttons"
+        id="personal_area"
+        onClick={() => navigate("/post-recipe")}
+      >
         <div className="icon_wrapper">
           <img src={profileIcon} alt="" />
         </div>
-        <h6>Personal recipe</h6>
+        <h6>Add recipe</h6>
       </div>
       <div className="personal_setting_buttons" id="setting_area">
         <div className="icon_wrapper">
