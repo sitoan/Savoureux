@@ -47,7 +47,6 @@ function DraggableTag({ id }: { id: string }) {
 function DroppableInput({
   value,
   onChange,
-  onDrop,
 }: {
   value: string;
   onChange: (val: string) => void;
