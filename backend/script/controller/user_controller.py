@@ -1,9 +1,11 @@
 
 from flask import Blueprint, jsonify, request
+from flask_cors import CORS
 from script.service.recipe_service import recipe_service
 from script.service.user_service import user_service
 
 user_bp = Blueprint("user", __name__)
+CORS(user_bp)
 user_ser = user_service()
 recipe_ser = recipe_service()
 
