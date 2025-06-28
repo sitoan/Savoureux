@@ -1,19 +1,20 @@
-import "../styles/newFeed.css";
 import "../styles/fonts.css";
 import nextRightArrow from "../assets/iconImages/nextrightArrow.png";
-import nextIcon from "../assets/iconImages/nextIcon.png";
+import Dropdown from "../components/Dropdown";
 import { useNavigate } from "react-router-dom";
-import Category from "./Category";
-import RecipeCard from "./RecipeCard";
-import { useRef } from "react";
+import Category from "../components/Category";
+import RecipeCard from "../components/RecipeCard";
+import { useEffect, useRef, useState } from "react";
 import { useCategoryContext } from "../context/categoryContext";
+import "../styles/allRecipeContainer.css";
+
 import {
   useRecipeInfoContext,
   useRecipeRatingContext,
 } from "../context/recipeContext";
 import { useUserFavoriteAndRatingContext } from "../context/userContext";
 
-const NewFeed = () => {
+const AllRecipeContainer = () => {
   const { categories } = useCategoryContext();
   const { userFavoriteAndRating } = useUserFavoriteAndRatingContext();
   const { recipeRatingMap } = useRecipeRatingContext();
@@ -23,6 +24,12 @@ const NewFeed = () => {
   const recipeRef = useRef<HTMLDivElement>(null);
 
   const navigate = useNavigate();
+
+  const [filter, setFilter] = useState("All Recipe");
+  const handleFilterChange = (value: string) => {
+    setFilter(value);
+  };
+
   const handleScroll = (ref: React.RefObject<HTMLDivElement | null>) => {
     const container = ref.current;
     if (container) {
@@ -39,16 +46,17 @@ const NewFeed = () => {
       }
     }
   };
-
   const handleClickCard = (id: string) => {
     navigate(`/recipe/${id}`);
   };
 
+  useEffect(() => {
+    console.log(filter);
+  }, [filter]);
+
   return (
-    <div id="nf_container">
-      <h2>
-        Un monde de saveurs, une recette <br /> à la fois.
-      </h2>
+    <div id="view-all-container">
+      <h2>VIEW ALL PAGE</h2>
       <h3>Categories</h3>
       <div className="categories_wrapper" ref={categoryRef}>
         <div className="categories_container">
@@ -60,9 +68,8 @@ const NewFeed = () => {
 
       <div id="newFeed_header">
         <h3>For you</h3>
-        <div id="view_all_area">
-          <h5>Discovery</h5>
-          <img src={nextIcon} alt="" />
+        <div className="filter-dropdown">
+          <Dropdown onSelect={handleFilterChange} defaultValue={filter} />
         </div>
       </div>
       <div className="content_wrapper" ref={recipeRef}>
@@ -103,4 +110,5 @@ const NewFeed = () => {
     </div>
   );
 };
-export default NewFeed;
+
+export default AllRecipeContainer;

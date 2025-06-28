@@ -5,6 +5,7 @@ type CategoryProps = {
   title: string;
 };
 const Category = ({ image, title }: CategoryProps) => {
+  console.log(title);
   return (
     <div className="category_container">
       <div className="image">
