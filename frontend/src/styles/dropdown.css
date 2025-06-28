@@ -1,5 +1,4 @@
 .dropdown {
-<<<<<<< HEAD
   width: 220px;
   position: relative;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -13,7 +12,6 @@
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   transition: all 0.2s ease;
-=======
   position: relative;
   display: inline-block;
   font-family: "Segoe UI", sans-serif;
@@ -29,32 +27,26 @@
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
->>>>>>> 316a3209d2fbbca45db33ebd8d9f2add3c76a413
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .dropdown-header:hover {
-<<<<<<< HEAD
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-=======
   background-color: #e6f7ff; /* xanh nhạt khi hover */
->>>>>>> 316a3209d2fbbca45db33ebd8d9f2add3c76a413
+  background-color: #e6f7ff; /* xanh nhạt khi hover */
 }
 
 .arrow {
   font-size: 12px;
-<<<<<<< HEAD
-=======
   margin-left: 8px;
->>>>>>> 316a3209d2fbbca45db33ebd8d9f2add3c76a413
+  margin-left: 8px;
   color: #666;
 }
 
 .dropdown-list {
   position: absolute;
-<<<<<<< HEAD
   top: 110%;
   width: 100%;
   background-color: white;
@@ -78,7 +70,6 @@
 
 .dropdown-item:hover {
   background-color: #f5f7fa;
-=======
   top: calc(100% + 5px);
   left: 0;
   right: 0;
@@ -102,5 +93,4 @@
 
 .dropdown-item:hover {
   background-color: #e6f7ff; /* xanh nhạt */
->>>>>>> 316a3209d2fbbca45db33ebd8d9f2add3c76a413
 }
