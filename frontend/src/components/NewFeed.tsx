@@ -8,7 +8,6 @@ import RecipeCard from "./RecipeCard";
 import { useEffect, useRef, useState } from "react";
 import { useAuth } from "../context/authContext";
 
-
 interface recipeInfo {
   id: string;
   title: string;
@@ -68,7 +67,6 @@ const NewFeed = () => {
         Un monde de saveurs, une recette <br /> à la fois.
       </h2>
 
-
       <div id="newFeed_header">
         <h3>For you</h3>
         <div
@@ -99,12 +97,12 @@ const NewFeed = () => {
         </div>
       </div>
 
-      <div
+      {/* <div
         className="next-button-category"
         onClick={() => handleScroll(categoryRef)}
       >
         <img src={nextRightArrow} alt="" />
-      </div>
+      </div> */}
       <div
         className="next_button-recipe-card"
         onClick={() => handleScroll(recipeRef)}
