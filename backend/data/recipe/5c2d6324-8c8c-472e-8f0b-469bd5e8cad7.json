@@ -1,5 +1,5 @@
 {
-  "avg_rating": 4.3,
+  "avg_rating": 3.7142857142857144,
   "category": [
     "Pasta & Noodles",
     "Asian Inspired"
@@ -35,7 +35,7 @@
     "chili flakes"
   ],
   "instructions": "Soak noodles, stir-fry shrimp and eggs, add noodles and sauce, toss with vegetables and peanuts.",
-  "number_of_rating": 27,
+  "number_of_rating": 28,
   "nutritional_info": {
     "calories": 450,
     "carbs": 58,
@@ -50,5 +50,5 @@
     "Spicy"
   ],
   "title": "Pad Thai",
-  "total_score": 103
+  "total_score": 104
 }

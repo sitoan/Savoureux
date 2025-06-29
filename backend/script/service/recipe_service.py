@@ -68,17 +68,6 @@ class recipe_service:
             return True
         return False
 
-    def update_rating(self, recipe_id: str, rating: float) -> bool:
-        recipe_path = self._get_recipe_path(recipe_id)
-        if not os.path.exists(recipe_path):
-            return False
-        with open(recipe_path, "r", encoding="utf-8") as f:
-            recipe = json.load(f)
-        recipe["avg_rating"] = ( recipe["total_score"] + rating ) / ( recipe["number_of_rating"] + 1 )
-        recipe["number_of_rating"] += 1
-        with open(recipe_path, "w", encoding="utf-8") as f:
-            json.dump(recipe, f, indent=2, ensure_ascii=False)
-        return True
     
     def update_recipe(self, recipe_id: str, updates: Dict[str, Any]) -> bool:
         recipe_path = self._get_recipe_path(recipe_id)
@@ -101,18 +90,22 @@ class recipe_service:
             json.dump(recipe, f, indent=2, ensure_ascii=False)
         return True
  
-    def add_comment(self, recipe_id: str, comment: Dict[str, Any]) -> bool:
+    def add_review(self,recipe_id, review: Dict[str, Any]) -> bool:
         recipe_path = self._get_recipe_path(recipe_id)
         if not os.path.exists(recipe_path):
             return False
         with open(recipe_path, "r", encoding="utf-8") as f:
             recipe = json.load(f)
-        if isinstance(comment, dict):
-            comment["id"] = str(uuid.uuid4())
-            comment["timestamp"] = datetime.now().isoformat()
-            recipe["comments"].append(comment)
-        else:
-            return False   
+        comment = {
+            "username": review["userName"] ,
+            "text": review["comment"],
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        }
+        rating = review["rating"]
+        recipe["total_score"] += rating
+        recipe["number_of_rating"] += 1
+        recipe["avg_rating"] = recipe["total_score"] / recipe["number_of_rating"]
+        recipe["comments"].append(comment)
         with open(recipe_path, "w", encoding="utf-8") as f:
             json.dump(recipe, f, indent=2, ensure_ascii=False)
         return True

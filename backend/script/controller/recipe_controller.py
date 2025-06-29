@@ -43,18 +43,11 @@ def delete_recipe(recipe_id):
     return ("Deleted", 200) if success else ("Not found", 404)
 
 
-### rate recipe by id
-@recipe_bp.route("/<recipe_id>/rate", methods=["POST"])
-def rate_recipe(recipe_id):
-    rating = request.json.get("rating", 0)
-    success = recipe_service.update_rating(recipe_id, rating)
-    return ("Rated", 200) if success else ("Not found", 404)
-
-### comment recipe by id
-@recipe_bp.route("/<recipe_id>/comment", methods=["POST"])
+### review recipe by id
+@recipe_bp.route("/<recipe_id>/review", methods=["POST"])
 def add_comment(recipe_id):
-    comment = request.json
-    success = recipe_service.add_comment(recipe_id, comment)
+    review = request.json
+    success = recipe_service.add_review(recipe_id, review)
     return ("Commented", 200) if success else ("Not found", 404)
 
 ### get name sort recipes
