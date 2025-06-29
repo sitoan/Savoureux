@@ -170,7 +170,7 @@ const ViewAllDetail = () => {
         </div>
       </div>
 
-      <div
+      {/* <div
         className="next-button-category"
         onClick={() => handleScroll(categoryRef)}
       >
@@ -182,7 +182,7 @@ const ViewAllDetail = () => {
         onClick={() => handleScroll(recipeRef)}
       >
         <img src={nextRightArrow} alt="scroll recipe" />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,0 +1,22 @@
+#log-in-container {
+  display: flex;
+  justify-self: center;
+  margin-top: 16%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#log-in-container > img {
+  width: 250px;
+}
+
+#log-in-container > form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 20px;
+}
+
+#log-in-container > form > button {
+  background-color: rgb(237, 54, 54);
+}
