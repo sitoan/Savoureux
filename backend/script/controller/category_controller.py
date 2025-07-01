@@ -13,3 +13,8 @@ category_service = category_service()
 @category_bp.route("/all", methods=["GET"])
 def get_categories():
     return jsonify(category_service.get_categories())
+
+### get all categories title
+@category_bp.route("/title", methods=["GET"])
+def get_categories_title():
+    return jsonify(category_service.get_category_by_title())

@@ -42,6 +42,14 @@ class user_service:
                     result[key] = value
             return result
         return deep_merge(DEFAULT_USER_TEMPLATE, user)
+    
+    def get_all_users(self) -> list:
+        users = []
+        for filename in os.listdir(self.storage_dir):
+            if filename.endswith(".json"):
+                with open(os.path.join(self.storage_dir, filename), "r", encoding="utf-8") as f:
+                    users.append(json.load(f))
+        return users
 
     def add_user(self, user_data: dict) -> str:
         user_id = str(uuid.uuid4())
@@ -68,4 +76,13 @@ class user_service:
 
     def get_user_favorite_recipes(self, user_id: str) -> list:
         user = self.get_user_by_id(user_id)
+        print(user["favorites"])
         return user["favorites"]
+    
+
+    def signin(self, email, password):
+        users = self.get_all_users()
+        for user in users:
+            if user["email"] == email and user["password"] == password:
+                return user["id"], user["username"]
+        return None

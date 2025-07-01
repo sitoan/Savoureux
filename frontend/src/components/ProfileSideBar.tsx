@@ -55,9 +55,9 @@ const ProfileSideBar = () => {
         onClick={() => navigate("/post-recipe")}
       >
         <div className="icon_wrapper">
-          <img src={profileIcon} alt="" />
+          <img src={settingIcon} alt="" />
         </div>
-        <h6>Add recipe</h6>
+        <h6>Recipe management</h6>
       </div>
       <div
         className="personal_setting_buttons"
@@ -67,9 +67,9 @@ const ProfileSideBar = () => {
         }}
       >
         <div className="icon_wrapper">
-          <img src={settingIcon} alt="" />
+          <img src={profileIcon} alt="" />
         </div>
-        <h6>Settings</h6>
+        <h6>Profile setting</h6>
       </div>
       <div className="banner_wrapper">
         <img id="profile_banner_img" src={salad} alt="" />

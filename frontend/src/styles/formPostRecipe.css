@@ -1,12 +1,10 @@
 .form-post-recipe {
   width: 600px;
-  /* margin: auto; */
   padding: 24px;
   border: 1px solid #ddd;
   border-radius: 12px;
-  background-color: #1e1e1e; /* nên dùng màu nền tối nếu chữ input màu trắng */
-  font-family: sans-serif;
   background-color: white !important;
+  font-family: sans-serif;
 }
 
 .form-post-recipe h2 {
@@ -33,9 +31,8 @@
 .form-group label {
   margin-bottom: 6px;
   font-weight: 500;
-  color: rgb(75, 75, 75) !important; /* chữ mô tả màu đen */
+  color: rgb(75, 75, 75) !important;
 }
-
 input,
 textarea {
   padding: 8px;
@@ -46,12 +43,25 @@ textarea {
   background-color: white;
   color: black !important; /* nội dung nhập màu trắng */
 }
+.form-post-recipe input,
+.form-post-recipe textarea,
+.form-post-recipe select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  background-color: white;
+  color: black !important;
+  width: auto;
+}
 
-textarea {
+.form-post-recipe textarea {
   min-height: 60px;
 }
 
 .form-group-nutrition {
+  width: 100%;
   margin-left: 30%;
 }
 
@@ -66,64 +76,57 @@ textarea {
   text-align: right;
   margin-top: 20px;
 }
+
 .form-group-nutrition legend {
   font-weight: bold;
   margin-bottom: 8px;
   color: black !important;
 }
+
 .form-actions {
   text-align: right;
   margin-right: 40%;
 }
 
-button {
+.form-post-recipe button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #a397f0;
   border: none;
   color: white;
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
+  margin: 0px 20px 0px 20px;
+  /* center */
+  display: inline;
+  margin-right: auto;
+  max-height: 100%;
 }
 
-button:hover {
-  background-color: #0056b3;
+.form-post-recipe button:hover {
+  background-color: #0e0a27;
 }
+
 .form-container-with-tags {
   display: flex;
   margin: auto;
+  gap: 20px;
+  align-items: flex-start;
 }
 
-.categories {
-  min-width: 180px;
+.tags-sidebar {
+  min-width: 200px;
   padding: 16px;
   background: linear-gradient(135deg, #e0f7ff, #c8f1ff);
   border: 1px solid #a0d8ef;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-right: 24px;
-  margin-top: 40px;
   height: fit-content;
   color: #003344;
   font-family: "Segoe UI", sans-serif;
-  margin-top: 260px;
 }
 
-.tags {
-  min-width: 180px;
-  padding: 16px;
-  background: linear-gradient(135deg, #e0f7ff, #c8f1ff);
-  border: 1px solid #a0d8ef;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-right: 24px;
-  margin-top: 40px;
-  height: fit-content;
-  color: #003344;
-  font-family: "Segoe UI", sans-serif;
-  margin-top: 400px;
-}
-.tag-list-panel h4 {
+.tags-sidebar h4 {
   margin-bottom: 12px;
   font-size: 16px;
   font-weight: 600;
@@ -131,4 +134,155 @@ button:hover {
   color: #005577;
   border-bottom: 1px solid #aad5e6;
   padding-bottom: 6px;
+}
+
+.ingredient-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.ingredient-input {
+  flex: 1;
+}
+
+.remove-btn {
+  padding: 8px 12px !important;
+  background-color: #dc3545 !important;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.remove-btn:hover {
+  background-color: #c82333 !important;
+}
+
+.add-btn {
+  padding: 6px 12px !important;
+  background-color: #28a745 !important;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.add-btn:hover {
+  background-color: #218838 !important;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.error-input {
+  border-color: #dc3545 !important;
+}
+
+.tags-input-container {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.tags-input-container .form-group {
+  flex: 1;
+}
+
+.available-tags {
+  max-width: 50%;
+}
+
+.draggable-tag {
+  padding: 6px 12px;
+  margin: 6px 4px;
+  background: #0077b6;
+  color: #fff;
+  border-radius: 16px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: grab;
+  transition: background-color 0.2s ease;
+}
+
+.draggable-tag:hover {
+  background: #005a8b;
+}
+
+.tags-drop-area {
+  min-height: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.tags-drop-area.drag-over {
+  border: 2px dashed #00bfff;
+  background-color: #f0f8ff;
+}
+
+.manual-tag-input {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.manual-tag-input input {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.manual-tag-input button {
+  padding: 6px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.tags-drop-area .placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.selected-tag {
+  padding: 4px 8px;
+  background: #28a745;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tag-remove-btn {
+  background: none !important;
+  border: none !important;
+  color: #fff !important;
+  cursor: pointer;
+  font-size: 14px !important;
+  padding: 0 !important;
+  margin-left: 4px !important;
+}
+
+.tag-remove-btn:hover {
+  background: none !important;
 }

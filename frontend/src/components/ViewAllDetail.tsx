@@ -31,6 +31,8 @@ const ViewAllDetail = () => {
   const [categoryList, setCategoryList] = useState<CategoryType[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [recipeList, setRecipeList] = useState<RecipeInfo[]>([]);
+  const [filteredRecipeList, setFilteredRecipeList] = useState<RecipeInfo[]>([]);
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const [sortOption, setSortOption] = useState<SortOption>({
     sortType: "All Recipe",
     dimension: null,
@@ -100,6 +102,18 @@ const ViewAllDetail = () => {
     fetchData();
   }, [sortOption, selectedCategory]);
 
+  // Effect riêng để filter recipes theo search query
+  useEffect(() => {
+    if (searchQuery.trim()) {
+      const filtered = recipeList.filter(recipe =>
+        recipe.title.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setFilteredRecipeList(filtered);
+    } else {
+      setFilteredRecipeList(recipeList);
+    }
+  }, [recipeList, searchQuery]);
+
   const handleScroll = (ref: React.RefObject<HTMLDivElement | null>) => {
     const container = ref.current;
     if (container) {
@@ -117,7 +131,8 @@ const ViewAllDetail = () => {
 
   const handleCategoryClick = (title: string) => {
     setSelectedCategory(title);
-    setSortOption({ sortType: "All Recipe", dimension: null }); // Reset sort tại đây
+    setSortOption({ sortType: "All Recipe", dimension: null });
+    setSearchQuery(""); // Reset search khi chọn category
     console.log("Selected category:", selectedCategory);
   };
 
@@ -126,11 +141,46 @@ const ViewAllDetail = () => {
   const handleSortSelect = (option: SortOption) => {
     setSortOption(option);
     setSelectedCategory(null);
+    setSearchQuery(""); // Reset search khi sort
+  };
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearchQuery(value);
+    
+    // Reset category khi search (không cần reset sort vì search sẽ filter kết quả hiện tại)
+    if (value.trim()) {
+      setSelectedCategory(null);
+    }
+  };
+
+  const handleSearchClear = () => {
+    setSearchQuery("");
   };
 
   return (
     <div id="nf_container">
-      <h2>View all Page</h2>
+      <div className="header_section">
+        <h2>View all Page</h2>
+        <div className="search_container">
+          <input
+            type="text"
+            placeholder="Search recipes..."
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className="search_input"
+          />
+          {searchQuery && (
+            <button
+              onClick={handleSearchClear}
+              className="search_clear_btn"
+              type="button"
+            >
+              ✕
+            </button>
+          )}
+        </div>
+      </div>
 
       <h3>Categories</h3>
       <div className="categories_wrapper" ref={categoryRef}>
@@ -156,7 +206,7 @@ const ViewAllDetail = () => {
 
       <div className="content_wrapper" ref={recipeRef}>
         <div className="content_container">
-          {recipeList.map((recipe) => (
+          {filteredRecipeList.map((recipe) => (
             <RecipeCard
               key={recipe.id}
               id={recipe.id}

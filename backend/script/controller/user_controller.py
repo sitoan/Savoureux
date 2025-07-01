@@ -24,6 +24,13 @@ def add_user():
     user_id = user_ser.add_user(data)
     return jsonify({"user_id": user_id}), 201
 
+### signin 
+@user_bp.route("/signin", methods=["POST"])
+def signin():
+    data = request.json
+    user_id, username = user_ser.signin(data["email"], data["password"])
+    return jsonify({"user_id": user_id, "username": username}), 200
+
 
 ### get user by id
 @user_bp.route("/<user_id>", methods=["GET"])

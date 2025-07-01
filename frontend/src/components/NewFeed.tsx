@@ -18,7 +18,6 @@ interface recipeInfo {
 
 const NewFeed = () => {
   const { userId } = useAuth();
-  const categoryRef = useRef<HTMLDivElement>(null);
   const recipeRef = useRef<HTMLDivElement>(null);
 
   const [recipeInfo, setRecipeInfo] = useState<recipeInfo[]>([]);
@@ -103,12 +102,12 @@ const NewFeed = () => {
       >
         <img src={nextRightArrow} alt="" />
       </div> */}
-      <div
+      {/* <div
         className="next_button-recipe-card"
         onClick={() => handleScroll(recipeRef)}
       >
         <img src={nextRightArrow} alt="" />
-      </div>
+      </div> */}
     </div>
   );
 };

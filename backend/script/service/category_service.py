@@ -48,3 +48,6 @@ class category_service:
 
     def get_categories(self):
         return CATEGORY
+    
+    def get_category_by_title(self):
+        return [category["title"] for category in CATEGORY]
