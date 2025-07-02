@@ -72,21 +72,8 @@ const ProfileSideBar = () => {
         <h6>Profile setting</h6>
       </div>
       <div className="banner_wrapper">
-        <img id="profile_banner_img" src={salad} alt="" />
-        <svg
-          className="s-top-wave"
-          viewBox="0 0 1440 150"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,60 C480,100 960,20 1440,60 L1440,0 L0,0 Z"
-            fill="aliceblue"
-          />
-        </svg>
-        <h4>
-          Make your
-          <br /> own recipe !
-        </h4>
+        
+        
       </div>
     </div>
   );

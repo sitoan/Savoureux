@@ -18,7 +18,7 @@
   ],
   "cooking_time": 35,
   "description": "Classic Thai stir-fried noodles with shrimp and peanuts",
-  "id": "beac0b07-89b8-46ae-b370-8d5c2606656b",
+  "id": "db7d9f2a-5310-428e-98da-9f5b38f2a510",
   "image": "https://i.pinimg.com/736x/5f/6a/c3/5f6ac3bc9c127712bff5451569abf497.jpg",
   "ingredients": [
     "rice noodles",
@@ -42,7 +42,7 @@
     "fat": 16,
     "protein": 22
   },
-  "posted_by": "Selena Nguyen",
+  "posted_by": "nhattoan",
   "servings": 4,
   "share_url": "https://yourapp.com/recipes/11",
   "tags": [

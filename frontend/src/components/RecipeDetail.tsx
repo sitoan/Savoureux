@@ -32,6 +32,11 @@ export interface recipeDataType {
   shareUrl: string;
 }
 
+interface MealPlanData {
+  date: string;
+  mealType: string;
+}
+
 const RecipeDetail = () => {
   const { id } = useParams();
   const [recipeData, setRecipeData] = useState<recipeDataType>({
@@ -67,7 +72,17 @@ const RecipeDetail = () => {
 
   // State cho favorite toggle
   const [isFavorite, setIsFavorite] = useState(false);
+  
+  // States cho meal plan form
+  const [showMealPlanForm, setShowMealPlanForm] = useState(false);
+  const [mealPlanData, setMealPlanData] = useState<MealPlanData>({
+    date: new Date().toISOString().split('T')[0], // Today's date as default
+    mealType: "breakfast"
+  });
+  const [isAddingToMealPlan, setIsAddingToMealPlan] = useState(false);
+
   const { userId } = useAuth();
+
   // Fetch data
   useEffect(() => {
     if (!id) return;
@@ -111,93 +126,144 @@ const RecipeDetail = () => {
       }
     };
     fetchRecipeData();
-  }, [id]);
+  }, [id, userId]);
 
   const handleToggleFavorite = async () => {
-  try {
-    if (isFavorite) {
-      // Nếu đang là favorite, thì remove
-      const result = await removeFavorite(recipeData.id);
-      // Chỉ cần check response thành công (status 200-299)
-      setIsFavorite(false);
-    } else {
-      // Nếu chưa là favorite, thì add
-      const result = await setFavorite(recipeData.id);
-      // Chỉ cần check response thành công (status 200-299)  
-      setIsFavorite(true);
-    }
-  } catch (error) {
-    console.error('Error toggling favorite:', error);
-    // Có thể hiển thị thông báo lỗi cho user
-    alert('Có lỗi xảy ra khi cập nhật yêu thích. Vui lòng thử lại!');
-  }
-};
-
-// Cải thiện hàm setFavorite
-const setFavorite = async (recipeId: string) => {
-  try {
-    const favoriteResponse = await fetch(`http://127.0.0.1:5000/user/${userId}/favorite/${recipeId}/add`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
+    try {
+      if (isFavorite) {
+        // Nếu đang là favorite, thì remove
+        const result = await removeFavorite(recipeData.id);
+        // Chỉ cần check response thành công (status 200-299)
+        setIsFavorite(false);
+      } else {
+        // Nếu chưa là favorite, thì add
+        const result = await setFavorite(recipeData.id);
+        // Chỉ cần check response thành công (status 200-299)  
+        setIsFavorite(true);
       }
-    });
-    
-    if (!favoriteResponse.ok) {
-      throw new Error('Failed to add favorite');
+    } catch (error) {
+      console.error('Error toggling favorite:', error);
+      // Có thể hiển thị thông báo lỗi cho user
+      alert('Có lỗi xảy ra khi cập nhật yêu thích. Vui lòng thử lại!');
     }
-    
-    // Kiểm tra content-type để xử lý response phù hợp
-    const contentType = favoriteResponse.headers.get('content-type');
-    let favoriteData;
-    
-    if (contentType && contentType.includes('application/json')) {
-      favoriteData = await favoriteResponse.json();
-    } else {
-      // Nếu response là text, tạo object success
-      const textResponse = await favoriteResponse.text();
-      favoriteData = { success: true, message: textResponse };
-    }
-    
-    return favoriteData;
-  } catch (error) {
-    console.error('Error adding favorite:', error);
-    throw error;
-  }
-};
+  };
 
-// Cải thiện hàm removeFavorite
-const removeFavorite = async (recipeId: string) => {
-  try {
-    const favoriteResponse = await fetch(`http://127.0.0.1:5000/user/${userId}/favorite/${recipeId}/remove`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
+  // Cải thiện hàm setFavorite
+  const setFavorite = async (recipeId: string) => {
+    try {
+      const favoriteResponse = await fetch(`http://127.0.0.1:5000/user/${userId}/favorite/${recipeId}/add`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+      
+      if (!favoriteResponse.ok) {
+        throw new Error('Failed to add favorite');
       }
-    });
-    
-    if (!favoriteResponse.ok) {
-      throw new Error('Failed to remove favorite');
+      
+      // Kiểm tra content-type để xử lý response phù hợp
+      const contentType = favoriteResponse.headers.get('content-type');
+      let favoriteData;
+      
+      if (contentType && contentType.includes('application/json')) {
+        favoriteData = await favoriteResponse.json();
+      } else {
+        // Nếu response là text, tạo object success
+        const textResponse = await favoriteResponse.text();
+        favoriteData = { success: true, message: textResponse };
+      }
+      
+      return favoriteData;
+    } catch (error) {
+      console.error('Error adding favorite:', error);
+      throw error;
     }
-    
-    // Kiểm tra content-type để xử lý response phù hợp
-    const contentType = favoriteResponse.headers.get('content-type');
-    let favoriteData;
-    
-    if (contentType && contentType.includes('application/json')) {
-      favoriteData = await favoriteResponse.json();
-    } else {
-      // Nếu response là text, tạo object success
-      const textResponse = await favoriteResponse.text();
-      favoriteData = { success: true, message: textResponse };
+  };
+
+  // Cải thiện hàm removeFavorite
+  const removeFavorite = async (recipeId: string) => {
+    try {
+      const favoriteResponse = await fetch(`http://127.0.0.1:5000/user/${userId}/favorite/${recipeId}/remove`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+      
+      if (!favoriteResponse.ok) {
+        throw new Error('Failed to remove favorite');
+      }
+      
+      // Kiểm tra content-type để xử lý response phù hợp
+      const contentType = favoriteResponse.headers.get('content-type');
+      let favoriteData;
+      
+      if (contentType && contentType.includes('application/json')) {
+        favoriteData = await favoriteResponse.json();
+      } else {
+        // Nếu response là text, tạo object success
+        const textResponse = await favoriteResponse.text();
+        favoriteData = { success: true, message: textResponse };
+      }
+      
+      return favoriteData;
+    } catch (error) {
+      console.error('Error removing favorite:', error);
+      throw error;
     }
-    
-    return favoriteData;
-  } catch (error) {
-    console.error('Error removing favorite:', error);
-    throw error;
-  }
-};
+  };
+
+  // Handle meal plan form toggle
+  const handleToggleMealPlanForm = () => {
+    setShowMealPlanForm(!showMealPlanForm);
+    if (!showMealPlanForm) {
+      // Reset form data when opening
+      setMealPlanData({
+        date: new Date().toISOString().split('T')[0],
+        mealType: "breakfast"
+      });
+    }
+  };
+
+  // Handle add to meal plan
+  const handleAddToMealPlan = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsAddingToMealPlan(true);
+
+    try {
+      const mealPlanPayload = {
+        date: mealPlanData.date,
+        meals: [
+          {
+            type: mealPlanData.mealType,
+            recipe_id: recipeData.id
+          }
+        ]
+      };
+
+      const response = await fetch(`http://127.0.0.1:5000/user/${userId}/meal_plans`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(mealPlanPayload)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to add to meal plan');
+      }
+
+      // Success
+      alert('Added to meal plan successfully!');
+      setShowMealPlanForm(false);
+    } catch (error) {
+      console.error('Error adding to meal plan:', error);
+      alert('Failed to add to meal plan. Please try again.');
+    } finally {
+      setIsAddingToMealPlan(false);
+    }
+  };
 
   // Handle share function
   const handleShare = async () => {
@@ -231,6 +297,7 @@ const removeFavorite = async (recipeId: string) => {
 
     try {
       const reviewData = {
+        user_id: userId,
         userName: userName.trim(),
         comment: newComment.trim(),
         rating: userRating,
@@ -341,6 +408,26 @@ const removeFavorite = async (recipeId: string) => {
 
         {/* Action buttons area */}
         <div className="action-buttons-area">
+          {/* Meal Plan button */}
+          <button
+            className="meal-plan-button"
+            onClick={handleToggleMealPlanForm}
+            title="Thêm vào kế hoạch ăn uống"
+          >
+            <svg
+              className="calendar-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </button>
+
           {/* Favorite toggle button */}
           <button
             className={`favorite-button ${isFavorite ? "active" : ""}`}
@@ -368,6 +455,62 @@ const removeFavorite = async (recipeId: string) => {
           </button>
         </div>
       </div>
+
+      {/* Meal Plan Form */}
+      {showMealPlanForm && (
+        <div className="recipe-section">
+          <h3>Thêm vào kế hoạch ăn uống</h3>
+          <form onSubmit={handleAddToMealPlan} className="meal-plan-form">
+            <div className="form-group">
+              <label htmlFor="meal-date">Ngày:</label>
+              <input
+                type="date"
+                id="meal-date"
+                value={mealPlanData.date}
+                onChange={(e) => setMealPlanData({
+                  ...mealPlanData,
+                  date: e.target.value
+                })}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="meal-type">Bữa ăn:</label>
+              <select
+                id="meal-type"
+                value={mealPlanData.mealType}
+                onChange={(e) => setMealPlanData({
+                  ...mealPlanData,
+                  mealType: e.target.value
+                })}
+                required
+              >
+                <option value="breakfast">Sáng</option>
+                <option value="lunch">Trưa</option>
+                <option value="dinner">Tối</option>
+              </select>
+            </div>
+
+            <div className="form-buttons">
+              <button 
+                type="button" 
+                className="cancel-btn"
+                onClick={() => setShowMealPlanForm(false)}
+              >
+                Hủy
+              </button>
+              <button 
+                type="submit" 
+                className="add-meal-plan-btn"
+                disabled={isAddingToMealPlan}
+              >
+                {isAddingToMealPlan ? "Đang thêm..." : "Thêm vào kế hoạch"}
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
 
       <div className="instruction-section">
         <h3>Instruction</h3>

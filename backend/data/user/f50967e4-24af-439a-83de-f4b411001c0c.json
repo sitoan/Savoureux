@@ -5,15 +5,17 @@
   "password": "12345678",
   "avatar": "https://i.pinimg.com/736x/0b/97/6f/0b976f0a7aa1aa43870e1812eee5a55d.jpg",
   "favorites": [
-    "ffb15397-027e-461c-bb7d-0647bd42f819",
-    "d5637ff4-d63e-48f8-8a0e-ef28c9c64934"
   ],
-  "ratings": [],
-  "meal_plans": [],
-  "comments": [],
+  "ratings": [
+  ],
+  "meal_plans": [
+  ],
+  "comments": [
+  ],
   "preferences": {
     "diet": "none",
     "allergies": []
   },
-  "view_history": {}
+  "view_history": {},
+  "recipe_created": []
 }

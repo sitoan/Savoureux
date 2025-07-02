@@ -106,7 +106,7 @@ class recipe_service:
         rating = review["rating"]
         recipe["total_score"] += rating
         recipe["number_of_rating"] += 1
-        recipe["avg_rating"] = recipe["total_score"] / recipe["number_of_rating"]
+        recipe["avg_rating"] = round(recipe["total_score"] / recipe["number_of_rating"], 2) 
         recipe["comments"].append(comment)
         with open(recipe_path, "w", encoding="utf-8") as f:
             json.dump(recipe, f, indent=2, ensure_ascii=False)

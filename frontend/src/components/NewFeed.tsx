@@ -1,10 +1,12 @@
 import "../styles/newFeed.css";
 import "../styles/fonts.css";
+import "../styles/MealPlanCalendar.css";
 import nextRightArrow from "../assets/iconImages/nextrightArrow.png";
 import nextIcon from "../assets/iconImages/nextIcon.png";
 import { useNavigate } from "react-router-dom";
 
 import RecipeCard from "./RecipeCard";
+import WeeklyMealPlanCalendar from "./MealPlanCalendar";
 import { useEffect, useRef, useState } from "react";
 import { useAuth } from "../context/authContext";
 
@@ -17,7 +19,7 @@ interface recipeInfo {
   posted_by: string;
 }
 
-interface userMealPlan{
+interface userMealPlan {
   recipeId: string;
   title: string;
   image: string;
@@ -76,6 +78,9 @@ const NewFeed = () => {
         Un monde de saveurs, une recette <br /> à la fois.
       </h2>
 
+      {/* Weekly Meal Plan Calendar */}
+      <WeeklyMealPlanCalendar />
+
       <div id="newFeed_header">
         <h3>For you</h3>
         <div
@@ -99,7 +104,9 @@ const NewFeed = () => {
                 image={recipeInfo.image}
                 description={recipeInfo.description}
                 avg_rating={recipeInfo?.avg_rating || 0}
-                onClick={() => handleClickCard(recipeInfo.id)} posted_by={recipeInfo.posted_by}              />
+                onClick={() => handleClickCard(recipeInfo.id)}
+                posted_by={recipeInfo.posted_by}
+              />
             );
           })}
         </div>

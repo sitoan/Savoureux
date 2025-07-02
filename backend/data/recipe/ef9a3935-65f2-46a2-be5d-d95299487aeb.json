@@ -17,7 +17,7 @@
   ],
   "cooking_time": 15,
   "description": "Crisp romaine lettuce with creamy caesar dressing",
-  "id": "2aa95a41-8234-42a8-8f7b-5fecc183f023",
+  "id": "ef9a3935-65f2-46a2-be5d-d95299487aeb",
   "image": "https://i.pinimg.com/736x/ec/29/77/ec29778102e2ace073e9d4db9d359f0d.jpg",
   "ingredients": [
     "romaine lettuce",
@@ -38,7 +38,7 @@
     "fat": 28,
     "protein": 12
   },
-  "posted_by": "Bob Smith",
+  "posted_by": "nhattoan",
   "servings": 4,
   "share_url": "https://yourapp.com/recipes/4",
   "tags": [

@@ -13,8 +13,8 @@
 
 #avatar_area {
   display: flex;
-  flex: 10;
-  margin-top: 10%;
+  flex: 1;
+  /* margin-top: 10%; */
   flex-direction: column;
   justify-content: center;
   align-items: center;

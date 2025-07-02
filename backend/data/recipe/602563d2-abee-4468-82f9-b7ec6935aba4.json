@@ -23,7 +23,7 @@
   ],
   "cooking_time": 180,
   "description": "Slow-cooked beef with vegetables in rich gravy",
-  "id": "a09fd74a-57cd-40ea-ac55-5ab61a5ba05d",
+  "id": "602563d2-abee-4468-82f9-b7ec6935aba4",
   "image": "https://i.pinimg.com/736x/a3/9e/74/a39e748901909fa688af85dd286d19cf.jpg",
   "ingredients": [
     "beef chuck",
@@ -47,7 +47,7 @@
     "fat": 18,
     "protein": 35
   },
-  "posted_by": "Sophia Wilson",
+  "posted_by": "nhattoan",
   "servings": 6,
   "share_url": "https://yourapp.com/recipes/20",
   "tags": [

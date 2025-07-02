@@ -13,7 +13,7 @@
   ],
   "cooking_time": 25,
   "description": "Nutritious grain salad with vegetables and herbs",
-  "id": "44abf627-b6e5-42ec-b2f3-bf85e3c3ae38",
+  "id": "91453b96-ff44-4705-be2e-fe03c8324179",
   "image": "https://i.pinimg.com/736x/68/2b/dd/682bddfa23f57ec23b8aec2bfa9da75d.jpg",
   "ingredients": [
     "quinoa",
@@ -34,7 +34,7 @@
     "fat": 14,
     "protein": 12
   },
-  "posted_by": "Michael Johnson",
+  "posted_by": "nhattoan",
   "servings": 4,
   "share_url": "https://yourapp.com/recipes/19",
   "tags": [

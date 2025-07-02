@@ -12,7 +12,7 @@
   ],
   "cooking_time": 20,
   "description": "Fluffy American-style breakfast pancakes",
-  "id": "567f4e71-f4ea-4ad1-bff5-78881fa38aad",
+  "id": "d0ad4df9-5736-4097-90f2-1b9f00bd26ca",
   "image": "https://i.pinimg.com/736x/6e/19/57/6e19573c475c983b556d75c488fb02ce.jpg",
   "ingredients": [
     "flour",
@@ -31,7 +31,7 @@
     "fat": 12,
     "protein": 8
   },
-  "posted_by": "Alice Johnson",
+  "posted_by": "nhattoan",
   "servings": 4,
   "share_url": "https://yourapp.com/recipes/3",
   "tags": [

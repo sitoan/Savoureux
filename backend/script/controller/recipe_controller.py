@@ -51,6 +51,7 @@ def delete_recipe(recipe_id):
 def add_comment(recipe_id):
     review = request.json
     success = recipe_service.add_review(recipe_id, review)
+    user_service.add_commented_recipe(review["user_id"], recipe_id, review)
     return ("Commented", 200) if success else ("Not found", 404)
 
 ### get name sort recipes
@@ -78,3 +79,4 @@ def get_all_recipes_by_userid(user_id):
     username = user_service.get_user_by_id(user_id)["username"]
     # get all recipes by username
     return jsonify(recipe_service.get_all_recipes_by_username(username))
+

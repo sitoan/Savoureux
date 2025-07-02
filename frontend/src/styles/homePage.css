@@ -1,9 +1,8 @@
 .body {
   display: flex;
   width: 90%;
-  height: 750px;
+  height: 100%;
   background-color: antiquewhite;
-  margin: auto;
   margin-top: 6vh;
 
   background: rgba(255, 255, 255, 0.3);
@@ -23,7 +22,7 @@
 
 .newFeedArea {
   display: flex;
-  flex: 5;
+  flex: 6;
   align-items: center;
   justify-content: center;
 }

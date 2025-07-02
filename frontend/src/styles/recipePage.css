@@ -1,7 +1,7 @@
 .body {
   display: flex;
   width: 90%;
-  height: 750px;
+  height: 100%;
   background-color: antiquewhite;
   margin: auto;
   margin-top: 6vh;
@@ -22,7 +22,7 @@
 }
 
 .recipeArea {
-  flex: 5;
+  flex: 6;
   display: flex;
   justify-content: center;
   align-items: flex-start; /* đẩy nội dung lên trên */

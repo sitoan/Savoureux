@@ -13,7 +13,7 @@
   ],
   "cooking_time": 10,
   "description": "Fresh mozzarella, tomatoes, and basil with balsamic",
-  "id": "ec8a0b46-09ca-4b27-96ff-21c1e4a95494",
+  "id": "8088f1f3-774a-406c-9fd6-24fb60cfd637",
   "image": "https://i.pinimg.com/736x/b1/11/9b/b1119b8c49f501da0f2c4dba0078608e.jpg",
   "ingredients": [
     "fresh mozzarella",
@@ -32,7 +32,7 @@
     "fat": 18,
     "protein": 16
   },
-  "posted_by": "Emily Davis",
+  "posted_by": "nhattoan",
   "servings": 4,
   "share_url": "https://yourapp.com/recipes/14",
   "tags": [

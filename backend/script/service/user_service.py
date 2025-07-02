@@ -20,7 +20,8 @@ DEFAULT_USER_TEMPLATE = {
         "allergies": []  # Danh sách chất gây dị ứng
     },
 
-    "view_history": {}  # Mỗi recipe_id sẽ có thông tin view riêng
+    "view_history": {},  # Mỗi recipe_id sẽ có thông tin view riêng
+    "recipe_created": []
 }
 
 
@@ -107,3 +108,84 @@ class user_service:
     def is_favorite_recipe(self, user_id, recipe_id):
         user = self.get_user_by_id(user_id)
         return recipe_id in user["favorites"]
+    
+    def get_meal_plans(self, user_id):
+        user = self.get_user_by_id(user_id)
+        return user["meal_plans"]
+    
+
+    #input {'source_date': '2025-07-02', 'source_meal_type': 'lunch', 'target_date': '2025-07-03', 'target_meal_type': 'lunch', 'recipe_id': 'ffb15397-027e-461c-bb7d-0647bd42f819'}
+    def update_meal_plans(self, user_id, meal_plans):
+        user = self.get_user_by_id(user_id)
+        for meal_plan in meal_plans:
+            if meal_plan["target_date"] not in [mp["date"] for mp in user["meal_plans"]]:
+                user["meal_plans"].append({"date": meal_plan["target_date"], "meals": [{"type": meal_plan["target_meal_type"], "recipe_id": meal_plan["recipe_id"]}]})
+            else:
+                for mp in user["meal_plans"]:
+                    if mp["date"] == meal_plan["target_date"]:
+                        for meal in mp["meals"]:
+                            if meal["type"] == meal_plan["target_meal_type"]:
+                                meal["recipe_id"] = meal_plan["recipe_id"]
+                                break
+        self.update_user(user_id, user)
+
+#{'date': '2025-07-02', 'meal_type': 'dinner'}
+    def remove_meal_plans(self, user_id, meal_plans):
+        user = self.get_user_by_id(user_id)
+        for meal_plan in meal_plans:
+            for mp in user["meal_plans"]:
+                if mp["date"] == meal_plan["date"]:
+                    for meal in mp["meals"]:
+                        if meal["type"] == meal_plan["meal_type"]:
+                            mp["meals"].remove(meal)
+                            break
+        self.update_user(user_id, user)
+
+    def add_meal_plans(self, user_id, meal_plans):
+        user = self.get_user_by_id(user_id)
+        user["meal_plans"].append(meal_plans)
+        self.update_user(user_id, user)
+
+    def add_commented_recipe(self, user_id, recipe_id, review):
+        user = self.get_user_by_id(user_id)
+        user["comments"].append({"recipe_id": recipe_id, "comment": review["comment"]})
+        user["ratings"].append({"recipe_id": recipe_id, "rating": review["rating"]})
+        self.update_user(user_id, user)
+    
+    def get_user_profile(self, user_id):
+        user = self.get_user_by_id(user_id)
+        user_profile = {
+            "username": user["username"],
+            "email": user["email"],
+            "avatar": user["avatar"],
+            "preferences": user["preferences"]
+        }
+        return user_profile
+    
+    def get_user_activity(self, user_id):
+        user = self.get_user_by_id(user_id)
+        user_activity = {
+            "number_of_recipes_created" : len(user["recipe_created"]),
+            "number_of_recipes_commented": len(user["comments"]),
+            "number_of_recipes_rated": len(user["ratings"]),
+            "recipe_created": [recipe["recipe_id"] for recipe in user["recipe_created"]],
+            "recipe_commented": [recipe["recipe_id"] for recipe in user["comments"]],
+        }
+        print(user_activity)
+        return user_activity
+    
+    def update_user(self, user_id, updated_user):
+        path = self._get_user_path(user_id)
+        user = self.get_user_by_id(user_id)
+        def deep_merge(default: dict, actual: dict):
+            result = copy.deepcopy(default)
+            for key, value in actual.items():
+                if isinstance(value, dict) and key in result:
+                    result[key] = deep_merge(result.get(key, {}), value)
+                else:
+                    result[key] = value
+            return result
+
+        updated_user = deep_merge(user, updated_user)
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(updated_user, f, indent=2, ensure_ascii=False)

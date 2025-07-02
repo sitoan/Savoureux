@@ -6,7 +6,7 @@ from flask import json
 import requests
 import json
 
-url = "http://127.0.0.1:5000/recipe/create"
+url = "http://127.0.0.1:5000/recipe/create/f50967e4-24af-439a-83de-f4b411001c0c"
 
 headers = {
   'Content-Type': 'application/json'

@@ -1,8 +1,9 @@
 :root {
+
   padding: -100px;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0, 0.87);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,8 +27,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 1000px;
-  overflow: hidden;
+  /* height: 1000px; */
+  /* overflow: hidden; */
 }
 
 #leave_img {

@@ -55,3 +55,58 @@ def remove_favorite_recipe(user_id, recipe_id):
 @user_bp.route("/<user_id>/favorite/<recipe_id>", methods=["GET"])
 def check_favorite_recipe(user_id, recipe_id):
     return jsonify(user_ser.is_favorite_recipe(user_id, recipe_id))
+
+### get meal plans
+@user_bp.route("/<user_id>/meal_plans", methods=["GET"])
+def get_meal_plans(user_id):
+    return jsonify(user_ser.get_meal_plans(user_id))
+
+### update meal plans
+@user_bp.route("/<user_id>/meal_plans", methods=["PUT"])
+def update_meal_plans(user_id):
+    data = request.json
+    print(data)
+    user_ser.update_meal_plans(user_id, data)
+    return ("Updated", 200)
+
+### remove meal plans
+@user_bp.route("/<user_id>/meal_plans/", methods=["DELETE"])
+def remove_meal_plans(user_id):
+    data = request.json
+    print(data)
+    user_ser.remove_meal_plans(user_id,data )
+    return ("Removed", 200)
+
+### add meal plans
+@user_bp.route("/<user_id>/meal_plans/", methods=["POST"])
+def add_meal_plans(user_id):
+    data = request.json
+    print(data)
+    user_ser.add_meal_plans(user_id, data)
+    return ("Added", 200)
+
+### get user profile
+@user_bp.route("/<user_id>/profile", methods=["GET"])    
+def get_user_profile(user_id):
+    return jsonify(user_ser.get_user_profile(user_id))
+
+### get user activity
+@user_bp.route("/<user_id>/activity", methods=["GET"])    
+def get_user_activity(user_id):
+    data = user_ser.get_user_activity(user_id)
+    print(data)
+    list_recipes = recipe_ser.get_favorite_recipes(list( set(data["recipe_created"]).union(set(data["recipe_commented"])))) 
+    dataMap = {
+        "number_of_recipes_created" : data["number_of_recipes_created"],
+        "number_of_recipes_commented": data["number_of_recipes_commented"],
+        "number_of_recipes_rated": data["number_of_recipes_rated"],
+        "recipes": list_recipes
+    }
+    return dataMap
+
+### update user
+@user_bp.route("/<user_id>/profile", methods=["PUT"])
+def update_user(user_id):
+    data = request.json
+    user_ser.update_user(user_id, data)
+    return ("Updated", 200)

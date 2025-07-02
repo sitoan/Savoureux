@@ -18,7 +18,7 @@
   ],
   "cooking_time": 25,
   "description": "Classic Italian pasta with eggs, cheese, and pancetta",
-  "id": "71ccf1b4-da0c-4b55-95a3-c4ae1340c45c",
+  "id": "455115ca-18ad-4aa6-ac46-f6e23c27758e",
   "image": "https://i.pinimg.com/736x/e0/dd/71/e0dd715d3d7d74fb0bf6481b017e89ca.jpg",
   "ingredients": [
     "spaghetti",
@@ -36,7 +36,7 @@
     "fat": 32,
     "protein": 28
   },
-  "posted_by": "John Doe",
+  "posted_by": "nhattoan",
   "servings": 4,
   "share_url": "https://yourapp.com/recipes/1",
   "tags": [

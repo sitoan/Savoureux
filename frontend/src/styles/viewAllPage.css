@@ -1,9 +1,8 @@
 .body {
-  display: flex;
+
   width: 90%;
-  height: 750px;
+  height: 100%;
   background-color: antiquewhite;
-  margin: auto;
   margin-top: 6vh;
 
   background: rgba(255, 255, 255, 0.3);
@@ -21,10 +20,12 @@
   justify-content: center;
 }
 
+
 .view-all-area {
-  flex: 5;
+  display: flex;
+  flex: 6;
   /* padding: 20px; */
-  padding: auto;
+  height: 100%;
   margin-left: 30px;
   margin-top: 20px;
   overflow-y: auto;
