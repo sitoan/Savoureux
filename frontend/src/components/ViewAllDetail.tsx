@@ -20,6 +20,7 @@ interface RecipeInfo {
   image: string;
   description: string;
   avg_rating: number;
+  posted_by: string;
 }
 
 interface SortOption {
@@ -214,8 +215,7 @@ const ViewAllDetail = () => {
               image={recipe.image}
               description={recipe.description}
               avg_rating={recipe.avg_rating || 0}
-              onClick={() => handleCardClick(recipe.id)}
-            />
+              onClick={() => handleCardClick(recipe.id)} posted_by={recipe.posted_by}            />
           ))}
         </div>
       </div>

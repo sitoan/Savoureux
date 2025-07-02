@@ -1,5 +1,6 @@
 // contexts/RecipeContext.tsx
 import React, { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
+import { useAuth } from './authContext';
 
 // Recipe type definition
 export interface Recipe {
@@ -76,7 +77,7 @@ export const RecipeProvider: React.FC<RecipeProviderProps> = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [categoryOptions, setCategoryOptions] = useState<string[]>([]);
   const [editingRecipe, setEditingRecipe] = useState<Recipe | null>(null);
-
+    const { userId } = useAuth();
   const fetchCategories = async () => {
     try {
       const response = await fetch("http://127.0.0.1:5000/category/title");
@@ -88,9 +89,10 @@ export const RecipeProvider: React.FC<RecipeProviderProps> = ({ children }) => {
   };
 
   const fetchRecipes = async () => {
+    console.log(userId);
     setLoading(true);
     try {
-      const response = await fetch("http://127.0.0.1:5000/recipe/all");
+      const response = await fetch("http://127.0.0.1:5000/recipe/all/" + userId);
       const data = await response.json();
       setRecipes(data);
     } catch (error) {
@@ -113,7 +115,7 @@ export const RecipeProvider: React.FC<RecipeProviderProps> = ({ children }) => {
         },
       };
 
-      const response = await fetch("http://127.0.0.1:5000/recipe/create", {
+      const response = await fetch("http://127.0.0.1:5000/recipe/create/" + userId, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

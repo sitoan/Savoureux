@@ -30,7 +30,8 @@
       }
     ],
     "tags": ["Italian", "Pasta", "Quick"],
-    "share_url": "https://yourapp.com/recipes/1"
+    "share_url": "https://yourapp.com/recipes/1",
+    "posted_by": "John Doe"
   },
   {
     "title": "Chicken Tikka Masala",
@@ -68,7 +69,8 @@
       }
     ],
     "tags": ["Indian", "Curry", "Spicy", "Comfort Food"],
-    "share_url": "https://yourapp.com/recipes/2"
+    "share_url": "https://yourapp.com/recipes/2",
+    "posted_by": "Jane Smith"
   },
   {
     "title": "Pancakes",
@@ -96,7 +98,8 @@
       }
     ],
     "tags": ["American", "Breakfast", "Sweet"],
-    "share_url": "https://yourapp.com/recipes/3"
+    "share_url": "https://yourapp.com/recipes/3",
+    "posted_by": "Alice Johnson"
   },
   {
     "title": "Caesar Salad",
@@ -129,7 +132,8 @@
       }
     ],
     "tags": ["Salad", "Classic", "Quick"],
-    "share_url": "https://yourapp.com/recipes/4"
+    "share_url": "https://yourapp.com/recipes/4",
+    "posted_by": "Bob Smith"
   },
   {
     "title": "Beef Stir Fry",
@@ -157,7 +161,8 @@
       }
     ],
     "tags": ["Asian", "Quick", "Healthy"],
-    "share_url": "https://yourapp.com/recipes/5"
+    "share_url": "https://yourapp.com/recipes/5",
+    "posted_by": "Charlie Brown"
   },
   {
     "title": "Chocolate Chip Cookies",
@@ -195,7 +200,8 @@
       }
     ],
     "tags": ["Dessert", "Baking", "Sweet", "Family"],
-    "share_url": "https://yourapp.com/recipes/6"
+    "share_url": "https://yourapp.com/recipes/6",
+    "posted_by": "Diana Davis"
   },
   {
     "title": "Greek Salad",
@@ -223,7 +229,8 @@
       }
     ],
     "tags": ["Greek", "Healthy", "Vegetarian"],
-    "share_url": "https://yourapp.com/recipes/7"
+    "share_url": "https://yourapp.com/recipes/7",
+    "posted_by": "nhattoan"
   },
   {
     "title": "Fish Tacos",
@@ -256,7 +263,8 @@
       }
     ],
     "tags": ["Mexican", "Seafood", "Healthy"],
-    "share_url": "https://yourapp.com/recipes/8"
+    "share_url": "https://yourapp.com/recipes/8",
+    "posted_by": "nhattoan"
   },
   {
     "title": "Mushroom Risotto",
@@ -284,7 +292,8 @@
       }
     ],
     "tags": ["Italian", "Vegetarian", "Comfort Food"],
-    "share_url": "https://yourapp.com/recipes/9"
+    "share_url": "https://yourapp.com/recipes/9",
+    "posted_by": "nhattoan"
   },
   {
     "title": "BBQ Pulled Pork",
@@ -317,7 +326,8 @@
       }
     ],
     "tags": ["BBQ", "American", "Slow Cooked"],
-    "share_url": "https://yourapp.com/recipes/10"
+    "share_url": "https://yourapp.com/recipes/10",
+    "posted_by": "nhattoan"
   },
   {
     "title": "Pad Thai",
@@ -350,7 +360,8 @@
       }
     ],
     "tags": ["Thai", "Seafood", "Spicy"],
-    "share_url": "https://yourapp.com/recipes/11"
+    "share_url": "https://yourapp.com/recipes/11",
+    "posted_by": "Selena Nguyen"
   },
   {
     "title": "French Toast",
@@ -378,7 +389,8 @@
       }
     ],
     "tags": ["French", "Breakfast", "Sweet"],
-    "share_url": "https://yourapp.com/recipes/12"
+    "share_url": "https://yourapp.com/recipes/12",
+    "posted_by": "Alice Johnson"
   },
   {
     "title": "Beef Tacos",
@@ -411,7 +423,8 @@
       }
     ],
     "tags": ["Mexican", "Quick", "Family"],
-    "share_url": "https://yourapp.com/recipes/13"
+    "share_url": "https://yourapp.com/recipes/13",
+    "posted_by": "John Doe"
   },
   {
     "title": "Caprese Salad",
@@ -439,7 +452,8 @@
       }
     ],
     "tags": ["Italian", "Fresh", "Vegetarian"],
-    "share_url": "https://yourapp.com/recipes/14"
+    "share_url": "https://yourapp.com/recipes/14",
+    "posted_by": "Emily Davis"
   },
   {
     "title": "Banana Bread",
@@ -472,7 +486,8 @@
       }
     ],
     "tags": ["Dessert", "Baking", "Sweet"],
-    "share_url": "https://yourapp.com/recipes/15"
+    "share_url": "https://yourapp.com/recipes/15",
+    "posted_by": "Sarah Johnson"
   },
   {
     "title": "Chicken Fajitas",
@@ -500,7 +515,8 @@
       }
     ],
     "tags": ["Mexican", "Healthy", "Quick"],
-    "share_url": "https://yourapp.com/recipes/16"
+    "share_url": "https://yourapp.com/recipes/16",
+    "posted_by": "John Doe"
   },
   {
     "title": "Vegetable Soup",
@@ -533,7 +549,8 @@
       }
     ],
     "tags": ["Vegetarian", "Healthy", "Comfort Food"],
-    "share_url": "https://yourapp.com/recipes/17"
+    "share_url": "https://yourapp.com/recipes/17",
+    "posted_by": "Jane Smith"
   },
   {
     "title": "Chocolate Cake",
@@ -571,7 +588,8 @@
       }
     ],
     "tags": ["Dessert", "Chocolate", "Celebration"],
-    "share_url": "https://yourapp.com/recipes/18"
+    "share_url": "https://yourapp.com/recipes/18",
+    "posted_by": "Emily Davis"
   },
   {
     "title": "Quinoa Salad",
@@ -599,7 +617,8 @@
       }
     ],
     "tags": ["Healthy", "Vegetarian", "Protein"],
-    "share_url": "https://yourapp.com/recipes/19"
+    "share_url": "https://yourapp.com/recipes/19",
+    "posted_by": "Michael Johnson"
   },
   {
     "title": "Beef Stew",
@@ -637,6 +656,7 @@
       }
     ],
     "tags": ["Comfort Food", "Slow Cooked", "Hearty"],
-    "share_url": "https://yourapp.com/recipes/20"
+    "share_url": "https://yourapp.com/recipes/20",
+    "posted_by": "Sophia Wilson"
   }
 ]

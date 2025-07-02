@@ -1,5 +1,5 @@
 {
-  "avg_rating": 3.7142857142857144,
+  "avg_rating": 4.3,
   "category": [
     "Pasta & Noodles",
     "Asian Inspired"
@@ -18,7 +18,7 @@
   ],
   "cooking_time": 35,
   "description": "Classic Thai stir-fried noodles with shrimp and peanuts",
-  "id": "5c2d6324-8c8c-472e-8f0b-469bd5e8cad7",
+  "id": "beac0b07-89b8-46ae-b370-8d5c2606656b",
   "image": "https://i.pinimg.com/736x/5f/6a/c3/5f6ac3bc9c127712bff5451569abf497.jpg",
   "ingredients": [
     "rice noodles",
@@ -35,13 +35,14 @@
     "chili flakes"
   ],
   "instructions": "Soak noodles, stir-fry shrimp and eggs, add noodles and sauce, toss with vegetables and peanuts.",
-  "number_of_rating": 28,
+  "number_of_rating": 27,
   "nutritional_info": {
     "calories": 450,
     "carbs": 58,
     "fat": 16,
     "protein": 22
   },
+  "posted_by": "Selena Nguyen",
   "servings": 4,
   "share_url": "https://yourapp.com/recipes/11",
   "tags": [
@@ -50,5 +51,5 @@
     "Spicy"
   ],
   "title": "Pad Thai",
-  "total_score": 104
+  "total_score": 103
 }

@@ -12,7 +12,7 @@
   ],
   "cooking_time": 20,
   "description": "Classic breakfast with cinnamon and vanilla",
-  "id": "57fefe3e-136d-49d5-8b3a-c1a5e3450c57",
+  "id": "9d592033-40e8-4b7f-8667-84432ed954b4",
   "image": "https://i.pinimg.com/736x/6d/7d/18/6d7d18266974659a8db01346b99728a3.jpg",
   "ingredients": [
     "bread",
@@ -32,6 +32,7 @@
     "fat": 14,
     "protein": 12
   },
+  "posted_by": "Alice Johnson",
   "servings": 4,
   "share_url": "https://yourapp.com/recipes/12",
   "tags": [

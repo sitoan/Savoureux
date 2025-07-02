@@ -8,6 +8,7 @@ interface CardInfor {
   image: string;
   description: string;
   avg_rating: number;
+  posted_by: string;
   onClick?: () => void;
 }
 const RecipeCard = ({
@@ -15,6 +16,7 @@ const RecipeCard = ({
   image,
   description,
   avg_rating,
+  posted_by,
   onClick,
 }: CardInfor) => {
   return (
@@ -29,12 +31,8 @@ const RecipeCard = ({
           <p>{avg_rating}</p>
           <img src={star} alt="" />
         </div>
-        <div className="share-button-area">
-          <button>
-            <img src={shareIcon} alt="" />
-          </button>
-        </div>
       </div>
+      <p className="posted-by">Posted by: {posted_by}</p>
     </div>
   );
 };

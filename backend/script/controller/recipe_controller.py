@@ -1,17 +1,20 @@
 from flask import Blueprint, request, jsonify
 from flask_cors import CORS
+from script.service.user_service import user_service
 from script.service.recipe_service import recipe_service
 
 recipe_bp = Blueprint("recipe", __name__)
 CORS(recipe_bp)
 recipe_service = recipe_service()
+user_service = user_service()
 
 
 ### create recipe
-@recipe_bp.route("/create", methods=["POST"])
-def add_recipe():
+@recipe_bp.route("/create/<user_id>", methods=["POST"])
+def add_recipe(user_id):
+    username = user_service.get_user_by_id(user_id)["username"]
     data = request.json
-    recipe_id = recipe_service.add_recipe(data)
+    recipe_id = recipe_service.add_recipe(data, username)
     return jsonify({"recipe_id": recipe_id}), 201
 
 
@@ -67,3 +70,11 @@ def get_filter_by_rating():
 def get_filter_by_category():
     category = request.headers.get("category")
     return jsonify(recipe_service.get_filter_by_category(category))
+
+### get all recipes by user
+@recipe_bp.route("/all/<user_id>", methods=["GET"])
+def get_all_recipes_by_userid(user_id):
+    # get username from user_id
+    username = user_service.get_user_by_id(user_id)["username"]
+    # get all recipes by username
+    return jsonify(recipe_service.get_all_recipes_by_username(username))

@@ -4,7 +4,10 @@
   "email": "s.toan883@gmail.com",
   "password": "12345678",
   "avatar": "https://i.pinimg.com/736x/0b/97/6f/0b976f0a7aa1aa43870e1812eee5a55d.jpg",
-  "favorites": ["87bddaa2-f5b4-4967-8289-4d8c96fbd005","5c2d6324-8c8c-472e-8f0b-469bd5e8cad7"],
+  "favorites": [
+    "ffb15397-027e-461c-bb7d-0647bd42f819",
+    "d5637ff4-d63e-48f8-8a0e-ef28c9c64934"
+  ],
   "ratings": [],
   "meal_plans": [],
   "comments": [],

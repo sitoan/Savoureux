@@ -18,7 +18,7 @@
   ],
   "cooking_time": 75,
   "description": "Moist and sweet homemade banana bread",
-  "id": "eb55b2b4-5351-41c4-863f-034e2a227007",
+  "id": "272a17ef-316b-4375-9708-d77811ab6a50",
   "image": "https://i.pinimg.com/736x/2b/c0/24/2bc024b4b062199c62158e62b5e1f2d9.jpg",
   "ingredients": [
     "ripe bananas",
@@ -39,6 +39,7 @@
     "fat": 12,
     "protein": 5
   },
+  "posted_by": "Sarah Johnson",
   "servings": 8,
   "share_url": "https://yourapp.com/recipes/15",
   "tags": [

@@ -22,7 +22,7 @@
   ],
   "cooking_time": 35,
   "description": "Soft and chewy homemade chocolate chip cookies",
-  "id": "cabce0e1-4044-4a75-ad33-8310c85c5586",
+  "id": "d8d59202-cb41-45e4-9bf0-f4bb0bf3fa97",
   "image": "https://i.pinimg.com/736x/26/fa/2f/26fa2fda58995d96010d696a0bd0aac2.jpg",
   "ingredients": [
     "flour",
@@ -43,6 +43,7 @@
     "fat": 8,
     "protein": 3
   },
+  "posted_by": "Diana Davis",
   "servings": 24,
   "share_url": "https://yourapp.com/recipes/6",
   "tags": [

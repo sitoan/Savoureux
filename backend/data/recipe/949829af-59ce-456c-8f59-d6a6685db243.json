@@ -13,7 +13,7 @@
   ],
   "cooking_time": 10,
   "description": "Fresh Mediterranean salad with feta and olives",
-  "id": "0a9f5953-87d2-4cfe-a52e-8fc423be34f1",
+  "id": "949829af-59ce-456c-8f59-d6a6685db243",
   "image": "https://i.pinimg.com/736x/53/b2/c0/53b2c09a0d164ec15152c0ffe736856f.jpg",
   "ingredients": [
     "tomatoes",
@@ -33,6 +33,7 @@
     "fat": 18,
     "protein": 8
   },
+  "posted_by": "nhattoan",
   "servings": 4,
   "share_url": "https://yourapp.com/recipes/7",
   "tags": [

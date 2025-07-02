@@ -17,7 +17,7 @@
   ],
   "cooking_time": 480,
   "description": "Slow-cooked pork shoulder in tangy barbecue sauce",
-  "id": "a0fe7812-f714-48d2-8344-fdae4ba574f2",
+  "id": "911acda7-80cf-4dc8-aa61-f8c5e851fb55",
   "image": "https://i.pinimg.com/736x/c6/cf/fe/c6cffeab908e290f1abe6e837bf6bedb.jpg",
   "ingredients": [
     "pork shoulder",
@@ -38,6 +38,7 @@
     "fat": 28,
     "protein": 42
   },
+  "posted_by": "nhattoan",
   "servings": 8,
   "share_url": "https://yourapp.com/recipes/10",
   "tags": [

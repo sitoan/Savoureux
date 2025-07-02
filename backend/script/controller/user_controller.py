@@ -39,3 +39,19 @@ def get_user(user_id):
     return jsonify(user) if user else ("Not found", 404)
 
 
+### add favorite recipe
+@user_bp.route("/<user_id>/favorite/<recipe_id>/add", methods=["PUT"])
+def add_favorite_recipe(user_id, recipe_id):
+    user_ser.add_favorite_recipe(user_id, recipe_id)
+    return ("Added", 200)
+
+### remove favorite recipe
+@user_bp.route("/<user_id>/favorite/<recipe_id>/remove", methods=["PUT"])
+def remove_favorite_recipe(user_id, recipe_id):
+    user_ser.remove_favorite_recipe(user_id, recipe_id)
+    return ("Removed", 200)
+
+### check favorite recipe
+@user_bp.route("/<user_id>/favorite/<recipe_id>", methods=["GET"])
+def check_favorite_recipe(user_id, recipe_id):
+    return jsonify(user_ser.is_favorite_recipe(user_id, recipe_id))

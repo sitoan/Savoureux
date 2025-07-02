@@ -13,7 +13,17 @@ interface recipeInfo {
   title: string;
   image: string;
   description: string;
-  avgRating: number;
+  avg_rating: number;
+  posted_by: string;
+}
+
+interface userMealPlan{
+  recipeId: string;
+  title: string;
+  image: string;
+  description: string;
+  avg_rating: number;
+  posted_by: string;
 }
 
 const NewFeed = () => {
@@ -88,9 +98,8 @@ const NewFeed = () => {
                 title={recipeInfo.title}
                 image={recipeInfo.image}
                 description={recipeInfo.description}
-                avg_rating={recipeInfo?.avgRating || 0}
-                onClick={() => handleClickCard(recipeInfo.id)}
-              />
+                avg_rating={recipeInfo?.avg_rating || 0}
+                onClick={() => handleClickCard(recipeInfo.id)} posted_by={recipeInfo.posted_by}              />
             );
           })}
         </div>

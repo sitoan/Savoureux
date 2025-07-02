@@ -26,7 +26,8 @@ DEFAULT_RECIPE_TEMPLATE = {
     },
     "comments": [],
     "tags": [],
-    "share_url": None
+    "share_url": None,
+    "posted_by": None
 }
 
 class recipe_service:
@@ -50,11 +51,12 @@ class recipe_service:
     def _get_recipe_path(self, recipe_id: str) -> str:
         return os.path.join(self.storage_dir, f"{recipe_id}.json")
 
-    def add_recipe(self, recipe_data: Dict[str, Any]) -> str:
+    def add_recipe(self, recipe_data: Dict[str, Any], username : str) -> str:
         if not recipe_data or not isinstance(recipe_data, dict):
             raise ValueError("Invalid recipe data") 
         recipe_id = str(uuid.uuid4())
         recipe_data["id"] = recipe_id
+        recipe_data["posted_by"] = username
         full_recipe = self.apply_default_schema(recipe_data)
         recipe_path = self._get_recipe_path(recipe_id)
         with open(recipe_path, "w", encoding="utf-8") as f:
@@ -139,7 +141,8 @@ class recipe_service:
                     "title": recipe["title"],
                     "image": recipe["image"],
                     "avg_rating": recipe["avg_rating"],
-                    "description": recipe["description"]
+                    "description": recipe["description"],
+                    "posted_by": recipe["posted_by"]
                 })
         return favorite_recipes
     
@@ -160,3 +163,14 @@ class recipe_service:
     def get_filter_by_category(self, category: str) -> List[Dict[str, Any]]:
         recipes = self.get_all_recipes()
         return [recipe for recipe in recipes if category in recipe["category"] ]
+    
+    def get_all_recipes_by_username(self, username: str) -> List[Dict[str, Any]]:
+       
+        recipes = []
+        for filename in os.listdir(self.storage_dir):
+            if filename.endswith(".json"):
+                with open(os.path.join(self.storage_dir, filename), "r", encoding="utf-8") as f:
+                    recipe = json.load(f)
+                    if recipe["posted_by"] == username:
+                        recipes.append(recipe)
+        return recipes

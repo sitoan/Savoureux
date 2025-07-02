@@ -86,3 +86,24 @@ class user_service:
             if user["email"] == email and user["password"] == password:
                 return user["id"], user["username"]
         return None
+    
+    def get_user_by_id(self, user_id: str) -> dict | None:
+        path = self._get_user_path(user_id)
+        if not os.path.exists(path):
+            return None
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+        
+    def add_favorite_recipe(self, user_id, recipe_id):
+        user = self.get_user_by_id(user_id)
+        user["favorites"].append(recipe_id)
+        self.update_user(user_id, user)
+
+    def remove_favorite_recipe(self, user_id, recipe_id):
+        user = self.get_user_by_id(user_id)
+        user["favorites"].remove(recipe_id if recipe_id in user["favorites"] else None)
+        self.update_user(user_id, user)
+
+    def is_favorite_recipe(self, user_id, recipe_id):
+        user = self.get_user_by_id(user_id)
+        return recipe_id in user["favorites"]

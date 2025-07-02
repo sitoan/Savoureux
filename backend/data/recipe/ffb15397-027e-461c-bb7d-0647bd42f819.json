@@ -13,7 +13,7 @@
   ],
   "cooking_time": 30,
   "description": "Sizzling chicken and peppers with tortillas",
-  "id": "52bf90b9-2fc2-4176-850d-bf6407a6ec82",
+  "id": "ffb15397-027e-461c-bb7d-0647bd42f819",
   "image": "https://i.pinimg.com/736x/e7/22/bb/e722bb52dcf0d304a594bf5d20805f8e.jpg",
   "ingredients": [
     "chicken breast",
@@ -35,6 +35,7 @@
     "fat": 15,
     "protein": 32
   },
+  "posted_by": "John Doe",
   "servings": 4,
   "share_url": "https://yourapp.com/recipes/16",
   "tags": [

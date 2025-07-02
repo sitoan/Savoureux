@@ -22,7 +22,7 @@
   ],
   "cooking_time": 90,
   "description": "Rich and moist chocolate layer cake",
-  "id": "a6e66e16-9e02-48f2-88a5-4bb494fcf9b7",
+  "id": "0e4d3f4f-0d8e-4a01-aa24-5b586013d62d",
   "image": "https://i.pinimg.com/736x/f7/06/b5/f706b57706ab60ad29185037cf6d0006.jpg",
   "ingredients": [
     "flour",
@@ -44,6 +44,7 @@
     "fat": 18,
     "protein": 6
   },
+  "posted_by": "Emily Davis",
   "servings": 12,
   "share_url": "https://yourapp.com/recipes/18",
   "tags": [

@@ -18,7 +18,7 @@
   ],
   "cooking_time": 30,
   "description": "Grilled fish with cabbage slaw in soft tortillas",
-  "id": "a1b3ae02-f7fc-4954-8a26-15f5e225120b",
+  "id": "dd22a3cf-ce70-48f5-92d8-b47483511bda",
   "image": "https://i.pinimg.com/736x/6e/d0/f8/6ed0f89669cec598d5367505f77cf2cf.jpg",
   "ingredients": [
     "white fish fillets",
@@ -40,6 +40,7 @@
     "fat": 12,
     "protein": 28
   },
+  "posted_by": "nhattoan",
   "servings": 4,
   "share_url": "https://yourapp.com/recipes/8",
   "tags": [

@@ -23,7 +23,7 @@
   ],
   "cooking_time": 60,
   "description": "Creamy tomato-based curry with tender chicken pieces",
-  "id": "33481e8c-e171-4b08-8094-be6d406b4f2b",
+  "id": "8160eb38-0915-4714-9ac6-3207f3a9b3b8",
   "image": "https://i.pinimg.com/736x/96/e9/a5/96e9a5eee31448bff7b4bb23f85bfd28.jpg",
   "ingredients": [
     "chicken thighs",
@@ -46,6 +46,7 @@
     "fat": 22,
     "protein": 35
   },
+  "posted_by": "Jane Smith",
   "servings": 6,
   "share_url": "https://yourapp.com/recipes/2",
   "tags": [

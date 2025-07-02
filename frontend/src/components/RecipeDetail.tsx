@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import "../styles/recipeDetail.css";
 import { useEffect, useState } from "react";
+import shareIcon from "../assets/iconImages/share.png";
+import { useAuth } from "../context/authContext";
 
 export interface recipeDataType {
   id: string;
@@ -63,6 +65,9 @@ const RecipeDetail = () => {
   const [hoveredRating, setHoveredRating] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // State cho favorite toggle
+  const [isFavorite, setIsFavorite] = useState(false);
+  const { userId } = useAuth();
   // Fetch data
   useEffect(() => {
     if (!id) return;
@@ -73,7 +78,7 @@ const RecipeDetail = () => {
         const data = await response.json();
         const mappedData: recipeDataType = {
           id: data.id,
-          title: data.title || "", 
+          title: data.title || "",
           description: data.description || "",
           image: data.image || "",
           ingredients: data.ingredients || [],
@@ -88,13 +93,19 @@ const RecipeDetail = () => {
             calories: data.nutritional_info?.calories || 0,
             protein: data.nutritional_info?.protein || 0,
             fat: data.nutritional_info?.fat || 0,
-            carbs: data.nutritional_info?.carbs || 0
+            carbs: data.nutritional_info?.carbs || 0,
           },
           comments: data.comments || [],
           tags: data.tags || [],
-          shareUrl: data.share_url || ""
+          shareUrl: data.share_url || "",
         };
         setRecipeData(mappedData);
+        const is_favorite = await fetch(
+          `http://127.0.0.1:5000/user/${userId}/favorite/${id}`
+        );
+        const isFavoriteData = await is_favorite.json();
+        console.log(isFavoriteData);
+        setIsFavorite(isFavoriteData);
       } catch (err) {
         console.error("Fetch error:", err);
       }
@@ -102,31 +113,138 @@ const RecipeDetail = () => {
     fetchRecipeData();
   }, [id]);
 
+  const handleToggleFavorite = async () => {
+  try {
+    if (isFavorite) {
+      // Nếu đang là favorite, thì remove
+      const result = await removeFavorite(recipeData.id);
+      // Chỉ cần check response thành công (status 200-299)
+      setIsFavorite(false);
+    } else {
+      // Nếu chưa là favorite, thì add
+      const result = await setFavorite(recipeData.id);
+      // Chỉ cần check response thành công (status 200-299)  
+      setIsFavorite(true);
+    }
+  } catch (error) {
+    console.error('Error toggling favorite:', error);
+    // Có thể hiển thị thông báo lỗi cho user
+    alert('Có lỗi xảy ra khi cập nhật yêu thích. Vui lòng thử lại!');
+  }
+};
+
+// Cải thiện hàm setFavorite
+const setFavorite = async (recipeId: string) => {
+  try {
+    const favoriteResponse = await fetch(`http://127.0.0.1:5000/user/${userId}/favorite/${recipeId}/add`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+    
+    if (!favoriteResponse.ok) {
+      throw new Error('Failed to add favorite');
+    }
+    
+    // Kiểm tra content-type để xử lý response phù hợp
+    const contentType = favoriteResponse.headers.get('content-type');
+    let favoriteData;
+    
+    if (contentType && contentType.includes('application/json')) {
+      favoriteData = await favoriteResponse.json();
+    } else {
+      // Nếu response là text, tạo object success
+      const textResponse = await favoriteResponse.text();
+      favoriteData = { success: true, message: textResponse };
+    }
+    
+    return favoriteData;
+  } catch (error) {
+    console.error('Error adding favorite:', error);
+    throw error;
+  }
+};
+
+// Cải thiện hàm removeFavorite
+const removeFavorite = async (recipeId: string) => {
+  try {
+    const favoriteResponse = await fetch(`http://127.0.0.1:5000/user/${userId}/favorite/${recipeId}/remove`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+    
+    if (!favoriteResponse.ok) {
+      throw new Error('Failed to remove favorite');
+    }
+    
+    // Kiểm tra content-type để xử lý response phù hợp
+    const contentType = favoriteResponse.headers.get('content-type');
+    let favoriteData;
+    
+    if (contentType && contentType.includes('application/json')) {
+      favoriteData = await favoriteResponse.json();
+    } else {
+      // Nếu response là text, tạo object success
+      const textResponse = await favoriteResponse.text();
+      favoriteData = { success: true, message: textResponse };
+    }
+    
+    return favoriteData;
+  } catch (error) {
+    console.error('Error removing favorite:', error);
+    throw error;
+  }
+};
+
+  // Handle share function
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: recipeData.title,
+          text: recipeData.description,
+          url: window.location.href,
+        });
+      } catch (err) {
+        console.log("Error sharing:", err);
+      }
+    } else {
+      // Fallback: copy to clipboard
+      navigator.clipboard.writeText(window.location.href);
+      alert("Link đã được sao chép vào clipboard!");
+    }
+  };
+
   // Submit comment và rating
   const handleSubmitReview = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!userName.trim() || !newComment.trim() || userRating === 0) {
       alert("Vui lòng điền đầy đủ thông tin và chọn rating!");
       return;
     }
 
     setIsSubmitting(true);
-    
+
     try {
       const reviewData = {
         userName: userName.trim(),
         comment: newComment.trim(),
         rating: userRating,
       };
-      // console.log(typeof userName, typeof newComment, typeof userRating);
-      const response = await fetch(`http://127.0.0.1:5000/recipe/${id}/review`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(reviewData)
-      });
+      const response = await fetch(
+        `http://127.0.0.1:5000/recipe/${id}/review`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(reviewData),
+        }
+      );
 
       if (!response.ok) throw new Error("Failed to submit review");
 
@@ -142,7 +260,7 @@ const RecipeDetail = () => {
         const updatedData = await updatedResponse.json();
         const mappedData: recipeDataType = {
           id: updatedData.id,
-          title: updatedData.title || "", 
+          title: updatedData.title || "",
           description: updatedData.description || "",
           image: updatedData.image || "",
           ingredients: updatedData.ingredients || [],
@@ -157,17 +275,16 @@ const RecipeDetail = () => {
             calories: updatedData.nutritional_info?.calories || 0,
             protein: updatedData.nutritional_info?.protein || 0,
             fat: updatedData.nutritional_info?.fat || 0,
-            carbs: updatedData.nutritional_info?.carbs || 0
+            carbs: updatedData.nutritional_info?.carbs || 0,
           },
           comments: updatedData.comments || [],
           tags: updatedData.tags || [],
-          shareUrl: updatedData.share_url || ""
+          shareUrl: updatedData.share_url || "",
         };
         setRecipeData(mappedData);
       }
 
       alert("Đánh giá của bạn đã được gửi thành công!");
-      
     } catch (err) {
       console.error("Submit error:", err);
       alert("Có lỗi xảy ra khi gửi đánh giá. Vui lòng thử lại!");
@@ -183,8 +300,10 @@ const RecipeDetail = () => {
       stars.push(
         <span
           key={i}
-          className={`star ${interactive ? 'interactive' : ''} ${
-            i <= (interactive ? (hoveredRating || userRating) : rating) ? 'filled' : ''
+          className={`star ${interactive ? "interactive" : ""} ${
+            i <= (interactive ? hoveredRating || userRating : rating)
+              ? "filled"
+              : ""
           }`}
           onClick={interactive ? () => setUserRating(i) : undefined}
           onMouseEnter={interactive ? () => setHoveredRating(i) : undefined}
@@ -197,8 +316,6 @@ const RecipeDetail = () => {
     return stars;
   };
 
-  // console.log(recipeData);
-  
   return (
     <div className="recipe-container">
       <h1 className="recipe-title">{recipeData?.title || "Loading..."}</h1>
@@ -212,11 +329,44 @@ const RecipeDetail = () => {
       )}
 
       <p className="recipe-description">{recipeData?.description}</p>
-      
+
       <div className="recipe-meta">
-        <span>{renderStarRating(Math.round(recipeData.avgRating))} {recipeData.avgRating.toFixed(1)} ({recipeData.numberOfRating} đánh giá)</span>
+        <span>
+          {renderStarRating(Math.round(recipeData.avgRating))}{" "}
+          {recipeData.avgRating.toFixed(1)} ({recipeData.numberOfRating} đánh
+          giá)
+        </span>
         <span>⏱ {recipeData.cookingTime} mins</span>
         <span>🍽 {recipeData.servings} servings</span>
+
+        {/* Action buttons area */}
+        <div className="action-buttons-area">
+          {/* Favorite toggle button */}
+          <button
+            className={`favorite-button ${isFavorite ? "active" : ""}`}
+            onClick={handleToggleFavorite}
+            title={isFavorite ? "Bỏ khỏi yêu thích" : "Thêm vào yêu thích"}
+          >
+            <svg
+              className="heart-icon"
+              viewBox="0 0 24 24"
+              fill={isFavorite ? "currentColor" : "none"}
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </button>
+
+          {/* Share button */}
+          <button
+            className="share-button"
+            onClick={handleShare}
+            title="Chia sẻ công thức"
+          >
+            <img src={shareIcon} alt="Share" />
+          </button>
+        </div>
       </div>
 
       <div className="instruction-section">
@@ -280,7 +430,7 @@ const RecipeDetail = () => {
             <div className="rating-input">
               {renderStarRating(userRating, true)}
               <span className="rating-text">
-                {userRating > 0 ? `${userRating}/5 sao` : 'Chọn rating'}
+                {userRating > 0 ? `${userRating}/5 sao` : "Chọn rating"}
               </span>
             </div>
           </div>
@@ -297,12 +447,8 @@ const RecipeDetail = () => {
             />
           </div>
 
-          <button 
-            type="submit" 
-            className="submit-btn"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? 'Đang gửi...' : 'Gửi đánh giá'}
+          <button type="submit" className="submit-btn" disabled={isSubmitting}>
+            {isSubmitting ? "Đang gửi..." : "Gửi đánh giá"}
           </button>
         </form>
       </div>
@@ -327,7 +473,7 @@ const RecipeDetail = () => {
                 <p className="comment-text">{comment.text}</p>
                 <small className="comment-timestamp">
                   {comment.timestamp
-                    ? new Date(comment.timestamp).toLocaleString('vi-VN')
+                    ? new Date(comment.timestamp).toLocaleString("vi-VN")
                     : "Invalid date"}
                 </small>
               </li>

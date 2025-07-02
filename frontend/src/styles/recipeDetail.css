@@ -381,3 +381,200 @@ h3 {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.2s ease;
 }
+/* Action buttons area */
+.action-buttons-area {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Base button styles */
+.favorite-button,
+.share-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Favorite button styles */
+.favorite-button {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  border: 2px solid #e9ecef;
+  color: #6c757d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.favorite-button.active {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  border-color: #ff6b6b;
+  color: white;
+  animation: heartBeat 0.6s ease-in-out;
+}
+
+.favorite-button.active:hover {
+  background: linear-gradient(135deg, #ff5252 0%, #e57373 100%);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Heart icon */
+.heart-icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
+.favorite-button:hover .heart-icon {
+  transform: scale(1.1);
+}
+
+.favorite-button.active .heart-icon {
+  animation: heartPulse 1.5s ease-in-out infinite;
+}
+
+/* Share button styles */
+.share-button {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  border: 2px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.share-button:hover {
+  border-color: #007bff;
+}
+
+.share-button img {
+  width: 18px;
+  height: 18px;
+  filter: grayscale(100%) opacity(0.7);
+}
+
+/* Animations */
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Button click effect */
+.favorite-button:active {
+  transform: translateY(0) scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.share-button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .action-buttons-area {
+    gap: 8px;
+  }
+  
+  .favorite-button,
+  .share-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .heart-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .share-button img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Tooltip effect (optional) */
+.favorite-button::after,
+.share-button::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.favorite-button:hover::after,
+.share-button:hover::after {
+  opacity: 1;
+}
+
+/* Alternative gradient styles for more visual appeal */
+.favorite-button {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.share-button {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Focus states for accessibility */
+.favorite-button:focus,
+.share-button:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 3px rgba(0, 123, 255, 0.25),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-button.active:focus {
+  box-shadow: 
+    0 0 0 3px rgba(255, 107, 107, 0.25),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-button.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loading-spinner {
+  margin-left: 5px;
+  font-size: 12px;
+}

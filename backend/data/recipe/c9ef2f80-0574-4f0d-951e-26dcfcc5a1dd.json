@@ -18,7 +18,7 @@
   ],
   "cooking_time": 25,
   "description": "Seasoned ground beef in crispy taco shells",
-  "id": "5e54f48d-ea5e-4559-9a10-fc949f40075e",
+  "id": "c9ef2f80-0574-4f0d-951e-26dcfcc5a1dd",
   "image": "https://i.pinimg.com/736x/22/bd/86/22bd86d22838ec680bf32ca902fab9b4.jpg",
   "ingredients": [
     "ground beef",
@@ -38,6 +38,7 @@
     "fat": 22,
     "protein": 24
   },
+  "posted_by": "John Doe",
   "servings": 6,
   "share_url": "https://yourapp.com/recipes/13",
   "tags": [
