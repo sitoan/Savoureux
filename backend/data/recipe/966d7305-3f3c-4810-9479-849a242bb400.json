@@ -1,0 +1,30 @@
+{
+  "avg_rating": 0.0,
+  "calories": 0,
+  "carbs": 0,
+  "category": "",
+  "comments": [],
+  "cooking_time": 0,
+  "description": "1234",
+  "fat": 0,
+  "id": "966d7305-3f3c-4810-9479-849a242bb400",
+  "image": "",
+  "ingredients": [
+    "dsfa"
+  ],
+  "instructions": "1234",
+  "number_of_rating": 0,
+  "nutritional_info": {
+    "calories": 0,
+    "carbs": 0,
+    "fat": 0,
+    "protein": 0
+  },
+  "posted_by": "nhattoan",
+  "protein": 0,
+  "servings": 1,
+  "share_url": null,
+  "tags": [],
+  "title": "sadf",
+  "total_score": 0
+}

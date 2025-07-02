@@ -189,3 +189,8 @@ class user_service:
         updated_user = deep_merge(user, updated_user)
         with open(path, "w", encoding="utf-8") as f:
             json.dump(updated_user, f, indent=2, ensure_ascii=False)
+
+    def add_recipe_created(self, user_id, recipe_id):
+        user = self.get_user_by_id(user_id)
+        user["recipe_created"].append({"recipe_id": recipe_id})
+        self.update_user(user_id, user)

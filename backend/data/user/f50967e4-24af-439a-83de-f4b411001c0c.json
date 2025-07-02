@@ -4,18 +4,30 @@
   "email": "s.toan883@gmail.com",
   "password": "12345678",
   "avatar": "https://i.pinimg.com/736x/0b/97/6f/0b976f0a7aa1aa43870e1812eee5a55d.jpg",
-  "favorites": [
-  ],
-  "ratings": [
-  ],
-  "meal_plans": [
-  ],
-  "comments": [
-  ],
+  "favorites": [],
+  "ratings": [],
+  "meal_plans": [],
+  "comments": [],
   "preferences": {
     "diet": "none",
     "allergies": []
   },
   "view_history": {},
-  "recipe_created": []
+  "recipe_created": [
+    {
+      "recipe_id": "d0ad4df9-5736-4097-90f2-1b9f00bd26ca"
+    },
+    {
+      "recipe_id": "db7d9f2a-5310-428e-98da-9f5b38f2a510"
+    },
+    {
+      "recipe_id": "e42a6a46-69c2-479b-a10d-39b8b90f91ae"
+    },
+    {
+      "recipe_id": "ec2d3ee6-d654-44ba-b700-a745a558b3e0"
+    },
+    {
+      "recipe_id": "ef9a3935-65f2-46a2-be5d-d95299487aeb"
+    }
+  ]
 }

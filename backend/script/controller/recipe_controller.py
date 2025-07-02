@@ -15,6 +15,7 @@ def add_recipe(user_id):
     username = user_service.get_user_by_id(user_id)["username"]
     data = request.json
     recipe_id = recipe_service.add_recipe(data, username)
+    user_service.add_recipe_created(user_id, recipe_id)
     return jsonify({"recipe_id": recipe_id}), 201
 
 

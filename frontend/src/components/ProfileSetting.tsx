@@ -445,9 +445,6 @@ const PersonalSettingPage = () => {
                               {recipe.description}
                             </p>
                           </div>
-                          <div className="recipe-actions">
-                            <span className="recipe-heart">❤️</span>
-                          </div>
                         </div>
                       ))}
                     </div>
@@ -469,7 +466,5 @@ const PersonalSettingPage = () => {
 };
 
 export default PersonalSettingPage;
-function str(imageFile: File): string {
-    throw new Error("Function not implemented.");
-}
+
 
