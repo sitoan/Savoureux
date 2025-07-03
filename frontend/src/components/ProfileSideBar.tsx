@@ -57,7 +57,7 @@ const ProfileSideBar = () => {
         <div className="icon_wrapper">
           <img src={settingIcon} alt="" />
         </div>
-        <h6>Recipe management</h6>
+        <h6>Recipe Setting</h6>
       </div>
       <div
         className="personal_setting_buttons"
