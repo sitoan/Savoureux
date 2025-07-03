@@ -144,7 +144,7 @@ const LoginPage = () => {
           <input
             type="password"
             name="password"
-            placeholder="Mật khẩu"
+            placeholder="Password"
             value={formData.password}
             onChange={handleChange}
             className={errors.password ? "error" : ""}
@@ -160,7 +160,7 @@ const LoginPage = () => {
         )}
 
         <button type="submit" disabled={isLoading}>
-          {isLoading ? "Đang đăng nhập..." : "Đăng nhập"}
+          {isLoading ? "Loading..." : "Log In"}
         </button>
       </form>
     </div>

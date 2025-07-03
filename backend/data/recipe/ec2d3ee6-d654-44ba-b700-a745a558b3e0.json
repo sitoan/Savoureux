@@ -1,5 +1,5 @@
 {
-  "avg_rating": 4.5,
+  "avg_rating": 4.09,
   "category": [
     "Meat Dishes"
   ],
@@ -13,6 +13,11 @@
       "text": "Just like grandpa used to make",
       "timestamp": "2024-12-04T13:45:28Z",
       "username": "SouthernCook"
+    },
+    {
+      "text": "12",
+      "timestamp": "2025-07-03 07:29:22",
+      "username": "Toan"
     }
   ],
   "cooking_time": 480,
@@ -31,7 +36,7 @@
     "black pepper"
   ],
   "instructions": "Rub pork with spices, slow cook until tender, shred and mix with BBQ sauce.",
-  "number_of_rating": 31,
+  "number_of_rating": 32,
   "nutritional_info": {
     "calories": 520,
     "carbs": 18,
@@ -47,5 +52,5 @@
     "Slow Cooked"
   ],
   "title": "BBQ Pulled Pork",
-  "total_score": 126
+  "total_score": 131
 }

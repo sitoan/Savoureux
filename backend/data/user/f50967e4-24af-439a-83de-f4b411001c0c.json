@@ -4,10 +4,39 @@
   "email": "s.toan883@gmail.com",
   "password": "12345678",
   "avatar": "https://i.pinimg.com/736x/0b/97/6f/0b976f0a7aa1aa43870e1812eee5a55d.jpg",
-  "favorites": [],
-  "ratings": [],
-  "meal_plans": [],
-  "comments": [],
+  "favorites": [
+    "ec2d3ee6-d654-44ba-b700-a745a558b3e0"
+  ],
+  "ratings": [
+    {
+      "recipe_id": "ec2d3ee6-d654-44ba-b700-a745a558b3e0",
+      "rating": 5
+    }
+  ],
+  "meal_plans": [
+    {
+      "date": "2025-07-03",
+      "meals": []
+    },
+    {
+      "date": "2025-07-02",
+      "meals": []
+    },
+    {
+      "date": "2025-07-01",
+      "meals": []
+    },
+    {
+      "date": "2025-07-04",
+      "meals": []
+    }
+  ],
+  "comments": [
+    {
+      "recipe_id": "ec2d3ee6-d654-44ba-b700-a745a558b3e0",
+      "comment": "12"
+    }
+  ],
   "preferences": {
     "diet": "none",
     "allergies": []

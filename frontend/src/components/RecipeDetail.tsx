@@ -280,7 +280,7 @@ const RecipeDetail = () => {
     } else {
       // Fallback: copy to clipboard
       navigator.clipboard.writeText(window.location.href);
-      alert("Link đã được sao chép vào clipboard!");
+      alert("Link is copied into clipboard!");
     }
   };
 
@@ -289,7 +289,7 @@ const RecipeDetail = () => {
     e.preventDefault();
 
     if (!userName.trim() || !newComment.trim() || userRating === 0) {
-      alert("Vui lòng điền đầy đủ thông tin và chọn rating!");
+      alert("Please fill all this form!");
       return;
     }
 
@@ -351,10 +351,10 @@ const RecipeDetail = () => {
         setRecipeData(mappedData);
       }
 
-      alert("Đánh giá của bạn đã được gửi thành công!");
+      alert("Your review sent successfully!");
     } catch (err) {
       console.error("Submit error:", err);
-      alert("Có lỗi xảy ra khi gửi đánh giá. Vui lòng thử lại!");
+      alert("Failed. Try again!");
     } finally {
       setIsSubmitting(false);
     }
@@ -412,7 +412,7 @@ const RecipeDetail = () => {
           <button
             className="meal-plan-button"
             onClick={handleToggleMealPlanForm}
-            title="Thêm vào kế hoạch ăn uống"
+            title="Add into meal plan"
           >
             <svg
               className="calendar-icon"
@@ -432,7 +432,7 @@ const RecipeDetail = () => {
           <button
             className={`favorite-button ${isFavorite ? "active" : ""}`}
             onClick={handleToggleFavorite}
-            title={isFavorite ? "Bỏ khỏi yêu thích" : "Thêm vào yêu thích"}
+            title={isFavorite ? "Dislike" : "Add into favorite"}
           >
             <svg
               className="heart-icon"
@@ -449,7 +449,7 @@ const RecipeDetail = () => {
           <button
             className="share-button"
             onClick={handleShare}
-            title="Chia sẻ công thức"
+            title="Share the recipe"
           >
             <img src={shareIcon} alt="Share" />
           </button>
@@ -459,10 +459,10 @@ const RecipeDetail = () => {
       {/* Meal Plan Form */}
       {showMealPlanForm && (
         <div className="recipe-section">
-          <h3>Thêm vào kế hoạch ăn uống</h3>
+          <h3>Add into meal plan</h3>
           <form onSubmit={handleAddToMealPlan} className="meal-plan-form">
             <div className="form-group">
-              <label htmlFor="meal-date">Ngày:</label>
+              <label htmlFor="meal-date">Day:</label>
               <input
                 type="date"
                 id="meal-date"
@@ -476,7 +476,7 @@ const RecipeDetail = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="meal-type">Bữa ăn:</label>
+              <label htmlFor="meal-type">Meal:</label>
               <select
                 id="meal-type"
                 value={mealPlanData.mealType}
@@ -486,9 +486,9 @@ const RecipeDetail = () => {
                 })}
                 required
               >
-                <option value="breakfast">Sáng</option>
-                <option value="lunch">Trưa</option>
-                <option value="dinner">Tối</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
               </select>
             </div>
 
@@ -505,7 +505,7 @@ const RecipeDetail = () => {
                 className="add-meal-plan-btn"
                 disabled={isAddingToMealPlan}
               >
-                {isAddingToMealPlan ? "Đang thêm..." : "Thêm vào kế hoạch"}
+                {isAddingToMealPlan ? "Adding..." : "Add to meal plan"}
               </button>
             </div>
           </form>
@@ -554,26 +554,26 @@ const RecipeDetail = () => {
 
       {/* Form thêm đánh giá */}
       <div className="recipe-section">
-        <h3>Thêm đánh giá của bạn</h3>
+        <h3>Review</h3>
         <form onSubmit={handleSubmitReview} className="review-form">
           <div className="form-group">
-            <label htmlFor="userName">Tên của bạn:</label>
+            <label htmlFor="userName">Name:</label>
             <input
               type="text"
               id="userName"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
-              placeholder="Nhập tên của bạn"
+              placeholder="Input your name"
               required
             />
           </div>
 
           <div className="form-group">
-            <label>Đánh giá:</label>
+            <label>Rating:</label>
             <div className="rating-input">
               {renderStarRating(userRating, true)}
               <span className="rating-text">
-                {userRating > 0 ? `${userRating}/5 sao` : "Chọn rating"}
+                {userRating > 0 ? `${userRating}/5 Star` : "Rating"}
               </span>
             </div>
           </div>
@@ -584,23 +584,23 @@ const RecipeDetail = () => {
               id="comment"
               value={newComment}
               onChange={(e) => setNewComment(e.target.value)}
-              placeholder="Chia sẻ trải nghiệm của bạn về công thức này..."
+              placeholder="Input your comment..."
               rows={4}
               required
             />
           </div>
 
           <button type="submit" className="submit-btn" disabled={isSubmitting}>
-            {isSubmitting ? "Đang gửi..." : "Gửi đánh giá"}
+            {isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </form>
       </div>
 
       {/* Hiển thị comments */}
       <div className="recipe-section">
-        <h3>Đánh giá và bình luận ({recipeData.comments?.length || 0})</h3>
+        <h3>Comments ({recipeData.comments?.length || 0})</h3>
         {recipeData.comments?.length === 0 ? (
-          <p>Chưa có đánh giá nào. Hãy là người đầu tiên!</p>
+          <p>No comments yet.</p>
         ) : (
           <ul className="comment-list">
             {recipeData.comments?.map((comment: any, i: number) => (
